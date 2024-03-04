@@ -1,2 +1,2 @@
 # pattern-library
-A multi-language library containing implmentations of common software design and architecture patterns 
+A multi-language library containing implementations of common software design and architecture patterns 
