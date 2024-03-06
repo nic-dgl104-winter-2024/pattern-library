@@ -7,8 +7,9 @@ A multi-language library containing implementations of common software design an
 
 
 
-## Pull Requests 
+## Articles / Websites
 
 
 
-## License
+## Contributions 
+
