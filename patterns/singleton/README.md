@@ -122,9 +122,6 @@ const getSingle = function(fn) {
 
 
 
-Because `getSingle` is solely focused on ensuring that the instance is created only once, without being responsible for the specific content of the instance. This design makes it easier to expand and maintain and also solves the violation of SOLID.
+Because `getSingle` is solely focused on ensuring that the instance is created only once, without being responsible for the specific content of the instance.
 
-
-
-## Reference
 
