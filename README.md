@@ -13,8 +13,3 @@ A multi-language library containing implementations of common software design an
 
 ## Contributions 
 
-@ash-teach
-
-@ting-dev-coder
-
-@KaiKitKobold
