@@ -1,4 +1,4 @@
--- Logger singleton class
+-- Singleton Logger Class
 Logger = {}
 
 -- Private member for the singleton instance
