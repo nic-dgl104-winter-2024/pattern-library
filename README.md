@@ -16,7 +16,7 @@ A multi-language library containing implementations of common software design an
 
 The observer pattern is a behavioral design pattern often used in software development. 
 
-The purpose of the observer pattern is to establish a one-to-many dependencybetween objects. An object known as the subject maintains a list of it's dependents, called observers. The subject automatically notifies these observers of any state changes it undergoes, typically achieved by invoking one of their methods.
+The purpose of the observer pattern is to establish a one-to-many dependency between objects. An object known as the subject maintains a list of it's dependents, called observers. The subject automatically notifies these observers of any state changes it undergoes, typically achieved by invoking one of their methods.
 
 This pattern is often employed in software systems to ensure consistency among multiple components or to notify interested parties about specific events.
 
