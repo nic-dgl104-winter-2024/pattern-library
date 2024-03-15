@@ -30,6 +30,6 @@ NamesDatabase.addName("Swathy")
 
 // Return a copy of the list of names
 var currentNames = NamesDatabase.getAllNames()
-printlin(currentNames)
+println(currentNames)
 
 }
