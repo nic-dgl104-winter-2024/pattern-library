@@ -1,7 +1,6 @@
 # Contributing to DGL104 pattern-library
 
-Thank you for considering contributing to the DGL104 pattern-library! We welcome contributions from everyone. By participating in the project, you agree to abide by the Code Of Conduct.  
-
+Thank you for considering contributing to the DGL104 pattern-library! We welcome contributions from everyone.
 ## Project Overview  
 
 ## Prerequisites  
