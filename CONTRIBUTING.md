@@ -2,7 +2,11 @@
 
 Thank you for considering contributing to the DGL104 pattern-library! We welcome contributions from everyone. By participating in the project, you agree to abide by the Code Of Conduct.  
 
-## Ways to Contribute  
+## Project Overview  
+
+## Prerequisites  
+
+## Ways to Contribute:  
 There are several ways you can contribute to the DGL104 pattern-library:  
 
 1. **Reporting Bugs:** If you encounter any bugs or issues, please report them by creating a new issue.  
@@ -23,8 +27,29 @@ To start contributing, follow these steps:
 6. submit a pull request from your branch to the main repository's 'main' branch.
 
 ## Code Style  
-please adhere to the existing code style and conventions used in the project. if your unsure, feel free to ask for clarification.  
 
-## Code of Conduct  
-This is where I would put a code of conduct if I had one.
+## Testing  
+
+## Code Review Process  
+
+## Documentation  
+
+## Translations  
+
+## Versioning
+
+## Continuous Intergration/Continuous Development(CI/CD)
+
+## Security
+
+## Licensing  
+
+## Acknowledgments
+
+## Code of Conduct 
+
+## External Resources
+
+## FAQs
+
 
