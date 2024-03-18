@@ -30,6 +30,15 @@ Refactoring Guru. (2014). Observer. Refactoring.guru. https://refactoring.guru/d
 
 Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/Observer_pattern#:~:text=In%20software%20design%20and%20engineering
 
+### Definition of MVC pattern
+
+The Model-View-Controller (MVC) pattern helps in organizing programming by keeping separate parts for how information looks, is shown, and is taken in by users. It helps in reusing code and lets different people work on it at the same time. The Model deals with the app's data and main logic. The View shows the data to the user. The Controller is in the middle, handling what the user does and updating the Model or View. This way, changing one part, like how the app looks, doesn't affect other parts, like its main logic. This is very helpful in making websites because it allows for easy updates and growth, using different technologies for each part (Model, View, Controller).
+
+References:
+
+- [Gamma, Erich, et al. "Design Patterns: Elements of Reusable Object-Oriented Software." Addison-Wesley, 1994.](https://www.javier8a.com/itc/bd1/articulo.pdf)
+
+- [Krasner, Glenn E., and Stephen T. Pope. "A Description of the Model-View-Controller User Interface Paradigm in the Smalltalk-80 System." Journal of Object Technology, 1988.](https://www.researchgate.net/publication/239452280_A_Description_of_the_Model-View-Controller_User_Interface_Paradigm_in_the_Smalltalk80_System)
 
 
 ## Articles / Websites
