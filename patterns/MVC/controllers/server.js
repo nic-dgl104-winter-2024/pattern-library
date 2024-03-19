@@ -50,3 +50,11 @@ app.post("/api/register", authController.registerUser);
 app.post("/api/login", authController.loginUser);
 // Logout an existing user
 app.post("/api/logout", authController.logoutUser);
+
+// Category routes
+
+// Get all categories
+app.get("/api/categories", categoryController.getAllCategories);
+// Create a new category
+app.post("/api/categories", categoryController.createCategory);
+// Add more category routes as needed
