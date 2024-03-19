@@ -58,3 +58,9 @@ app.get("/api/categories", categoryController.getAllCategories);
 // Create a new category
 app.post("/api/categories", categoryController.createCategory);
 // Add more category routes as needed
+
+// Start the server
+const PORT = process.env.PORT || 5000; // Use the specified port or default to 5000
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
