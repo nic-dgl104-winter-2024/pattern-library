@@ -28,3 +28,16 @@ const db = mongoose.connection;
 
 // if there is an error while connecting  to DB then print it on console and stop the execution of application
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+
+// Routes
+
+// Tasks routes
+
+// Get all tasks
+app.get("/api/todos", todoController.getAllTodos);
+// Create a new task
+app.post("/api/todos", todoController.createTodo);
+// Update a task by ID
+app.put("/api/todos/:id", todoController.updateTodo);
+// Delete a task by ID
+app.delete("/api/todos/:id", todoController.deleteTodo);
