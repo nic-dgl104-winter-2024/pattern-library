@@ -66,6 +66,25 @@ const todoController = {
       res.status(400).json({ message: error.message });
     }
   },
+
+  // Delete a Todo task
+  deleteTodo: async (req, res) => {
+    try {
+      // Find the Todo task by ID
+      const todo = await Todo.findById(req.params.id);
+      if (todo == null) {
+        // If the Todo task is not found, respond with a 404 error
+        return res.status(404).json({ message: "Todo not found" });
+      }
+      // Remove the Todo task from the database
+      await todo.remove();
+      // Respond with a success message
+      res.json({ message: "Todo deleted" });
+    } catch (error) {
+      // If an error occurs, respond with an error message
+      res.status(500).json({ message: error.message });
+    }
+  },
 };
 
 module.exports = todoController;
