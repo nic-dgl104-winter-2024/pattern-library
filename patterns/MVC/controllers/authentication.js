@@ -20,6 +20,26 @@ const userController = {
       res.status(400).json({ message: error.message });
     }
   },
+
+  // Login user
+  loginUser: async (req, res) => {
+    try {
+      // Find user by email
+      const user = await User.findOne({ email: req.body.email });
+      if (!user) {
+        return res.status(401).json({ message: "Invalid email or password" });
+      }
+      // Check password
+      const isValidPassword = await user.comparePassword(req.body.password);
+      if (!isValidPassword) {
+        return res.status(401).json({ message: "Invalid email or password" });
+      }
+      // Respond with user data
+      res.json({ message: "Login successful", user });
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  },
 };
 
 module.exports = userController;
