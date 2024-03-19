@@ -41,3 +41,12 @@ app.post("/api/todos", todoController.createTodo);
 app.put("/api/todos/:id", todoController.updateTodo);
 // Delete a task by ID
 app.delete("/api/todos/:id", todoController.deleteTodo);
+
+// Authentication routes
+
+// Register a new user
+app.post("/api/register", authController.registerUser);
+// Login an existing user
+app.post("/api/login", authController.loginUser);
+// Logout an existing user
+app.post("/api/logout", authController.logoutUser);
