@@ -40,6 +40,29 @@ const userController = {
       res.status(500).json({ message: error.message });
     }
   },
+
+  // Logout user
+  logoutUser: async (req, res) => {
+    // In this example, assume the User model has a method to end the user's session
+    try {
+      const logout = await User.findOne({ email: req.body.email });
+      if (logout) {
+        // Here, i'm assuming a function to end user's session from database
+        endSession();
+
+        // If logout is successful, respond with a success message
+        res.json({ message: "Logout successful" });
+      } else {
+        // If logout is not successful, throw an error
+        throw new Error("some internal error occurred, please try again !!");
+      }
+    } catch (error) {
+      // If an error occurs during logout, respond with an error message
+      res.json({
+        message: `Logout unsuccessful, ${error.message} `,
+      });
+    }
+  },
 };
 
 module.exports = userController;
