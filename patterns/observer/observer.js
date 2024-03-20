@@ -24,4 +24,26 @@ class Observable {
     unsubscribe(fn) {
         this.subscribers = this.subscribers.filter((item) => item !== fn);
     }
+
+    // To broadcast to all the observers
+    broadcast(data) {
+        for (let i = 0; i < this.subscribers.length; i++) {
+            // Calling each function in the observers list with the broadcast data
+            this.subscribers[i](data);
+        }
+    }
 }
+
+
+const observer = new Observable();
+
+const fn = (data) => {
+    console.log("Callback was executed with data", data);
+};
+
+// function 'fn' subscribed to Observable
+observer.subscribe(fn);
+
+
+// Broadcasting message to all the subscribers
+observer.broadcast("Hello from observable");
