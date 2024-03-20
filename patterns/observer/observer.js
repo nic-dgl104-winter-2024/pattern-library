@@ -1,6 +1,6 @@
 // Observer pattern defines a one to many dependency relationship from Subject to Observers
 // Observers wait for a signal / trigger from the subject to start.
-
+// Code reference: https://www.youtube.com/watch?v=PldXoGemkyk
 
 
 // OBSERVER PATTERN WITH CLASS
