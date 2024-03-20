@@ -1,51 +1,58 @@
-class Product {
+class Item {
     constructor(name) {
         this.name = name;
     }
 
-    // Method to display the product name
+    // Method to display the Item name
     display() {
-        console.log(`Product: ${this.name}`);
+        console.log(`Item: ${this.name}`);
     }
 }
 
-// ConcreteProduct1 class
-class ConcreteProduct1 extends Product {
+// ConcreteItem1 class
+class ConcreteItem1 extends Item {
     constructor() {
-        super("ConcreteProduct1");
+        super("ConcreteItem1");
     }
 }
 
-// ConcreteProduct2 class
-class ConcreteProduct2 extends Product {
+// ConcreteItem2 class
+class ConcreteItem2 extends Item {
     constructor() {
-        super("ConcreteProduct2");
+        super("ConcreteItem2");
     }
 }
 
-// Creator class
+
+// Factory method returns an instance of ConcreteItem based on the type passed as a parameter. 
+// The type is used to determine which ConcreteItem subclass to return. 
+// This allows the Creator class to be independent of the ConcreteItem subclasses. 
+// The Creator class is responsible for creating the ConcreteItem instances.
+
 class Creator {
-    // Factory method
-    createProduct(type) {
-        let product;
+    // Factory method 
+    createItem(type) {
+        let item;
         switch (type) {
             case "type1":
-                product = new ConcreteProduct1();
+                item = new ConcreteItem1();
                 break;
             case "type2":
-                product = new ConcreteProduct2();
+                item = new ConcreteItem2();
                 break;
             default:
-                throw new Error("Invalid Product Type");
+                throw new Error("Invalid Item Type");
         }
-        return product;
+        return item;
     }
 }
 
-// Usage
+// Usage method for creating ConcreteItem instances based on the type passed as a parameter
 const creator = new Creator();
-const product1 = creator.createProduct("type1");
-product1.display(); // Output: Product: ConcreteProduct1
+const item1 = creator.createItem("type1");
+item1.display(); 
+// Output: Item: ConcreteItem1
 
-const product2 = creator.createProduct("type2");
-product2.display(); // Output: Product: ConcreteProduct2
+const item2 = creator.createItem("type2");
+item2.display(); 
+// Output: Item: ConcreteItem2
