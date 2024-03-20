@@ -50,9 +50,11 @@ Node.js - For Controller part
     |    │---TodoList.js               # Component for rendering the list of todo tasks
 
     
-The Todo Task List application follows the MVC (Model-View-Controller) architecture, which is a software design pattern commonly used in web development. MVC separates the application into three interconnected components, each with its own distinct responsibilities:
+-----------------------
 
--------------------
+The Todo Task List application follows the MVC (Model-View-Controller) architecture, which is a software design pattern commonly used in web development and for other platforms as well. MVC separates the application into three interconnected components, each with its own distinct responsibilities:
+
+
 
 ## Model
 
