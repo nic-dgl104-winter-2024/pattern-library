@@ -1,6 +1,10 @@
 # MVC ( model-view-controller) Architecture
 
-In programming, model-view-controller (MVC) is an architectural design pattern that organizes an application's logic into distinct layers, each of which carries out a specific set of tasks. The layers also interact with each other to ensure that the application's functionality is delivered in a coordinated and consistent manner. The MVC methodology incorporates the entire application, from the user interface (UI) to the underlying data model.
+In programming, model-view-controller (MVC) is an architectural design pattern that organizes an application's logic into distinct layers, each of which carries out a specific set of tasks. The layers also interact with each other to ensure that the application's functionality is delivered in a coordinated and consistent manner. The MVC methodology incorporates the entire application, from the user interface (UI) to the underlying data model. The three layers of MVC architecure are - 
+
+- Model : Manages the application's data and business logic, including data validation, manipulation, and interaction with the database.
+- View : Presents the user interface to the user, rendering data received from the Model layer in a format suitable for presentation.
+- Controller : Interprets user input from the View layer, processes it, and interacts with the Model layer to retrieve or manipulate data accordingly.
 
 Sheldon, Robert. “What Is Model-View-Controller (MVC)?: Definition from TechTarget.” WhatIs, TechTarget, 12 Sept. 2023, [techtarget.com](www.techtarget.com/whatis/definition/model-view-controller-MVC#:~:text=In%20programming%2C%20model%2Dview%2D,a%20specific%20set%20of%20tasks)
 
