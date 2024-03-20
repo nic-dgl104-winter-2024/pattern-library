@@ -11,12 +11,17 @@ class Observable {
 
     constructor() {
 
-        // The subscribers array keeps the list of subscribers
+        // The list of subscribers
         this.subscribers = []
     }
 
-    // The subscribing function will be added to the list of subscribers
+    // Function is added to the list of subscribers
     subscribe(fn) {
         this.subscribers.push(fn);
+    }
+
+    // Function will get removed from the subscribers list
+    unsubscribe(fn) {
+        this.subscribers = this.subscribers.filter((item) => item !== fn);
     }
 }
