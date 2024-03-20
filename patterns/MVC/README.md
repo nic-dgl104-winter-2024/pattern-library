@@ -8,6 +8,7 @@ Sheldon, Robert. “What Is Model-View-Controller (MVC)?: Definition from TechTa
 
 ![image](https://github.com/YogeshManni/pattern-library/assets/29475936/96056260-a719-4651-bee0-685ce6390af8)
 
+sadikarahmantanisha, "the-mvc-architecture", medium.com,19 Sept. 2023, [MVC architecture](https://medium.com/@sadikarahmantanisha/the-mvc-architecture-97d47e071eb2)
 
 # MVC Architecture in Todo Task List Application
 
@@ -112,7 +113,7 @@ The **View** is responsible for rendering the user interface and presenting data
 
 ### Example View File:
 
-Below given is the Todo.js File from the View part which displays all the available tasks to the browser screen. Here we fetch all the tasks by making an request to the controller through an api which on successfull operation return all the available tasks.
+Below given is the Todo.js File from the View part which displays all the available tasks to the browser screen. Here we fetch all the tasks by making an request to the controller through an api which on successful operation return all the available tasks.
 
 ```javascript
 
@@ -171,7 +172,7 @@ The **Controller** acts as an intermediary between the Model and the View. It re
 
 ### Example Controller File:
 
-In this example, I have displayed certain part of tasks.js controller where on user request, controller fetchs all tasks from database and return back to view part from where the requerst came.
+In this example, I have displayed certain part of tasks.js controller where on user request, controller fetchs all tasks from database and return back to view part from where the request came.
 In this example there are two methods listed - 
 
 - getAllTodos - This method fetchs all the tasks from database and return them to view.
@@ -232,6 +233,59 @@ const todoController = {
 5. **User Interface Update**: The View updates the user interface to reflect the changes made to the data.
 
 ------------------------
+
+## Todo Task List Project Architecture
+
+The Todo Task List project follows the MVC (Model-View-Controller) architecture and the work flow is explained below -
+
+### User Interaction
+
+Users interact with the frontend (React) application by navigating through different pages, filling out forms, and performing actions such as creating, updating, or deleting todo tasks.
+
+### View Rendering
+
+Frontend components (`App.js`, `Login.js`, `Todo.js`, etc.) render the user interface elements based on the current state and data received from the backend.
+
+### API Interaction
+
+React components make API requests to the backend server using the `api.js` service file. These requests are sent to the appropriate backend endpoints based on the user's actions.
+
+### Controller Handling
+
+When the backend server receives an API request, it routes the request to the appropriate controller for processing through (`Server.js`). Each controller (`tasks.js`, `category.js`, `authentication.js`) handles a specific type of request related to todo tasks, categories, or authentication.
+
+### Data Processing
+
+The controller processes the incoming request, extracts relevant data, and interacts with the corresponding model file to perform CRUD operations on the database. For example, when creating a new todo task, the `tasks.js` controller interacts with the `tasksModel.js` model to insert the task data into the database.
+
+### Database Interaction
+
+The model file interacts with the database to perform CRUD operations. It validates incoming data, executes database queries, and returns the results back to the controller.
+
+### Response Rendering
+
+Once the CRUD operation is completed, the controller sends a response back to the frontend React application. This response may include updated data, error messages, or success indicators.
+
+### View Update
+
+The React components receive the response from the backend and update the user interface accordingly. For example, if a new todo task is successfully created, the task will be added to the list of tasks displayed on the frontend.
+
+### User Feedback
+
+The updated user interface provides feedback to the user, indicating the success or failure of their actions. For example, if an error occurs during the creation of a new task, an error message will be displayed to the user, informing them of the issue.
+
+### Continued Interaction
+
+The user can continue to interact with the application, performing additional actions such as updating existing tasks, deleting tasks, or navigating to different pages.
+
+This flow ensures that the Todo Task List application functions smoothly, with data being transferred between the frontend and backend, and CRUD operations being performed accurately and efficiently, following the MVC architecture principles.
+
+----------------
+
+*Note* - Please go through all the files in [MVC](https://github.com/YogeshManni/pattern-library/tree/main/patterns/MVC) folder , I have commented them properly for better understanding. It will help you understand work flow more efficiently.
+
+
+-----------------------------------
 
 ## Advantages of MVC
 
