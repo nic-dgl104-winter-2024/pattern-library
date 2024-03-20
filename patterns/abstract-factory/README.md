@@ -6,66 +6,105 @@ One common creational pattern in JavaScript is the Factory Method pattern. It de
 
 Here's an example of the Factory Method pattern in JavaScript:
 
+<br>
+
+
+
+### 1. Item Interface Definition 
+
+First of all, we upgrade on it to Item class which will function as a means of access to our items. And, in case of Java and TypeScript, we would apply an interface that is not available in JavaScript; therefore, we use a base class. This place shows a constructor that uses the name of the item as an argument and the display() function which displays the item name. 
+
+<br>
+
 ```javascript
 
-// Define a simple Product interface (here, using a class as JavaScript doesn't have interfaces like Java or TypeScript)
-
-class Product {
+class Item {
     constructor(name) {
         this.name = name;
     }
 
-    // Method to display the product name
     display() {
-        console.log(`Product: ${this.name}`);
+        console.log(`Item: ${this.name}`);
     }
 }
-
-// ConcreteProduct1 class
-class ConcreteProduct1 extends Product {
-    constructor() {
-        super("ConcreteProduct1");
-    }
-}
-
-// ConcreteProduct2 class
-class ConcreteProduct2 extends Product {
-    constructor() {
-        super("ConcreteProduct2");
-    }
-}
-
-// Creator class
-class Creator {
-    // Factory method
-    createProduct(type) {
-        let product;
-        switch (type) {
-            case "type1":
-                product = new ConcreteProduct1();
-                break;
-            case "type2":
-                product = new ConcreteProduct2();
-                break;
-            default:
-                throw new Error("Invalid Product Type");
-        }
-        return product;
-    }
-}
-
-// Usage
-const creator = new Creator();
-const product1 = creator.createProduct("type1");
-product1.display(); // Output: Product: ConcreteProduct1
-
-const product2 = creator.createProduct("type2");
-product2.display(); // Output: Product: ConcreteProduct2
-
 
 ```
 
+<br>
+
+### 2. Concrete Item Classes
+
+Then, two subclasses ConcreteItem1 and ConcreteItem2 are derived from the class Item. Both of which inherit its functionality and properties. Here, you can find a collection of different types of classes that is presented in an easy-to-grasp way. When inheriting Item, the classes receive its constructor and display (unspecified) method, but the parameter passed in the constructor of each concrete class, which calls the base class implementation "ConcreteItem1" or "ConcreteItem2", determines its item name.
+
+<br>
+
+```Javascript
+
+class ConcreteItem1 extends Item {
+    constructor() {
+        super("ConcreteItem1");
+    }
+}
+
+class ConcreteItem2 extends Item {
+    constructor() {
+        super("ConcreteItem2");
+    }
+}
+
+```
+<br>
 
 
+### 3. Clase Creator
+
+<br>
+
+The Creator class – (createItem(type))- is the key of the Factory Method pattern. A method of this sort that accepts a type parameter and subsequently decides which class of item to create and return by its type. If the grouping does not belong to the category of the user, an error is displayed.
+
+<br>
+
+```Javascript
+
+class Creator {
+    createItem(type) {
+        let item;
+        switch (type) {
+            case "type1":
+                item = new ConcreteItem1();
+                break;
+            case "type2":
+                item = new ConcreteItem2();
+                break;
+            default:
+                throw new Error("Invalid Item Type");
+        }
+        return item;
+    }
+}
+
+
+```
+<br>
+
+### 4. Use
+
+Finally, Here in the code, the Creator class holds information that is used to generate item instances. The Creator class is made. Its createItem() method is invoked and the different items are passed as parametres. It underlines two essential things; hiding the process of construction of different items from the client, and the ability to do it without any knowledge of concrete classes. The created items are next used as arguments for the display() method whose implementation prints the item's name in the console.
+
+
+```Javascript
+const creator = new Creator();
+const item1 = creator.createItem("type1");
+item1.display(); 
+// Output: Item: ConcreteItem1
+
+const item2 = creator.createItem("type2");
+item2.display(); 
+// Output: Item: ConcreteItem2
+
+```
+<br>
+
+This way of separating the code responsible for making a particular object type and the code that uses this object is very convenient, facilitating object code maintenance and large-scale code extension.
 
 
