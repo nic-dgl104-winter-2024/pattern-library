@@ -111,7 +111,7 @@ This way of separating the code responsible for making a particular object type 
 
 # Resouces
 
-1.[Java Script Code](./abstract-factory.js)  
+1. [Java Script Code](./abstract-factory.js)  
 
 # References
 
