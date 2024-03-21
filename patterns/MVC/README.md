@@ -36,29 +36,29 @@ Node.js - For Controller part
 
 # Folder Structure
 
+```
     MVC
-    ├── controllers                   # Controllers directory
-    |   |
-    |   |---authentication.js         # Controller for authentication-related requests
-    |   |---category.js               # Controller for category-related requests
-    |   |---server.js                 # Main entry point for backend server
-    |   |---tasks.js                  # Controller for todo task-related requests
+    |-- controllers                   # Controllers directory
+    |   |-- authentication.js         # Controller for authentication-related requests
+    |   |-- category.js               # Controller for category-related requests
+    |   |-- server.js                 # Main entry point for backend server
+    |   |-- tasks.js                  # Controller for todo task-related requests
     |
-    ├── models                        # Models directory
-    │   ├── authenticationModel.js    # Model for authentication operations
-    │   ├── categoryModel.js          # Model for category operations
-    │   ├── tasksModel.js             # Model for todo task operations
+    |-- models                        # Models directory
+    │   |-- authenticationModel.js    # Model for authentication operations
+    │   |-- categoryModel.js          # Model for category operations
+    │   |-- tasksModel.js             # Model for todo task operations
     │
-    │---views                          # Views directory
-    |    ├── api.js                    # Service for making API requests
-    |    └── App.js                    # Main component for frontend React application
-    |    |---Login.js                  # View component for login page
-    |    |---NewTask.js                # View component for creating a new task
-    |    |---Register.js               # View component for registration page
-    |    |---Todo.js                   # View component for main todo task list page
-    |    |---TodoItem.js               # View component for rendering an individual todo task
-    |    │---TodoList.js               # Component for rendering the list of todo tasks
-
+    │--views                          # Views directory
+    |   |-- api.js                    # Service for making API requests
+    |   |-- App.js                    # Main component for frontend React application
+    |   |-- Login.js                  # View component for login page
+    |   |-- NewTask.js                # View component for creating a new task
+    |   |-- Register.js               # View component for registration page
+    |   |-- Todo.js                   # View component for main todo task list page
+    |   |-- TodoItem.js               # View component for rendering an individual todo task
+    |   │-- TodoList.js               # Component for rendering the list of todo tasks
+```
 ---
 
 The Todo Task List application follows the MVC (Model-View-Controller) architecture, which is a software design pattern commonly used in web development and for other platforms as well. MVC separates the application into three interconnected components, each with its own distinct responsibilities:
