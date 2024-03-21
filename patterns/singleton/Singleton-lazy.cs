@@ -15,10 +15,6 @@ class Student
     {
         get
         {
-            if (!instance.IsValueCreated)
-            {
-                throw new InvalidOperationException("Singleton instance has not been created yet.");
-            }
             return instance.Value;
         }
     }
@@ -71,7 +67,7 @@ class Program
         ///  Comile time error: Student.Student(string, int, string)' is inaccessible due to its protection level
         /// </summary>
         
-        // For example 
+        // <example> 
 
         //Student student1 = new Student("",0,""); 
         //student1.UpdateDetails("R",12,"C");
@@ -79,13 +75,11 @@ class Program
         /// <summary>
         /// Developer can check the using the bool if the instance is exist before operating the operation 
         ///  Output if Instace exist: Is the instance created? True
-        ///  Output if Instance not exist: Throw exception:- Singleton instance has not been created yet.
         /// </summary>
         
-        // For example
+        //  <example>
 
         bool isInstanceCreated = Student.Instance != null; //Checking if the instance has been created yet
-        Console.WriteLine($"Is the instance created? {isInstanceCreated}"); // Outputs: 
-        
+        Console.WriteLine($"Is the instance created? {isInstanceCreated}");         
     }
 }
