@@ -68,3 +68,11 @@ Behavioral patterns are all about efficient communication and the assignment of 
 | Visitor          | Lets you define a new operation without changing the classes of the elements on which it operates.                                                            |
 
 
+<br>
+<br>
+
+# References
+
+1. [GeeksforGeeks - Software Design Patterns](https://www.geeksforgeeks.org/software-design-patterns/?ref=lbp)
+
+
