@@ -1,5 +1,10 @@
 import Watcher from "../viewModel/Watcher.js";
 
+/*
+The templateRegex provided by ChatGPT
+https://chat.openai.com/
+*/
+
 export default class View {
 	constructor(el, vm) {
 		this.el = el;
@@ -9,27 +14,25 @@ export default class View {
 
 	init() {
 		[].slice.call(this.el.children).forEach((node) => {
-			let text = node.textContent;
-			let reg = /\{\{(.*?)\}\}/;
+			let textContent = node.textContent;
 
-			if (reg.test(text)) {
-				let key = reg.exec(text)[1];
+			// sample reg to match is template include  {}
+			let templateRegex = /\{\{(.*?)\}\}/;
+
+			if (templateRegex.test(textContent)) {
+				// get content within {{}}
+				let key = templateRegex.exec(textContent)[1];
 				this.vm.dep.add(new Watcher(this.vm, () => (node.innerText = this.vm[key])));
 			}
 
-			if (node.getAttribute("y-model")) {
-				let modelKey = node.getAttribute("y-model");
+			if (node.getAttribute("v-click")) {
+				let eventKey = node.getAttribute("v-click");
 
-				this.vm.dep.add(new Watcher(this.vm, () => (node.value = this.vm[modelKey])));
-				node.removeAttribute("y-model");
-			}
-
-			if (node.getAttribute("y-click")) {
-				let eventKey = node.getAttribute("y-click");
-
+				// bind event to ViewModel
 				node.addEventListener("click", this.vm[eventKey].bind(this.vm), false);
 
-				node.removeAttribute("y-click");
+				// remove the v-click attribute to make sure it's only bind once
+				node.removeAttribute("v-click");
 			}
 		});
 	}

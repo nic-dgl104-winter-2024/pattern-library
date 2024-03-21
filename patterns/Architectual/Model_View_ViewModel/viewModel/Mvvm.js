@@ -2,6 +2,11 @@ import Observer from "./Observer.js";
 import Dep from "./Dep.js";
 import View from "../view/View.js";
 
+/*
+The idea of watching data using new Proxy and Reflect is taken as a reference from:
+https://github.com/vuejs/core/blob/caeb8a68811a1b0f799632582289fcf169fb673c/packages/reactivity/src/baseHandlers.ts#L129
+*/
+
 export default class Mvvm {
 	constructor(options) {
 		this.$options = options;
