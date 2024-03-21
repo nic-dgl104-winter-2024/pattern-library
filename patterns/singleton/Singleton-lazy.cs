@@ -67,7 +67,7 @@ class Program
         student.DisplayDetails();
 
         /// <summary>
-        ///  If user try to create the new object of student class, he will get error at the compile time
+        ///  If developer try to create the new object of student class, he will get error at the compile time
         ///  Comile time error: Student.Student(string, int, string)' is inaccessible due to its protection level
         /// </summary>
         
@@ -75,6 +75,17 @@ class Program
 
         //Student student1 = new Student("",0,""); 
         //student1.UpdateDetails("R",12,"C");
+
+        /// <summary>
+        /// Developer can check the using the bool if the instance is exist before operating the operation 
+        ///  Output if Instace exist: Is the instance created? True
+        ///  Output if Instance not exist: Throw exception:- Singleton instance has not been created yet.
+        /// </summary>
+        
+        // For example
+
+        bool isInstanceCreated = Student.Instance != null; //Checking if the instance has been created yet
+        Console.WriteLine($"Is the instance created? {isInstanceCreated}"); // Outputs: 
         
     }
 }
