@@ -56,3 +56,14 @@ item1.display();
 const item2 = creator.createItem("type2");
 item2.display(); 
 // Output: Item: ConcreteItem2
+
+/* 
+References
+
+
+
+1. [GeeksforGeeks - Abstract Factory Pattern](https://www.geeksforgeeks.org/abstract-factory-pattern/)
+
+
+2. [Refactoring Guru - Abstract Factory Design Pattern](https://refactoring.guru/design-patterns/abstract-factory)
+ */
