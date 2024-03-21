@@ -11,7 +11,17 @@ class Student
     private static readonly Lazy<Student> instance = new Lazy<Student>(() => new Student("Default",0,"None"));
     
     // Public static property to access the singleton instance
-    public static Student Instance => instance.Value;
+    public static Student Instance
+    {
+        get
+        {
+            if (!instance.IsValueCreated)
+            {
+                throw new InvalidOperationException("Singleton instance has not been created yet.");
+            }
+            return instance.Value;
+        }
+    }
 
     // Constructor
     private Student(string name, int age, string grade)  // Making private constructor to prevent instantiation from outside
@@ -57,11 +67,14 @@ class Program
         student.DisplayDetails();
 
         /// <summary>
-        ///  Developer still able to create new object of Student singleton class
-        ///  student1 is new object of singleton class
+        ///  If user try to create the new object of student class, he will get error at the compile time
+        ///  Comile time error: Student.Student(string, int, string)' is inaccessible due to its protection level
         /// </summary>
+        
+        // For example 
 
-        Student student1 = new Student("",0,""); 
-        student1.UpdateDetails("R",12,"C");
+        //Student student1 = new Student("",0,""); 
+        //student1.UpdateDetails("R",12,"C");
+        
     }
 }
