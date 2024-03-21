@@ -14,7 +14,7 @@ class Student
     public static Student Instance => instance.Value;
 
     // Constructor
-    public Student(string name, int age, string grade)
+    private Student(string name, int age, string grade)  // Making private constructor to prevent instantiation from outside
     {
         Name = name;
         Age = age;
