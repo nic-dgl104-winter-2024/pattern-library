@@ -1,4 +1,4 @@
-// Singleton.js
+
 
 class MySingleton {
   static instance;
