@@ -1,12 +1,12 @@
 <?php
 /**
- * How to use:
- * $subject = new Subject;
- * $observer = new Observer;
+ * RESOURCES USED:
+ * I wrote the Kotlin observer pattern and used the same resources
  * 
- * $subject->subscribe($observer);
- * $subject->setData('enter some new data');
- * $subject->notify();
+ * This one I watched the entire video, very helpful resource
+ * https://www.youtube.com/watch?v=_BpmfnqjgzQ&t=2245s
+ * 
+ * Additionally, I used stack overflow and other misc resources that I can't remember
  */
 interface Observers
 {
@@ -38,13 +38,14 @@ class Observer implements Observers
    * @var $id
    */
   private $id;
+
   public function __construct()
   {
     $this->id = uniqid('observer_');
   }
   public function update($subject)
   {
-   echo "$this->id notified that the subject has changed to ".$subject->getData()."<br>";
+   echo "$this->id notified that the subject has changed to ".$subject->getData()."\r\n";
   }
   /**
    * Get ID
@@ -76,7 +77,6 @@ class Subject implements Subjects
   {
     $this->id = uniqid('subject_');
   }
-
   /**
    * Subscribes Observer object to Subject object
    * @param Observer
@@ -85,9 +85,9 @@ class Subject implements Subjects
   {
     if (!in_array($observer, $this->observerList)) {
       $this->observerList[] = $observer;
-      echo  $observer->getId()." is now subscribed to $this->id <br>";
+      echo  $observer->getId()." is now subscribed to $this->id\r\n";
     } else {
-      echo $observer->getId()." is already subscribed to $this->id <br>";
+      echo $observer->getId()." is already subscribed to $this->id\r\n";
     }
   }
 
@@ -100,9 +100,9 @@ class Subject implements Subjects
     $key = array_search($observer, $this->observerList);
     if ($key !== false) {
       unset($this->observerList[$key]);
-      echo $observer->getId()." is now unsubscribed from $this->id <br>";
+      echo $observer->getId()." is now unsubscribed from $this->id\r\n";
     } else {
-      echo $observer->getId()." is not subscribed to $this->id <br>";
+      echo $observer->getId()." is not subscribed to $this->id\r\n";
     }
   }
 
