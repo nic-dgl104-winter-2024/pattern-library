@@ -28,11 +28,11 @@ sadikarahmantanisha, "the-mvc-architecture", medium.com,19 Sept. 2023, [MVC arch
 
 For this issue, I will be explaining MVC architecture by writing code for to-do task list application. The Tech stack that I will be using is
 
-```
-Mongodb and Javascript - For Model part (Database)
-React - For View Part
-Node.js - For Controller part
-```
+
+- [Mongodb and Javascript - For Model part (Database)](https://www.mongodb.com/)
+- [React - For View Part](https://react.dev/learn)
+- [Node.js - For Controller part](https://nodejs.org/en)
+
 
 # Folder Structure
 
@@ -49,7 +49,7 @@ Node.js - For Controller part
     │   |-- categoryModel.js          # Model for category operations
     │   |-- tasksModel.js             # Model for todo task operations
     │
-    │--views                          # Views directory
+    │-- views                          # Views directory
     |   |-- api.js                    # Service for making API requests
     |   |-- App.js                    # Main component for frontend React application
     |   |-- Login.js                  # View component for login page
@@ -233,6 +233,34 @@ const todoController = {
 ```
 
 ---
+
+## Commands to run the project files
+
+### For View (React) part
+
+Firstly you have to make sure you have Node.js installed on your computer, if not you can install it from [here](https://nodejs.org/en/download/current).
+
+After Node installation, create a new React app by using the following command - 
+
+```
+npx create-react-app todo-list
+```
+After that, you can copy the view files to your `src` folder in the project. Before running application you have to install all node dependencies as well, for that you can use below command - 
+
+```
+npm install
+```
+Once all node dependencies are install, you can now run the react application with following command - 
+
+```
+npm start
+```
+If everything works and your code gets compiled, you can see you website live on `http://localhost:3000/`
+
+
+Luke Karrys, "Create React App", create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)
+
+-----------------------------------------------
 
 ## How It Works
 
