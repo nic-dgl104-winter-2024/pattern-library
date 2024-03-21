@@ -1,4 +1,4 @@
-import Dep from "./Dep.js";
+import Dep from "./dep.js";
 
 export default class Observer {
 	constructor(data, vm) {

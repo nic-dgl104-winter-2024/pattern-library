@@ -1,4 +1,4 @@
-import Watcher from "../viewModel/Watcher.js";
+import Watcher from "./viewModel/watcher.js";
 
 /*
 The templateRegex provided by ChatGPT

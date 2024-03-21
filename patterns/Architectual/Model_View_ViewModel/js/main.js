@@ -1,4 +1,4 @@
-import Mvvm from "./viewModel/Mvvm.js";
+import Mvvm from "./viewModel/mvvm.js";
 
 /*
 This is MVVM example the whole concepts is base on VUE framework : https://github.com/vuejs

@@ -1,6 +1,6 @@
-import Observer from "./Observer.js";
-import Dep from "./Dep.js";
-import View from "../view/View.js";
+import Observer from "./observer.js";
+import Dep from "./dep.js";
+import View from "../view.js";
 
 /*
 The idea of watching data using new Proxy and Reflect is taken as a reference from:
