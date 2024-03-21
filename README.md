@@ -51,3 +51,17 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 
 
+<<<<<<< Dev
+=======
+
+
+
+
+
+## Articles / Websites
+
+
+
+## Contributions 
+>>>>>>> main
+
