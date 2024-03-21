@@ -10,6 +10,9 @@ class Student
     // Private static instance variable using Lazy initialization
     private static readonly Lazy<Student> instance = new Lazy<Student>(() => new Student("Default",0,"None"));
     
+    // Public static property to access the singleton instance
+    public static Student Instance => instance.Value;
+
     // Constructor
     public Student(string name, int age, string grade)
     {
