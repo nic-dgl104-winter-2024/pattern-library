@@ -3,9 +3,34 @@ A multi-language library containing implementations of common software design an
 
 
 
-## Table of Contents
+## Documentation Table of Contents
 - [Observer Pattern Definition](#observer-pattern)
+- [Singleton Pattern Definition](#singleton-pattern)
 
+## Library Table of Contents
+
+### [Creational Patterns](Kaia-pattern-library-main/patterns/Architectual)
+
+#### [Singleton](Kaia-pattern-library-main/patterns/Creational/singleton)
+- [JavaScript](Kaia-pattern-library-main/patterns/Creational/singleton/JavaScript)
+- [ReactNative](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
+- [Kotlin](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
+- [Dart](Kaia-pattern-library-main/patterns/Creational/singleton/Dart)
+- [Lua](Kaia-pattern-library-main/patterns/Creational/singleton/Lua)
+
+### [Behavioral Patterns](Kaia-pattern-library-main/patterns/Behavioral)
+
+####  [Observer](Kaia-pattern-library-main/patterns/Behavioral/Observal)
+- [JavaScript](Kaia-pattern-library-main/patterns/Behavioral/Observal/JavaScript)
+- [ReactNative](Kaia-pattern-library-main/patterns/Behavioral/Observal/React Native)
+- [Kotlin](Kaia-pattern-library-main/patterns/Behavioral/Observal/Kotlin)
+- [Dart](Kaia-pattern-library-main/patterns/Behavioral/Observal/Dart)
+- [Lua](Kaia-pattern-library-main/patterns/Behavioral/Observal/Lua)
+
+### [Architectual Patterns](Kaia-pattern-library-main/patterns/Architectual)
+
+- [Model View ViewModel](Kaia-pattern-library-main/patterns/Architectual/Model View ViewModel (MVVM))
+- [Model View Controller](Kaia-pattern-library-main/patterns/Architectual/Model View Controller (MVC)
 
 
 
@@ -29,6 +54,16 @@ Design Patterns and Refactoring. (n.d.). Sourcemaking.com. https://sourcemaking.
 Refactoring Guru. (2014). Observer. Refactoring.guru. https://refactoring.guru/design-patterns/observer
 
 Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/Observer_pattern#:~:text=In%20software%20design%20and%20engineering
+
+
+<a id="#singleton-pattern"></a> 
+
+### Definition of Singelton Pattern
+
+#### References
+
+
+
 
 
 
