@@ -1,6 +1,6 @@
 # MVC ( model-view-controller) Architecture
 
-In programming, model-view-controller (MVC) is an architectural design pattern that organizes an application's logic into distinct layers, each of which carries out a specific set of tasks. The layers also interact with each other to ensure that the application's functionality is delivered in a coordinated and consistent manner. The MVC methodology incorporates the entire application, from the user interface (UI) to the underlying data model. The three layers of MVC architecure are - 
+In programming, model-view-controller (MVC) is an architectural design pattern that organizes an application's logic into distinct layers, each of which carries out a specific set of tasks. The layers also interact with each other to ensure that the application's functionality is delivered in a coordinated and consistent manner. The MVC methodology incorporates the entire application, from the user interface (UI) to the underlying data model. The three layers of MVC architecure are -
 
 - Model : Manages the application's data and business logic, including data validation, manipulation, and interaction with the database.
 - View : Presents the user interface to the user, rendering data received from the Model layer in a format suitable for presentation.
@@ -13,6 +13,16 @@ Sheldon, Robert. “What Is Model-View-Controller (MVC)?: Definition from TechTa
 ![image](https://github.com/YogeshManni/pattern-library/assets/29475936/96056260-a719-4651-bee0-685ce6390af8)
 
 sadikarahmantanisha, "the-mvc-architecture", medium.com,19 Sept. 2023, [MVC architecture](https://medium.com/@sadikarahmantanisha/the-mvc-architecture-97d47e071eb2)
+
+---
+
+## Advantages of MVC
+
+- **Separation of Concerns**: MVC separates the application into distinct components, making it easier to understand, maintain, and modify.
+- **Modular Design**: Each component of MVC can be developed and tested independently, allowing for greater flexibility and reusability.
+- **Scalability**: MVC facilitates the scalability of the application by allowing developers to add new features or modify existing ones without affecting other parts of the application.
+
+---
 
 # MVC Architecture in Todo Task List Application
 
@@ -28,17 +38,17 @@ Node.js - For Controller part
 
     MVC
     ├── controllers                   # Controllers directory
-    |   | 
+    |   |
     |   |---authentication.js         # Controller for authentication-related requests
     |   |---category.js               # Controller for category-related requests
     |   |---server.js                 # Main entry point for backend server
     |   |---tasks.js                  # Controller for todo task-related requests
-    |    
-    ├── models                        # Models directory 
-    │   ├── authenticationModel.js    # Model for authentication operations            
-    │   ├── categoryModel.js          # Model for category operations     
+    |
+    ├── models                        # Models directory
+    │   ├── authenticationModel.js    # Model for authentication operations
+    │   ├── categoryModel.js          # Model for category operations
     │   ├── tasksModel.js             # Model for todo task operations
-    │   
+    │
     │---views                          # Views directory
     |    ├── api.js                    # Service for making API requests
     |    └── App.js                    # Main component for frontend React application
@@ -49,12 +59,9 @@ Node.js - For Controller part
     |    |---TodoItem.js               # View component for rendering an individual todo task
     |    │---TodoList.js               # Component for rendering the list of todo tasks
 
-    
------------------------
+---
 
 The Todo Task List application follows the MVC (Model-View-Controller) architecture, which is a software design pattern commonly used in web development and for other platforms as well. MVC separates the application into three interconnected components, each with its own distinct responsibilities:
-
-
 
 ## Model
 
@@ -62,15 +69,15 @@ The **Model** represents the application's data and business logic. In the Todo 
 
 ### Example Model File:
 
-Below given is the tasksModel.js file which represent the Model structure for each task in to-do list.  Each task will have following properties -
+Below given is the tasksModel.js file which represent the Model structure for each task in to-do list. Each task will have following properties -
 
- - title
- - description
- - category
- - completed
- -  createdAt
+- title
+- description
+- category
+- completed
+- createdAt
 
-Thus these properties make structure  for an individual task which we call a model.
+Thus these properties make structure for an individual task which we call a model.
 
 ```javascript
 const mongoose = require("mongoose");
@@ -109,9 +116,9 @@ const Todo = mongoose.model("Todo", todoSchema);
 
 // Export the Todo model for use in other parts of the application
 module.exports = Todo;
-
 ```
-----------------------------
+
+---
 
 ## View
 
@@ -122,7 +129,6 @@ The **View** is responsible for rendering the user interface and presenting data
 Below given is the Todo.js File from the View part which displays all the available tasks to the browser screen. Here we fetch all the tasks by making an request to the controller through an api which on successful operation return all the available tasks.
 
 ```javascript
-
 // Import necessary modules
 import React, { useState, useEffect } from "react"; // For React hooks
 import TodoList from "./TodoList"; // Import the TodoList component
@@ -167,10 +173,9 @@ function Todo() {
 
 // Export the TodoPage component
 export default Todo;
-
 ```
 
---------------------------
+---
 
 ## Controller
 
@@ -179,13 +184,12 @@ The **Controller** acts as an intermediary between the Model and the View. It re
 ### Example Controller File:
 
 In this example, I have displayed certain part of tasks.js controller where on user request, controller fetchs all tasks from database and return back to view part from where the request came.
-In this example there are two methods listed - 
+In this example there are two methods listed -
 
 - getAllTodos - This method fetchs all the tasks from database and return them to view.
 - createTodo - This method create a new task in database based on the information provided by view part.
 
-
-*Note* - The entry point of controller is [Server.js](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/controllers/server.js) file, from there the request comes to the corresponding controller file.
+_Note_ - The entry point of controller is [Server.js](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/controllers/server.js) file, from there the request comes to the corresponding controller file.
 
 ```javascript
 
@@ -228,7 +232,7 @@ const todoController = {
 
 ```
 
----------------------
+---
 
 ## How It Works
 
@@ -238,7 +242,7 @@ const todoController = {
 4. **Response Rendering**: Once the Model has processed the data, the Controller sends the updated data to the View for rendering.
 5. **User Interface Update**: The View updates the user interface to reflect the changes made to the data.
 
-------------------------
+---
 
 ## Todo Task List Project Architecture
 
@@ -262,7 +266,7 @@ When the backend server receives an API request, it routes the request to the ap
 
 ### Data Processing
 
-The controller processes the incoming request, extracts relevant data, and interacts with the corresponding model file to perform CRUD operations on the database. For example, when creating a new todo task, the `tasks.js` controller interacts with the `tasksModel.js` model to insert the task data into the database.
+The controller processes the incoming request, extracts relevant data, and interacts with the corresponding model file to perform CRUD(create, read, update and delete) operations on the database. For example, when creating a new todo task, the `tasks.js` controller interacts with the `tasksModel.js` model to insert the task data into the database.
 
 ### Database Interaction
 
@@ -286,20 +290,9 @@ The user can continue to interact with the application, performing additional ac
 
 This flow ensures that the Todo Task List application functions smoothly, with data being transferred between the frontend and backend, and CRUD operations being performed accurately and efficiently, following the MVC architecture principles.
 
-----------------
+---
 
-*Note* - Please go through all the files in [MVC](https://github.com/YogeshManni/pattern-library/tree/main/patterns/MVC) folder , I have commented them properly for better understanding. It will help you understand work flow more efficiently.
-
-
------------------------------------
-
-## Advantages of MVC
-
-- **Separation of Concerns**: MVC separates the application into distinct components, making it easier to understand, maintain, and modify.
-- **Modular Design**: Each component of MVC can be developed and tested independently, allowing for greater flexibility and reusability.
-- **Scalability**: MVC facilitates the scalability of the application by allowing developers to add new features or modify existing ones without affecting other parts of the application.
-
-----------------------
+_Note_ - Please go through all the files in [MVC](https://github.com/YogeshManni/pattern-library/tree/main/patterns/MVC) folder , I have commented them properly for better understanding. It will help you understand work flow more efficiently.
 
 ## Conclusion
 
