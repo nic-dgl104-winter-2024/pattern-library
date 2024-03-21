@@ -7,6 +7,9 @@ class Student
     public int Age { get; set; }
     public string Grade { get; set; }
 
+    // Private static instance variable using Lazy initialization
+    private static readonly Lazy<Student> instance = new Lazy<Student>(() => new Student("Default",0,"None"));
+    
     // Constructor
     public Student(string name, int age, string grade)
     {
