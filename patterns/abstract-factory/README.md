@@ -106,5 +106,19 @@ item2.display();
 <br>
 
 This way of separating the code responsible for making a particular object type and the code that uses this object is very convenient, facilitating object code maintenance and large-scale code extension.
+<br>
+<br>
 
+# Resouces
 
+1.[Java Script Code](./abstract-factory.js)  
+
+# References
+
+<br>
+
+1. [GeeksforGeeks - Abstract Factory Pattern](https://www.geeksforgeeks.org/abstract-factory-pattern/)
+
+<br>
+
+2. [Refactoring Guru - Abstract Factory Design Pattern](https://refactoring.guru/design-patterns/abstract-factory)

@@ -57,3 +57,8 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 ## Contributions 
 
+
+
+# References
+
+[GeeksforGeeks - Software Design Patterns](https://www.geeksforgeeks.org/software-design-patterns/?ref=lbp)
