@@ -42,8 +42,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create a new student object
-        Student student = new Student("Demo", 0, "null");
+        // Accessing the singleton instance
+        Student student = Student.Instance;
 
         // Display original details
         Console.WriteLine("Original Details:");
