@@ -51,11 +51,12 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 
 
+
+
+
+
 ## Articles / Websites
 
 
 
-## Contributions 
-
-
-
+## Contributions
