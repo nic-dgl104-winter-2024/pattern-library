@@ -119,6 +119,9 @@ const Todo = mongoose.model("Todo", todoSchema);
 // Export the Todo model for use in other parts of the application
 module.exports = Todo;
 ```
+
+The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/models/tasksModel.js)
+
 <br>
 
 *Mongoose, "Schemas", mongoosejs.com, Jan. 2024, [Mongoose Schema](https://mongoosejs.com/docs/guide.html)*
@@ -179,6 +182,8 @@ function Todo() {
 // Export the TodoPage component
 export default Todo;
 ```
+The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/views/Todo.js)
+
 <br>
 
 *React community, "Your First Component", react.dev, Feb. 2024, [React components](https://react.dev/learn/your-first-component)*
@@ -239,6 +244,9 @@ const todoController = {
   },
 
 ```
+
+The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/controllers/tasks.js)
+
 <br>
 
 *MDN contributors, "Routes and controllers", developer.mozilla.org, 18 Oct. 2023, [Node Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)*
