@@ -55,5 +55,13 @@ class Program
         // Display updated details
         Console.WriteLine("\nUpdated Details:");
         student.DisplayDetails();
+
+        /// <summary>
+        ///  Developer still able to create new object of Student singleton class
+        ///  student1 is new object of singleton class
+        /// </summary>
+
+        Student student1 = new Student("",0,""); 
+        student1.UpdateDetails("R",12,"C");
     }
 }
