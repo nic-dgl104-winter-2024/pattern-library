@@ -6,13 +6,13 @@ In programming, model-view-controller (MVC) is an architectural design pattern t
 - View : Presents the user interface to the user, rendering data received from the Model layer in a format suitable for presentation.
 - Controller : Interprets user input from the View layer, processes it, and interacts with the Model layer to retrieve or manipulate data accordingly.
 
-Sheldon, Robert. “What Is Model-View-Controller (MVC)?: Definition from TechTarget.” WhatIs, TechTarget, 12 Sept. 2023, [techtarget.com](www.techtarget.com/whatis/definition/model-view-controller-MVC#:~:text=In%20programming%2C%20model%2Dview%2D,a%20specific%20set%20of%20tasks)
+*Sheldon, Robert. “What Is Model-View-Controller (MVC)?: Definition from TechTarget.” WhatIs, TechTarget, 12 Sept. 2023, [techtarget.com](www.techtarget.com/whatis/definition/model-view-controller-MVC#:~:text=In%20programming%2C%20model%2Dview%2D,a%20specific%20set%20of%20tasks)*
 
 # Visual representation of MVC architecture
 
 ![image](https://github.com/YogeshManni/pattern-library/assets/29475936/96056260-a719-4651-bee0-685ce6390af8)
 
-sadikarahmantanisha, "the-mvc-architecture", medium.com,19 Sept. 2023, [MVC architecture](https://medium.com/@sadikarahmantanisha/the-mvc-architecture-97d47e071eb2)
+*sadikarahmantanisha, "the-mvc-architecture", medium.com,19 Sept. 2023, [MVC architecture](https://medium.com/@sadikarahmantanisha/the-mvc-architecture-97d47e071eb2)*
 
 ---
 
@@ -236,6 +236,7 @@ const todoController = {
 
 ## Commands to run the project files
 
+
 ### For View (React) part
 
 Firstly you have to make sure you have Node.js installed on your computer, if not you can install it from [here](https://nodejs.org/en/download/current).
@@ -258,7 +259,37 @@ npm start
 If everything works and your code gets compiled, you can see you website live on `http://localhost:3000/`
 
 
-Luke Karrys, "Create React App", create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)
+*Luke Karrys, "Create React App", create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)*
+
+---
+
+### For Controller part
+
+To run server files you need Node.js install on your computer. After installation create a new folder and run the following command inside it to create new Node.js project - 
+
+```
+npm init
+```
+This above command will initalize nodejs project, after that you can install all the node dependencies using following command - 
+
+```
+npm install
+```
+Finally, you can run your server by following command - 
+
+```
+npm run start
+```
+Or you can run a particular file by mentioning its name. For example if I want to run server.js, I will run it by using following command - 
+
+```
+node server.js
+```
+
+If everything works out and your code compile successfully, you will see success message and your server will be running at `http://localhost:5000/`
+
+
+*Mohammed Ibrahim, "Node.js: Step-by-Step", medium.com, 05 Nov. 2023, [Node.js Guide](https://medium.com/@ibrahimhz/creating-your-first-backend-with-node-js-step-by-step-guide-892769af4cb0)*
 
 -----------------------------------------------
 
