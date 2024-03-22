@@ -20,7 +20,7 @@
       // Define a constructor function for the Subject object, that is, to represent the subject of the observer pattern
 
       function ButtonSubject() {
-        this.observers = []; // Array to hold observer functions
+        this.observersList = []; // Array to hold observer functions
       }
 
       // Extend the prototype of the ButtonSubject object with methods subscribe, unsubscribe, and notify
@@ -28,14 +28,14 @@
       ButtonSubject.prototype = {
         // Method to subscribe an observer
         subscribe: function (observer) {
-          this.observers.push(observer);
+          this.observersList.push(observer);
         },
         // Method to unsubscribe an observer
         unsubscribe: function (observerToRemove) {
           // Remove the observerToRemove from the array by finding its index
-          const index = this.observers.indexOf(observerToRemove);
+          const index = this.observersList.indexOf(observerToRemove);
           if (index !== -1) {
-            this.observers.splice(index, 1);
+            this.observersList.splice(index, 1);
           }
         },
 
@@ -44,7 +44,7 @@
         // Method to notify all observers
         notify: function (buttonId) {
           // Call each observer function based on the button clicked
-          for (const observer of this.observers) {
+          for (const observer of this.observersList) {
             observer(buttonId);
           }
         },
@@ -62,16 +62,15 @@
 
       // Subscribe the observer functions to the buttonSubject
       buttonSubject.subscribe(function (buttonId) {
-        if (buttonId === "button1") {
-          document.getElementById("output").textContent =
-            "Button Click Observer 1 is clicked!\n";
-        }
-      });
-
-      buttonSubject.subscribe(function (buttonId) {
-        if (buttonId === "button2") {
-          document.getElementById("output").textContent =
-            "Button Click Observer 2 is clicked!\n";
+        switch(buttonId) {
+          case "button1":
+            document.getElementById("output").textContent =
+              "Button Click Observer 1 is clicked!\n";
+            break;
+          case "button2":
+            document.getElementById("output").textContent =
+              "Button Click Observer 2 is clicked!\n";
+            break;
         }
       });
 
