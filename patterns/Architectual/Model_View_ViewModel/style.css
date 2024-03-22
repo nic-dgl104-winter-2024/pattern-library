@@ -14,9 +14,9 @@ body{
 }
 
 #mvvm button {
-  padding: 15px 30px; /* 按钮大一些 */
+  padding: 15px 30px;
   font-size: 20px;
-  background-color: #8a2be2; /* 紫蓝色 */
+  background-color: #8a2be2; 
   color: white;
   border: none;
   cursor: pointer;
@@ -26,7 +26,7 @@ body{
 }
 
 #mvvm button:hover {
-  background-color: #6a5acd; /* 深紫蓝色 */
+  background-color: #6a5acd;
 }
 
 #mvvm p {
