@@ -7,43 +7,43 @@
 
 
 
-class Observable {
+class Subject {
 
     constructor() {
 
         // The list of subscribers
-        this.subscribers = []
+        this.subscribersList = []
     }
 
     // Function is added to the list of subscribers
     subscribe(fn) {
-        this.subscribers.push(fn);
+        this.subscribersList.push(fn);
     }
 
     // Function will get removed from the subscribers list
     unsubscribe(fn) {
-        this.subscribers = this.subscribers.filter((item) => item !== fn);
+        this.subscribersList = this.subscribersList.filter((item) => item !== fn);
     }
 
     // To broadcast to all the observers
     broadcast(data) {
-        for (let i = 0; i < this.subscribers.length; i++) {
+        for (let i = 0; i < this.subscribersList.length; i++) {
             // Calling each function in the observers list with the broadcast data
-            this.subscribers[i](data);
+            this.subscribersList[i](data);
         }
     }
 }
 
 
-const observer = new Observable();
+const subject = new Subject();
 
 const fn = (data) => {
     console.log("Callback was executed with data", data);
 };
 
 // function 'fn' subscribed to Observable
-observer.subscribe(fn);
+subject.subscribe(fn);
 
 
 // Broadcasting message to all the subscribers
-observer.broadcast("Hello from observable");
+subject.broadcast("Hello from subject");
