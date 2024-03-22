@@ -63,7 +63,10 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 #### References
 
 
+## Functional Patterns vs. OOP Design Patterns in JavaScript
 
+Introduction
+In traditional Object-Oriented Programming (OOP), design patterns are widely used to solve common problems by providing structured approaches to design and development. However, with the rise of Functional Programming (FP), there's a shift towards different paradigms and patterns. In this README, we'll explore the contrast between OOP design patterns and functional patterns in JavaScript.
 
 
 
