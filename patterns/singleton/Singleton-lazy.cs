@@ -1,6 +1,6 @@
 using System;
 
-class Student
+public sealed class Student
 {
     // Properties of the student
     public string Name { get; set; }
@@ -71,6 +71,8 @@ class Program
 
         //Student student1 = new Student("",0,""); 
         //student1.UpdateDetails("R",12,"C");
+        
+        // </example>
 
         /// <summary>
         /// Developer can check the using the bool if the instance is exist before operating the operation 
@@ -80,6 +82,27 @@ class Program
         //  <example>
 
         bool isInstanceCreated = Student.Instance != null; //Checking if the instance has been created yet
-        Console.WriteLine($"Is the instance created? {isInstanceCreated}");         
+        Console.WriteLine($"Is the instance created? {isInstanceCreated}"); 
+
+        // </example>
+
+
+        /// <summary>
+        /// Developer can Create the another instance and can access the Student class and able to perform action 
+        ///  Output: Both object are same (true)
+        /// </summary>
+        Student student1 = Student.Instance;  // creating new object referring to same class 
+
+        if(student == student1)  // comaparing the both instances
+        {
+            Console.WriteLine("Both objects are same");   
+        }
+ 
+        student1.UpdateDetails("Ravi", 30, "A");  // updating the grade of student class using student1 object
+
+        Console.WriteLine("\nUpdated Details: using Student1 object");
+        student.DisplayDetails(); // Showing the details using the student object
+    }
+
     }
 }
