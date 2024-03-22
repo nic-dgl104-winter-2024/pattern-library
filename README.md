@@ -77,7 +77,7 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) is an architectural pattern in software development whose purpose is to provide a clear separation of concerns in applications, especially those with complex user interfaces and interactive features. In both patterns, the program logic of your application (the model) is kept separate from the user interface (the view). The View-Model acts as the mediator between the Model and View. This separation enhances the structure and maintainability of the code, making it easier to develop, test and manage. 
 
-![MVVM Diagram](images/mvvm-diagram.png)
+![MVVM Diagram](Images/mvvm-diagram.png)
 
 (Mastering Xamarin UI Development - Second Edition, n.d.)
 
