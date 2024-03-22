@@ -9,28 +9,28 @@ A multi-language library containing implementations of common software design an
 
 ## Library Table of Contents
 
-### [Creational Patterns](Kaia-pattern-library-main/patterns/Architectual)
+### [Creational Patterns](patterns/Creational)
 
-#### [Singleton](Kaia-pattern-library-main/patterns/Creational/singleton)
-- [JavaScript](Kaia-pattern-library-main/patterns/Creational/singleton/JavaScript)
-- [ReactNative](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
-- [Kotlin](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
-- [Dart](Kaia-pattern-library-main/patterns/Creational/singleton/Dart)
-- [Lua](Kaia-pattern-library-main/patterns/Creational/singleton/Lua)
+#### [Singleton](patterns/Creational/singleton)
+- [JavaScript](patterns/Creational/singleton/JavaScript)
+- [ReactNative](patterns/Creational/singleton/ReactNative)
+- [Kotlin](patterns/Creational/singleton/Kotlin)
+- [Dart](patterns/Creational/singleton/Dart)
+- [Lua](patterns/Creational/singleton/Lua)
 
-### [Behavioral Patterns](Kaia-pattern-library-main/patterns/Behavioral)
+### [Behavioral Patterns](patterns/Behavioral)
 
-####  [Observer](Kaia-pattern-library-main/patterns/Behavioral/Observal)
-- [JavaScript](Kaia-pattern-library-main/patterns/Behavioral/Observal/JavaScript)
-- [ReactNative](Kaia-pattern-library-main/patterns/Behavioral/Observal/React Native)
-- [Kotlin](Kaia-pattern-library-main/patterns/Behavioral/Observal/Kotlin)
-- [Dart](Kaia-pattern-library-main/patterns/Behavioral/Observal/Dart)
-- [Lua](Kaia-pattern-library-main/patterns/Behavioral/Observal/Lua)
+####  [Observer](patterns/Behavioral/Observal)
+- [JavaScript](patterns/Behavioral/Observal/JavaScript)
+- [ReactNative](patterns/Behavioral/Observal/ReactNative)
+- [Kotlin](patterns/Behavioral/Observal/Kotlin)
+- [Dart](patterns/Behavioral/Observal/Dart)
+- [Lua](patterns/Behavioral/Observal/Lua)
 
-### [Architectual Patterns](Kaia-pattern-library-main/patterns/Architectual)
+### [Architectual Patterns](patterns/Architectual)
 
-- [Model View ViewModel](Kaia-pattern-library-main/patterns/Architectual/Model View ViewModel (MVVM))
-- [Model View Controller](Kaia-pattern-library-main/patterns/Architectual/Model View Controller (MVC)
+- [Model View ViewModel](patterns/Architectual/Model_View_ViewModel)
+- [Model View Controller](patterns/Architectual/Model_View_Controller)
 
 
 
