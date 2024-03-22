@@ -1,4 +1,3 @@
-
 export default class JournalSubject {
     constructor() {
       this.observers = [];
