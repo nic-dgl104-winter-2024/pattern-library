@@ -1,0 +1,39 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+
+#mvvm {
+  text-align: center;
+  margin-top: 50px;
+}
+#mvvm h1 {
+  padding-bottom: 64px;
+}
+
+#mvvm button {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #8a2be2; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0 20px;
+  transition: background-color 0.3s ease;
+}
+
+#mvvm button:hover {
+  background-color: #6a5acd;
+}
+
+#mvvm p {
+  font-size: 28px;
+  margin: 0 auto;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 15px;
+  width: 100px
+}
