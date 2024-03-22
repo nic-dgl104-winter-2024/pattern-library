@@ -1,7 +1,7 @@
 # DGL 104 Pattern Library
 A multi-language library containing implementations of common software design and architecture patterns 
 
-# Design Patterns
+## Design Patterns
 
 Design patterns are like templates or solutions to common problems encountered in software design. They represent the best practices used by experienced object-oriented software developers. Design patterns are about reusing designs that have been proven effective, rather than reinventing the wheel. They help you solve specific problems in your code, making your software easier to understand, maintain, and scale.
 
@@ -11,42 +11,41 @@ Here's a brief overview and a list of some fundamental design patterns, divided 
 
 See the [Design Patterns section](./patterns/)
 
-
 ## Documentation Table of Contents
 - [Observer Pattern Definition](#observer-pattern)
 - [Singleton Pattern Definition](#singleton-pattern)
 
 ## Library Table of Contents
 
-### [Creational Patterns](Kaia-pattern-library-main/patterns/Architectual)
+### [Creational Patterns](patterns/Creational)
 
-#### [Singleton](Kaia-pattern-library-main/patterns/Creational/singleton)
-- [JavaScript](Kaia-pattern-library-main/patterns/Creational/singleton/JavaScript)
-- [ReactNative](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
-- [Kotlin](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
-- [Dart](Kaia-pattern-library-main/patterns/Creational/singleton/Dart)
-- [Lua](Kaia-pattern-library-main/patterns/Creational/singleton/Lua)
+#### [Singleton](patterns/Creational/singleton)
+- [JavaScript](patterns/Creational/singleton/JavaScript)
+- [ReactNative](patterns/Creational/singleton/ReactNative)
+- [Kotlin](patterns/Creational/singleton/Kotlin)
+- [Dart](patterns/Creational/singleton/Dart)
+- [Lua](patterns/Creational/singleton/Lua)
 
-### [Behavioral Patterns](Kaia-pattern-library-main/patterns/Behavioral)
+### [Behavioral Patterns](patterns/Behavioral)
 
-####  [Observer](Kaia-pattern-library-main/patterns/Behavioral/Observal)
-- [JavaScript](Kaia-pattern-library-main/patterns/Behavioral/Observal/JavaScript)
-- [ReactNative](Kaia-pattern-library-main/patterns/Behavioral/Observal/React Native)
-- [Kotlin](Kaia-pattern-library-main/patterns/Behavioral/Observal/Kotlin)
-- [Dart](Kaia-pattern-library-main/patterns/Behavioral/Observal/Dart)
-- [Lua](Kaia-pattern-library-main/patterns/Behavioral/Observal/Lua)
+####  [Observer](patterns/Behavioral/Observal)
+- [JavaScript](patterns/Behavioral/Observal/JavaScript)
+- [ReactNative](patterns/Behavioral/Observal/ReactNative)
+- [Kotlin](patterns/Behavioral/Observal/Kotlin)
+- [Dart](patterns/Behavioral/Observal/Dart)
+- [Lua](patterns/Behavioral/Observal/Lua)
 
-### [Architectual Patterns](Kaia-pattern-library-main/patterns/Architectual)
+### [Architectual Patterns](patterns/Architectual)
 
-- [Model View ViewModel](Kaia-pattern-library-main/patterns/Architectual/Model View ViewModel (MVVM))
-- [Model View Controller](Kaia-pattern-library-main/patterns/Architectual/Model View Controller (MVC)
+- [Model View ViewModel](patterns/Architectual/Model_View_ViewModel)
+- [Model View Controller](patterns/Architectual/Model_View_Controller)
 
 
 
 
 <a id="observer-pattern"></a>
 
-### Definition of Observer Pattern
+## Definition of Observer Pattern
 
 The observer pattern is a behavioral design pattern often used in software development. 
 
@@ -56,7 +55,7 @@ This pattern is often employed in software systems to ensure consistency among m
 
 As an example, consider a scenario using the analogy of a publisher/subscriber relationship. In this analogy, the publisher acts as the subject, while the subscribers represent the observers. Whenever a significant event occurs to the publisher, it notifies the subscribers by invoking specific notification methods on their objects. This process ensures that subscribers are quickly informed of important updates.
 
-#### References
+### References
 
 Design Patterns and Refactoring. (n.d.). Sourcemaking.com. https://sourcemaking.com/design_patterns/observer
 
@@ -67,9 +66,10 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 <a id="#singleton-pattern"></a> 
 
-### Definition of Singelton Pattern
+## Definition of Singleton Pattern
 
-#### References
+### References
+
 
 ## Model View View-Model (MVVM) - Architectural Pattern
 
@@ -152,3 +152,11 @@ Michaelstonis. (2022, November 4). _Model-View-ViewModel - .NET._ Microsoft Lear
 
 Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture explained._ Web Design, UI/UX, Branding, and App Development Blog. https://www.ramotion.com/blog/what-is-mvvm/ 
 
+
+
+
+## Articles / Websites
+
+
+
+## Contributions 
