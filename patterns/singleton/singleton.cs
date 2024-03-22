@@ -20,3 +20,17 @@ public sealed class Calculations
         return num1 + num2;
     }
 }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Access the Singleton instance
+        Calculations cals = Calculations.Instance;
+
+        // Perform addition operation
+        int result = cals .Add(5, 3);
+
+        Console.WriteLine("Result of addition: " + result);
+    }
+}
