@@ -37,7 +37,7 @@ A multi-language library containing implementations of common software design an
 
 <a id="observer-pattern"></a>
 
-### Definition of Observer Pattern
+## Definition of Observer Pattern
 
 The observer pattern is a behavioral design pattern often used in software development. 
 
@@ -47,7 +47,7 @@ This pattern is often employed in software systems to ensure consistency among m
 
 As an example, consider a scenario using the analogy of a publisher/subscriber relationship. In this analogy, the publisher acts as the subject, while the subscribers represent the observers. Whenever a significant event occurs to the publisher, it notifies the subscribers by invoking specific notification methods on their objects. This process ensures that subscribers are quickly informed of important updates.
 
-#### References
+### References
 
 Design Patterns and Refactoring. (n.d.). Sourcemaking.com. https://sourcemaking.com/design_patterns/observer
 
@@ -58,9 +58,9 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 <a id="#singleton-pattern"></a> 
 
-### Definition of Singelton Pattern
+## Definition of Singelton Pattern
 
-#### References
+### References
 
 
 
