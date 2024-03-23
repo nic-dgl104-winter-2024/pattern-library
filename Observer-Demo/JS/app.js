@@ -4,6 +4,11 @@
 "use strict";
 (() =>{
   window.addEventListener("load", (event) =>{
-    console.log('Hello World!');
+
+    // set global names
+    window.TIMEFORM = document.getElementById('timeController');
+    window.TIMEDELAY = TIMEFORM.querySelector('[name="timeInput"]');
+    // eventHandler for timeControl submission. Time controller is used to set delay of the example, to improve the understanding of how the Subject and Observer interact with one another.
+    TIMEFORM.addEventListener("submit", timeControl);
   });
 })();
