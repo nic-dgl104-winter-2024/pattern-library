@@ -4,57 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Observer Pattern Live Demo</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <h1>Observer Pattern Live Demo</h1>
     </header>
     <!-- Example of the issue the observer pattern solves -->
-    <section id="problem">
-      <div class="problem__object">
-        <h2>Object</h2>
-        <h3>Data</h3>
-      </div>
-      <div class="problem__data">
-        <h2>Data</h2>
-        <h3>Value</h3>
-      </div>
-    </section>
+    <main>
+      <section id="problem">
+        <div class="problem__object">
+          <h2>Object</h2>
+          <h3>Data</h3>
+        </div>
+        <div class="problem__data">
+          <h2>Data</h2>
+          <h3>Value</h3>
+        </div>
+      </section>
 
-    <section id="controlls">
-      <form id="timeController">
-        <label for="timeInput">Time in MS</label>
-        <small>1000ms = 1s</small>
-        <input name="timeInput" type="number" value="1000" />
-        <button type="submit">Save</button>
-      </form>
-    </section>
-
-    <section>
-      <div id="subjects">
-        <h2>Subjects</h2>
-        
-        <form id="addNewSubject">
-          <label for="newSubject">Create New Subject</label>
-          <input type="text" name="newSubject" placeholder="Subject">
-          <button type="submit">Add</button>
+      <section id="controlls">
+        <form id="timeController">
+          <label for="timeInput">Time in MS</label>
+          <small>1000ms = 1s</small>
+          <input name="timeInput" type="number" value="1000" />
+          <button type="submit">Save</button>
         </form>
-      </div>
+      </section>
 
-      <div id="observers">
-        <h2>Observers</h2>
-        <form id="addNewObserver">
-          <label for="newObserver">Create New Observer</label>
-          <input type="text" name="newObserser" placeholder="Observer">
-          <button type="submit">Add</button>
-        </form>
-      </div>
-    </section>
+      <section class="grid-cols-2">
+        <div id="subjects">
+          <h2>Subjects</h2>
+          <ul id="subjectList">
+            <li>
+              Subject
+              <ul>
+                <li>
+                  Observer
+                  <button ob-data="theId">Remove</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form id="addNewSubject">
+            <label for="newSubject">Create New Subject</label>
+            <input type="text" name="newSubject" placeholder="Subject" />
+            <button type="submit">Add</button>
+          </form>
+        </div>
 
-    <section id="responses">
-      <h2>Responses</h2>
-    </section>
-    <script src="js/app.js"></script>
-    <script src="js/events.js"></script>
+        <div id="observers">
+          <h2>Observers</h2>
+          <ul id="observerList">
+            <li>
+              Observer
+              <ul>
+                <li>
+                  Subjects
+                  <button ob-data="subscriber">Unsubscribe</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <form id="addNewObserver">
+            <label for="newObserver">Create New Observer</label>
+            <input type="text" name="newObserser" placeholder="Observer" />
+            <button type="submit">Add</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="responses">
+        <h2>Responses</h2>
+      </section>
+      <script src="js/app.js"></script>
+      <script src="js/events.js"></script>
+    </main>
   </body>
 </html>
