@@ -32,5 +32,10 @@ class Program
         int result = cals .Add(5, 3);
 
         Console.WriteLine("Result of addition: " + result);
+        Calculations cals1 = Calculations.Instance;
+         if(cals1 == cals)
+	{
+             Console.WriteLine("cals1 and cals are equal");
+         }
     }
 }
