@@ -2,11 +2,11 @@
 
 
 The Prototype Design Pattern is a creational pattern that enables the creation of new objects by copying an existing object. Prototype allows us to hide the complexity of making new instances from the client. The concept is to copy an existing object rather than create a new instance from scratch, something that may include costly operations. The existing object acts as a prototype and contains the state of the object.
-
+<br>
 ## Prototype Pattern in JavaScript
 
 It promotes the creation of objects without specifying the exact class of object to create. This pattern is particularly useful when you want to create instances of complex objects efficiently.
-
+<br>
 Below is an example of how to implement and use the prototype pattern in JavaScript.
 
 ```javascript
@@ -64,17 +64,11 @@ const vehiclePrototype = {
 
 ```Javascript
 
-class ConcreteItem1 extends Item {
-    constructor() {
-        super("ConcreteItem1");
-    }
-}
+const car1 = Object.create(vehiclePrototype);
+car1.init('Toyota', 'Camry');
 
-class ConcreteItem2 extends Item {
-    constructor() {
-        super("ConcreteItem2");
-    }
-}
+const car2 = Object.create(vehiclePrototype);
+car2.init('Honda', 'Civic');
 
 ```
 
@@ -88,22 +82,8 @@ class ConcreteItem2 extends Item {
 
 ```Javascript
 
-class Creator {
-    createItem(type) {
-        let item;
-        switch (type) {
-            case "type1":
-                item = new ConcreteItem1();
-                break;
-            case "type2":
-                item = new ConcreteItem2();
-                break;
-            default:
-                throw new Error("Invalid Item Type");
-        }
-        return item;
-    }
-}
+console.log(car1.getDetails()); // Output: 'Toyota Camry'
+console.log(car2.getDetails()); // Output: 'Honda Civic'
 
 
 ```
