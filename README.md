@@ -1,7 +1,15 @@
 # DGL 104 Pattern Library
 A multi-language library containing implementations of common software design and architecture patterns 
 
+## Design Patterns
 
+Design patterns are like templates or solutions to common problems encountered in software design. They represent the best practices used by experienced object-oriented software developers. Design patterns are about reusing designs that have been proven effective, rather than reinventing the wheel. They help you solve specific problems in your code, making your software easier to understand, maintain, and scale.
+
+> Design templates work as a key to producing a perfect and functional framework and are helpful for developers in easily comprehending their code. In addition to solving common problems they help, also, to avoid duplication that would arise in case the code was not moduled.
+
+Here's a brief overview and a list of some fundamental design patterns, divided into three main categories:Here's a brief overview and a list of some fundamental design patterns, divided into three main categories.
+
+See the [Design Patterns section](./patterns/)
 
 ## Documentation Table of Contents
 - [Observer Pattern Definition](#observer-pattern)
@@ -9,35 +17,35 @@ A multi-language library containing implementations of common software design an
 
 ## Library Table of Contents
 
-### [Creational Patterns](Kaia-pattern-library-main/patterns/Architectual)
+### [Creational Patterns](patterns/Creational)
 
-#### [Singleton](Kaia-pattern-library-main/patterns/Creational/singleton)
-- [JavaScript](Kaia-pattern-library-main/patterns/Creational/singleton/JavaScript)
-- [ReactNative](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
-- [Kotlin](Kaia-pattern-library-main/patterns/Creational/singleton/Kotlin)
-- [Dart](Kaia-pattern-library-main/patterns/Creational/singleton/Dart)
-- [Lua](Kaia-pattern-library-main/patterns/Creational/singleton/Lua)
+#### [Singleton](patterns/Creational/singleton)
+- [JavaScript](patterns/Creational/singleton/JavaScript)
+- [ReactNative](patterns/Creational/singleton/ReactNative)
+- [Kotlin](patterns/Creational/singleton/Kotlin)
+- [Dart](patterns/Creational/singleton/Dart)
+- [Lua](patterns/Creational/singleton/Lua)
 
-### [Behavioral Patterns](Kaia-pattern-library-main/patterns/Behavioral)
+### [Behavioral Patterns](patterns/Behavioral)
 
-####  [Observer](Kaia-pattern-library-main/patterns/Behavioral/Observal)
-- [JavaScript](Kaia-pattern-library-main/patterns/Behavioral/Observal/JavaScript)
-- [ReactNative](Kaia-pattern-library-main/patterns/Behavioral/Observal/React Native)
-- [Kotlin](Kaia-pattern-library-main/patterns/Behavioral/Observal/Kotlin)
-- [Dart](Kaia-pattern-library-main/patterns/Behavioral/Observal/Dart)
-- [Lua](Kaia-pattern-library-main/patterns/Behavioral/Observal/Lua)
+####  [Observer](patterns/Behavioral/Observal)
+- [JavaScript](patterns/Behavioral/Observal/JavaScript)
+- [ReactNative](patterns/Behavioral/Observal/ReactNative)
+- [Kotlin](patterns/Behavioral/Observal/Kotlin)
+- [Dart](patterns/Behavioral/Observal/Dart)
+- [Lua](patterns/Behavioral/Observal/Lua)
 
-### [Architectual Patterns](Kaia-pattern-library-main/patterns/Architectual)
+### [Architectual Patterns](patterns/Architectual)
 
-- [Model View ViewModel](Kaia-pattern-library-main/patterns/Architectual/Model View ViewModel (MVVM))
-- [Model View Controller](Kaia-pattern-library-main/patterns/Architectual/Model View Controller (MVC)
+- [Model View ViewModel](patterns/Architectual/Model_View_ViewModel)
+- [Model View Controller](patterns/Architectual/Model_View_Controller)
 
 
 
 
 <a id="observer-pattern"></a>
 
-### Definition of Observer Pattern
+## Definition of Observer Pattern
 
 The observer pattern is a behavioral design pattern often used in software development. 
 
@@ -47,7 +55,7 @@ This pattern is often employed in software systems to ensure consistency among m
 
 As an example, consider a scenario using the analogy of a publisher/subscriber relationship. In this analogy, the publisher acts as the subject, while the subscribers represent the observers. Whenever a significant event occurs to the publisher, it notifies the subscribers by invoking specific notification methods on their objects. This process ensures that subscribers are quickly informed of important updates.
 
-#### References
+### References
 
 Design Patterns and Refactoring. (n.d.). Sourcemaking.com. https://sourcemaking.com/design_patterns/observer
 
@@ -58,94 +66,97 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 <a id="#singleton-pattern"></a> 
 
-### Definition of Singelton Pattern
-
-#### References
-
-
-## Functional Patterns vs. OOP Design Patterns in JavaScript
-
-### Introduction: 
-
-In traditional Object-Oriented Programming (OOP), design patterns are widely used to solve common problems by providing structured approaches to design and development. However, with the rise of Functional Programming (FP), there's a shift towards different paradigms and patterns. In this Section, we'll explore the contrast between OOP design patterns and functional patterns in JavaScript.
-
-### OOP Design Patterns
-OOP design patterns like Singleton, Factory, Observer, and others are well-established concepts in JavaScript development. They focus on class hierarchies, encapsulation, and inheritance to achieve modularity and extensibility.
-
-For example, the Singleton pattern ensures that a class has only one instance and provides a global point of access to it. In JavaScript:
-
-```
-This example is taken from this repository's Singleton JS code.
-
-/**
- * Singleton class
- *
- * @class
- * @returns {AlertDialog} The AlertDialog class instance.
- */
-
-class Singleton {
-	constructor() {
-		if (Singleton.instance) {
-			return Singleton.instance;
-		}
-		this.data = "This is the singleton instance.";
-
-		// Save the instance as a static property
-		Singleton.instance = this;
-
-		return this;
-	}
-
-	getData() {
-		return this.data;
-	}
-}
-
-const instance1 = new Singleton();
-console.log(instance1.getData());
-// Output: This is the singleton instance.
-
-const instance2 = new Singleton();
-console.log(instance2.getData());
-// Output: This is the singleton instance.
-
-console.log(instance1 === instance2); // Output: true
-```
-
-### Functional Patterns
-Functional programming emphasizes immutable data and pure functions without side effects. While traditional OOP design patterns may not directly translate, functional programming offers its own set of patterns to address similar concerns.
-
-One common pattern in FP is the Higher-Order Function pattern. Higher-order functions take other functions as arguments or return them, enabling composition and abstraction.
-
-```
-// Example of map, a higher-order function
-const numbers = [1, 2, 3, 4, 5];
-const doubled = numbers.map(x => x * 2);
-console.log(doubled); // [2, 4, 6, 8, 10]
-```
-
-
-### Contrast and Comparison
-**Immutability:** FP favors immutable data, reducing the risk of unintended state changes. OOP, while supporting immutability, often relies on mutable state within objects.
-
-**Composition vs. Inheritance:** Functional programming encourages composition over inheritance. Instead of relying on class hierarchies, functions are composed to achieve complex behaviors.
-
-**Pattern Matching:** FP languages like Haskell or Scala offer pattern matching, allowing elegant handling of different cases. This contrasts with traditional switch-case or if-else statements in OOP.
-
-### Conclusion
-While OOP design patterns are specific to class-based systems, functional programming offers alternative patterns that address similar concerns. Functional patterns emphasize immutability, higher-order functions, and composition, leading to concise and expressive code. While the transition from OOP to FP may require a mindset shift, understanding both paradigms equips developers with a broader toolkit for solving problems.
+## Definition of Singleton Pattern
 
 ### References
 
-* [javascript-functional-programming-vs-oop](https://anywhere.epam.com/en/blog/javascript-functional-programming-vs-oop)
-* [Comparing Dessign Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
-* [singleton-pattern](https://www.patterns.dev/vanilla/singleton-pattern/)
-* [functional-programming-javascript](https://www.toptal.com/javascript/functional-programming-javascript)
+
+## Model View View-Model (MVVM) - Architectural Pattern
+
+### Overview of the concept
+
+Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) is an architectural pattern in software development whose purpose is to provide a clear separation of concerns in applications, especially those with complex user interfaces and interactive features. In both patterns, the program logic of your application (the model) is kept separate from the user interface (the view). The View-Model acts as the mediator between the Model and View. This separation enhances the structure and maintainability of the code, making it easier to develop, test and manage. 
+
+![MVVM Diagram](Images/mvvm-diagram.png)
+
+(Mastering Xamarin UI Development - Second Edition, n.d.)
+
+### Which problems does it solve?
+
+MVVM was developed to address several problems in the development of graphical user interfaces (GUIs), particularly those related to separation of concerns, testability and maintanability. Here are two key issues MVVM aims to solve:
+
+1. Tight coupling between UI and backend logic: in traditional GUI development approaches, UI code often becomes intertwined with backend program logic which makes it hard to test, maintain and scale.
+**Solution:** MVVM introduces a ViewModel layer that acts as an intermediary betwen the View (UI) and the Model (backend logic and data). This separation ensures that changes to the View don't directly impact the program logic, and vice versa. The key benefits to decoupling the UI from the backend logic include: UI and backend code can be tested separately, it promotes code reusability (the Model and ViewModel logic can be reused or easily adapted for different interfaces), and frequent design changes don't impact underlying program logic.
+
+2. Complexity in managing Stateful UIs and Data Binding: managing synchronization between the UI and underlying data models can be complex and error-prone especially in dynamic applications where the UI needs to reflect changes in real-time.
+**Solution:** By leveraging data-binding mechanisms, MVVM automates View-ViewModel synchronization. Changes in the data layer are reflected in the UI automatically, and user interactions with the UI are propagated back to the model via the ViewModel. This simplifies the development of complex, stateful user interfaces.
+
+**Key benefits:**
+* Reduces dependencies and conflicts 
+* Facilitates testability
+* Improves maintainability
+* Data binding reduces need for boilerplate code
+* Enhanced UI responsiveness
+* Simplifies UI state management
+* Facilitates rich and interactive UIs
+* Enhanced security
+
+### Enhancements over MVC
+
+MVVM evolvees from MVC but introduces two crucial distinctions:
+
+* Data-binding: Unlike MVC, MVVM's View is fully decoupled from the Model, heavily relying on data binding for synchronization, thus minimizing direct UI-program logic interaction and facilitating dynamic UI responsiveness.
+
+* ViewModel's role: the ViewModel is primarily concerned with preparing data for display while the Controller in MVC directly manages application flow, deciding which content to display and reacting to user inputs by updating the Model or selecting a different view.
+
+### Data Binding Explained
+
+Data binding in MVVM is a foundational concept that establishes a two-way connection between the application's UI (the View) and the data it displays (represented by the ViewModel). This connection allows for **automatic synchronization of data** between the ViewModel and the View, meaning that when the data in the ViewModel changes, the UI automatically updates to reflect these changes and vice versa.
+
+**How Data Binding Works in MVVM**
+
+From ViewModel to View: When a property in the ViewModel changes (for instance, due to program logic operations or user input processed by the ViewModel), data binding ensures that these changes are automatically reflected in the View. For example, if the ViewModel holds a userName property and this property is updated, any UI element bound to userName will display the updated value.
+
+From View to ViewModel: Data binding also works in the opposite direction. If a user interacts with the UI in a way that modifies a bound data element (like editing a text field that's bound to the userName property), the new value is automatically propagated back to the ViewModel. This keeps the underlying data model in sync with the user interface.
+
+**Benefits of Data Binding in MVVM**
+* Reducing boilerplate code by eliminating the need for manual UI updates
+* Helps maintain clean separation between the View and ViewModel
+* Simplifies state management and enhances maintanability 
+
+### Use Cases
+
+MVVM is a desirable architectural pattern in scenarios requiring complex UIs, dynamic data presentation and sophisticated interaction logic, such as:
+
+* Rich Desktop and Web Application: offers as seamless user experience with dynamic UI updates.
+* Mobile Applications: supports cross-platform development with shared UI logic.
+* Interactive content and games: facilitates complex game logic and UI separation
+* UI prototyping: accelerates prototyping with parallel design and development
+
+**Examples of tools, frameworks and programming languages that implement the MVVM pattern:** 
+* [Microsoft’s MVVM Toolkit](https://learn.microsoft.com/en-us/dotnet/communitytoolkit/mvvm/), provides a collection of standard types that developers can use to build applications  
+* [Maui](https://learn.microsoft.com/en-us/dotnet/maui/what-is-maui?view=net-maui-7.0), Microsoft’s cross-platform framework for creating native mobile and desktop apps 
+* [Angular](https://angular.io/)
+* [React](https://react.dev/)
+* [Xamarin](https://dotnet.microsoft.com/en-us/apps/xamarin) 
+* [WPF (Windows Presentation Foundation)](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/?view=netdesktop-8.0)
+* [Android ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+
+### References
+
+Gallardo, E. (2023, January 9). _What is MVVM Architecture?_ Built In. https://builtin.com/software-engineering-perspectives/mvvm-architecture 
+
+_Mastering Xamarin UI Development - Second Edition._ (n.d.). https://subscription.packtpub.com/book/mobile/9781788995511/5/ch05lvl1sec41/understanding-the-mvvm-architectural-pattern
+
+Michaelstonis. (2022, November 4). _Model-View-ViewModel - .NET._ Microsoft Learn. https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm 
+
+Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture explained._ Web Design, UI/UX, Branding, and App Development Blog. https://www.ramotion.com/blog/what-is-mvvm/ 
+
+
+
 
 ## Articles / Websites
 
 
 
 ## Contributions 
-
