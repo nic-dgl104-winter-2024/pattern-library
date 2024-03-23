@@ -5,16 +5,18 @@ class MySingleton {
 
   // Private constructor to prevent direct construction calls with the `new` operator.
   constructor() {
-    if (typeof MySingleton.instance === 'object') {
-      return MySingleton.instance;
+    if (MySingleton.instance !== null) {
+      throw new Error("Singleton instance already exists. Use getInstance method.");
     }
-    MySingleton.instance = this;
 
     // Initialize properties
     this.myProperty = "Initial Value";
+
+    MySingleton.instance = this;
+    Object.freeze(MySingleton.instance); // Ensure the instance is immutable
   }
 
-  // Static method to get instance
+// Static method to get instance
   static getInstance() {
     if (!MySingleton.instance) {
       MySingleton.instance = new MySingleton();
@@ -40,5 +42,4 @@ console.log(instance1 === instance2); // true, both variables hold the same inst
 // Accessing a method of the Singleton instance
 instance1.myMethod(); // Outputs: Singleton method has been called.
 
-// Exporting the Singleton if you want to use it in other parts of your application
-export default MySingleton;
+
