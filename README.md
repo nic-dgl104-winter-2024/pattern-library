@@ -164,44 +164,7 @@ OOP design patterns like Singleton, Factory, Observer, and others are well-estab
 
 For example, the Singleton pattern ensures that a class has only one instance and provides a global point of access to it. In JavaScript:
 
-```
-This example is taken from this repository's Singleton JS code.
-
-/**
- * Singleton class
- *
- * @class
- * @returns {AlertDialog} The AlertDialog class instance.
- */
-
-class Singleton {
-	constructor() {
-		if (Singleton.instance) {
-			return Singleton.instance;
-		}
-		this.data = "This is the singleton instance.";
-
-		// Save the instance as a static property
-		Singleton.instance = this;
-
-		return this;
-	}
-
-	getData() {
-		return this.data;
-	}
-}
-
-const instance1 = new Singleton();
-console.log(instance1.getData());
-// Output: This is the singleton instance.
-
-const instance2 = new Singleton();
-console.log(instance2.getData());
-// Output: This is the singleton instance.
-
-console.log(instance1 === instance2); // Output: true
-```
+Please see the example for [Singleton pattern in JavaScript](https://github.com/nic-dgl104-winter-2024/pattern-library/blob/main/patterns/Creational/singleton/JavaScript/singleton.js)
 
 ### Functional Patterns
 Functional programming emphasizes immutable data and pure functions without side effects. While traditional OOP design patterns may not directly translate, functional programming offers its own set of patterns to address similar concerns.
@@ -209,8 +172,13 @@ Functional programming emphasizes immutable data and pure functions without side
 One common pattern in FP is the Higher-Order Function pattern. Higher-order functions take other functions as arguments or return them, enabling composition and abstraction.
 
 ```
+JavaScript
 // Example of map, a higher-order function
+
 const numbers = [1, 2, 3, 4, 5];
+// Using the map method, which is a higher-order function,
+// to apply the arrow function to each element of the numbers array.
+// The arrow function takes an argument 'x' and returns 'x * 2'.
 const doubled = numbers.map(x => x * 2);
 console.log(doubled); // [2, 4, 6, 8, 10]
 ```
