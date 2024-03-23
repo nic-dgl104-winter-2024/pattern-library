@@ -34,8 +34,8 @@ class Program
         Console.WriteLine("Result of addition: " + result);
         Calculations cals1 = Calculations.Instance;
          if(cals1 == cals)
-	{
-             Console.WriteLine("cals1 and cals are equal");
+	    {
+             Console.WriteLine("cals1 and cals both instances are equal");
          }
     }
 }
