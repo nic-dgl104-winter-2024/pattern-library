@@ -53,10 +53,10 @@ const vehiclePrototype = {
 
 ```
 
--In this part of the code, an object called **vehiclePrototype** is defined, which acts as a prototype for other objects of type vehicle.
--The **vehiclePrototype** object has two methods: **init** and **getDetails**.
--The **init** method is used to initialize the **make** and **model** properties of the object.
--The **getDetails** method returns a string containing the vehicle details, such as the make and model.
+- In this part of the code, an object called **vehiclePrototype** is defined, which acts as a prototype for other objects of type vehicle.
+- The **vehiclePrototype** object has two methods: **init** and **getDetails**.
+- The **init** method is used to initialize the **make** and **model** properties of the object.
+- The **getDetails** method returns a string containing the vehicle details, such as the make and model.
 
 
 
@@ -78,9 +78,9 @@ class ConcreteItem2 extends Item {
 
 ```
 
--In this part of the code, new vehicle instances (**car1** and **car2**) are created using the **Object.create()** method.
--The **vehiclePrototype** object is passed as an argument to **Object.create()**, which sets the prototype of the new created object to **vehiclePrototype**.
--The **init()** method is then called on each instance to initialize the **make** and **model** properties with specific values.
+- In this part of the code, new vehicle instances (**car1** and **car2**) are created using the **Object.create()** method.
+- The **vehiclePrototype** object is passed as an argument to **Object.create()**, which sets the prototype of the new created object to **vehiclePrototype**.
+- The **init()** method is then called on each instance to initialize the **make** and **model** properties with specific values.
 
 
 
@@ -108,7 +108,7 @@ class Creator {
 
 ```
 
--The **getDetails(**)** methods are used on each instance (**car1** and **car2**) to obtain and record the details of each vehicle in the console.
+- The **getDetails(**)** methods are used on each instance (**car1** and **car2**) to obtain and record the details of each vehicle in the console.
 
 
 <br>
