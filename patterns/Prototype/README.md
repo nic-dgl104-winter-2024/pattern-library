@@ -3,7 +3,7 @@
 
 The Prototype Design Pattern is a creational pattern that enables the creation of new objects by copying an existing object. Prototype allows us to hide the complexity of making new instances from the client. The concept is to copy an existing object rather than create a new instance from scratch, something that may include costly operations. The existing object acts as a prototype and contains the state of the object.
 
-Prototype Pattern in JavaScript
+## Prototype Pattern in JavaScript
 
 It promotes the creation of objects without specifying the exact class of object to create. This pattern is particularly useful when you want to create instances of complex objects efficiently.
 
@@ -34,9 +34,8 @@ console.log(car2.getDetails()); // Output: 'Honda Civic'
 
 ```
 
-<br>
-
 Below is an explanation of the above code.
+<br>
 
 ### 1. Prototype object
 
@@ -54,16 +53,12 @@ const vehiclePrototype = {
 
 ```
 
-First of all, we upgrade on it to Item class which will function as a means of access to our items. And, in case of Java and TypeScript, we would apply an interface that is not available in JavaScript; therefore, we use a base class. This place shows a constructor that uses the name of the item as an argument and the display() function which displays the item name. 
+-In this part of the code, an object called **vehiclePrototype** is defined, which acts as a prototype for other objects of type vehicle.
+-The **vehiclePrototype** object has two methods: **init** and **getDetails**.
+-The **init** method is used to initialize the **make** and **model** properties of the object.
+-The **getDetails** method returns a string containing the vehicle details, such as the make and model.
 
-<br>
 
-*In this part of the code, an object called vehiclePrototype is defined, which acts as a prototype for other objects of type vehicle.*
-*The vehiclePrototype object has two methods: init and getDetails.*
-*The init method is used to initialize the make and model properties of the object.*
-*The getDetails method returns a string containing the vehicle details, such as the make and model.*
-
-<br>
 
 ### 2. Create new instances using the prototype
 
@@ -83,9 +78,9 @@ class ConcreteItem2 extends Item {
 
 ```
 
-In this part of the code, new vehicle instances (car1 and car2) are created using the Object.create() method.
-The vehiclePrototype object is passed as an argument to Object.create(), which sets the prototype of the new created object to vehiclePrototype.
-The init() method is then called on each instance to initialize the make and model properties with specific values.
+-In this part of the code, new vehicle instances (**car1** and **car2**) are created using the **Object.create()** method.
+-The **vehiclePrototype** object is passed as an argument to **Object.create()**, which sets the prototype of the new created object to **vehiclePrototype**.
+-The **init()** method is then called on each instance to initialize the **make** and **model** properties with specific values.
 
 
 
@@ -113,15 +108,12 @@ class Creator {
 
 ```
 
-<br>
-
-*The getDetails() methods are used on each instance (car1 and car2) to obtain and record the details of each vehicle in the console.*
-
+-The **getDetails(**)** methods are used on each instance (**car1** and **car2**) to obtain and record the details of each vehicle in the console.
 
 
 <br>
 
-In this example, vehiclePrototype acts as a common prototype for all objects of type vehicle, and new vehicle instances (car1 and car2) can be created using this prototype as a base.
+In this example, **vehiclePrototype** acts as a common prototype for all objects of type vehicle, and new vehicle instances (**car1** and **car2**) can be created using this prototype as a base.
 <br>
 <br>
 
