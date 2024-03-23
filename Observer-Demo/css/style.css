@@ -27,3 +27,30 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+.place-items-center {
+  place-items: center;
+}
+.border-2 {
+  border: 2px solid black;
+}
+.problem {
+  background-color: purple;
+}
+.controlls {
+  background-color: firebrick;
+}
+.pattern {
+  background-color: pink;
+}
+.responses {
+  background-color: orange;
+}
+button,
+input {
+  padding: 6px 10px;
+  border-radius: 7px;
+  border: 2px solid palevioletred;
+}
+button:hover {
+  cursor: pointer;
+}
