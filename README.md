@@ -68,8 +68,21 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 ## Definition of Singleton Pattern
 
+Singleton is a creational design pattern that uses a single class that can only be instantiated once. This class allows you to easily access its single object from anywhere in the codebase without having to create new or additional instances of the class. This is because the goal is to have only one instance of a class throughout an application, which makes Singletons excel at managing global state in an application.
+
+Take a class Calendar as an example. Multiple Calendar instances would introduce confusion and errors as each may have its own settings for time and date format and different time zone settings.  
+
+
+It is for this reason that Singletons provide the best design solution to the above scenario because with only one instance of class existing, there's only one  source of truth that provides a centralized way to handle shared data, preventing conflicting updates or inconsistent data.
+
+
 ### References
 
+Design pattern - Singleton pattern. (n.d.). https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm
+
+Eduard Ghergu Software Architect. (2023, June 27). Singleton Design Pattern: definition, implementation, and benefits | Pentalog. Pentalog. https://www.pentalog.com/blog/design-patterns/singleton-design-pattern/
+
+Rahman, S. (2023, April 3). The 3 Types of Design Patterns All Developers Should Know (with code examples of each). freeCodeCamp.org. https://www.freecodecamp.org/news/the-basic-design-patterns-all-developers-need-to-know/
 
 ## Model View View-Model (MVVM) - Architectural Pattern
 
