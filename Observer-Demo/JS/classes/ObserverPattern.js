@@ -37,35 +37,34 @@ export class Subject {
 export class Observer {
   constructor() {
     this.id = Date.now();
+    this.bind;
     this.subList = [];
-    this.logs = [];
   }
-  
   update() {
-    this.logs.forEach(log => {
-      log.textContent = this.getSubListData();
-    })
+    let ele = document.querySelectorAll(this.bind);
+    ele.forEach((ele) => {
+      ele.textContent = this.getSubListData();
+    });
   }
   getSubListData() {
     let data = [];
-    this.subList.forEach(subject => {
+    this.subList.forEach((subject) => {
       data.push(subject.getData());
-    })
+    });
     return data;
   }
   observing(subject) {
     this.subList.push(subject);
   }
-  
+
   data() {
     let dataArray = [];
-    this.subList.forEach(subject => {
+    this.subList.forEach((subject) => {
       dataArray.push(subject.getData());
     });
     return dataArray;
   }
-  log(ele) {
-    this.logs.push(ele);
+  dataBind(bindTo) {
+    this.bind = `[${bindTo}="${this.id}"]`;
   }
 }
-

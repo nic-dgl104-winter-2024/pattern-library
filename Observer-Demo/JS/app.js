@@ -7,11 +7,14 @@ const subject = new Subject();
 const observer = new Observer();
 
 const tag = document.getElementById('subjectData');
-observer.log(tag);
+const tag2 = document.getElementById('bind');
+tag.setAttribute('observer-bind', observer.id);
+tag2.setAttribute('observer-bind', observer.id);
+observer.dataBind('observer-bind');
 console.log(subject)
 console.log(observer)
 subject.subscribe(observer);
-subject.setData();
+subject.setData("New Data");
 subject.notify();
 (() =>{
   window.addEventListener("load", (event) =>{
