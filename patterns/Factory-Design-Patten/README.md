@@ -111,9 +111,41 @@ run();
 ```
 Idea extracted from (Harsh, 2023). Factory Method. Retrieved from [Kinsta Blog](https://kinsta.com/blog/javascript-design-patterns/#2-factory-method)
 
+### Output
+
+```
+The pizza is famous among: youngers!
+The burger is famous among: Kids!
+The salad is famous among: elders!
+```
+
+
+## Implementing Factory Method Pattern in Various Programming Languages
+
+The Factory Method pattern can be implemented in various programming languages apart from JavaScript. Here's a list of some of the additional programming languages where you can implement the Factory Method pattern:
+
+1. [Python](https://refactoring.guru/design-patterns/factory-method/python/example#:~:text=Factory%20method%20is%20a%20creational,constructor%20call%20(%20new%20operator).)
+2. [Java](https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/)
+3. [C++](https://www.geeksforgeeks.org/factory-method-for-designing-pattern/)
+5. [Ruby](https://refactoring.guru/design-patterns/factory-method/ruby/example)
+5. [PHP](https://sourcemaking.com/design_patterns/factory_method/php/1)
+
+
 # References
+
 Cocca, G. (2022, June 22). Factory Method Pattern. Retrieved from freeCodeCamp: https://www.freecodecamp.org/news/javascript-design-patterns-explained/#factory-method-pattern
+
+GeeksforGeeks. (2024, February 28). Factory method design pattern in Java. Retrieved from GeeksforGeeks: https://www.geeksforgeeks.org/factory-method-design-pattern-in-java/
+
+GeeksforGeeks. (n.d.). Factory method for designing pattern. Retrieved from GeeksforGeeks: https://www.geeksforgeeks.org/factory-method-for-designing-pattern/
+
+Guru, R. (2024). Factory Method in Python. Retrieved from Refactoring Guru: https://refactoring.guru/design-patterns/factory-method/python/example#:~:text=Factory%20method%20is%20a%20creational,constructor%20call%20(%20new%20operator).
+
+Guru, R. (n.d.). Factory Method in Ruby. Retrieved from Refactoring Guru: https://refactoring.guru/design-patterns/factory-method/ruby/example
 
 Harsh, K. (2023, October 23). Factory Method. Retrieved from Kinsta: https://kinsta.com/blog/javascript-design-patterns/#2-factory-method
 
 Poorte, J. (2023, September 30). JavaScript Factory Method Design Pattern. Retrieved from doFactory: https://www.dofactory.com/javascript/design-patterns/factory-method
+SourceMaking. (n.d.). Factory Method in PHP. Retrieved from SourceMaking: https://sourcemaking.com/design_patterns/factory_method/php/1
+
+
