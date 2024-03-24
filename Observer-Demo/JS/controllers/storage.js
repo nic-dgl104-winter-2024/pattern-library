@@ -7,6 +7,7 @@ import { Subject, Observer } from "../classes/ObserverPattern.js";
 export function createObject(id) {
   let instance = id === "observerForm" ? "observer" : "subject";
   let name = document.querySelector(`[name="${instance}"]`);
+  console.log(name.value);
   let object = instance === "observer" ? new Observer(name.value) : new Subject(name.value);
   name.value = "";
   return storageController(object, instance);
@@ -37,12 +38,12 @@ function createInstance(list, instance) {
   let items = [];
   if (instance === "observer") {
     list.forEach((item) => {
-      item = new Observer(item.id, item.name, item.subList);
+      item = new Observer(item.name, item.id, item.subList);
       items.push(item);
     });
   } else {
     list.forEach((item) => {
-      item = new Subject(item.id, item.name, item.data, item.observerList);
+      item = new Subject(item.name, item.id, item.data, item.observerList);
       items.push(item);
     });
   }

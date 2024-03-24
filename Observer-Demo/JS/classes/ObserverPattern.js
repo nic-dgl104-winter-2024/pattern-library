@@ -1,5 +1,5 @@
 export class Subject {
-  constructor(id = Date.now(), name, data = "", observerList = []) {
+  constructor(name = "Subject", id = Date.now(), data = "", observerList = []) {
     this.id = id;
     this.name = name;
     this.data = data;
@@ -18,7 +18,7 @@ export class Subject {
   unsubscribe(observer) {
     if (this.observerList.includes(observer)) {
       this.observerList.pop(observer);
-      observer.removeObservable(this);
+      observer.removeObservable(this.id);
       return "Observer is not unsubscribed";
     } else {
       return "Observer is not subscribed";
@@ -26,7 +26,7 @@ export class Subject {
   }
   notify() {
     this.observerList.forEach((observer) => {
-      observer.update(this);
+      observer.update(this.id);
     });
   }
   setData(data) {
@@ -45,7 +45,7 @@ export class Subject {
 }
 
 export class Observer {
-  constructor(id = Date.now(), name = "", subList = []) {
+  constructor(name = "Observer", id = Date.now(), subList = []) {
     this.id = id;
     this.name = name;
     this.bind = "observer-bind";
