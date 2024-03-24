@@ -86,8 +86,27 @@ softwareFacade.softwareDevelopmentProcess();
 
 ```
 
+### Output
+
+```
+Software Developer codes the frontend and backend for an application
+UI Designer creates the wireframes for the website.
+Database engineer performs the connection between the application and the database
+```
 
 ## Implementing Facade Method Pattern in Various Programming Languages
 
+The Facade design pattern can be implemented in various programming languages. Some commonly used languages for implementing the Facade pattern include:
+
+1. [Python](https://www.geeksforgeeks.org/facade-method-python-design-patterns/)
+2. [Java](https://www.tutorialspoint.com/design_pattern/facade_pattern.htm)
+3. [C++](https://refactoring.guru/design-patterns/facade/cpp/example#:~:text=Facade%20in%20C%2B%2B,unwanted%20dependencies%20to%20one%20place.)
+4. [C#](https://www.dofactory.com/net/facade-design-pattern)
+5. [Ruby](https://blog.appsignal.com/2020/03/18/facade-pattern-in-rails-for-performance-and-maintainability.html)
+
 # References
+
+GeeksforGeeks. (2023, October 31). Facade Design Pattern | JavaScript Design Pattern. Retrieved from GeeksforGeeks: https://www.geeksforgeeks.org/facade-design-patterns-javascript-design-pattern/
+GeeksforGeeks. (2023, October 31). Facade Design Pattern | JavaScript Design Pattern. Retrieved from GeeksforGeeks: https://www.geeksforgeeks.org/facade-design-patterns-javascript-design-pattern/
+Poorte, J. (2023, September 30). JavaScript Façade Design Pattern. Retrieved from doFactory: https://dofactory.com/javascript/design-patterns/facade
 
