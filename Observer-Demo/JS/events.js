@@ -8,17 +8,14 @@ import { Subject, Observer } from "./classes/ObserverPattern.js";
  * P = printer
  */
 ("use strict");
-() => {
-  window.addEventListener("load", (event) => {
-    //Disable forms default behaviour
-    let forms = document.querySelectorAll("form");
-    forms.forEach((form) => {
-      form.addEventListener("submit", (event) => {
-        event.preventDefault();
-      });
-    });
-  })();
-};
+
+window.addEventListener("load", (event) => {
+  //Disable forms default behaviour
+  document.addEventListener("submit", (event) => {
+    const form = event.target.closest("form");
+    if (form) event.preventDefault();
+  });
+});
 
 window.TIME_FORM = document.getElementById("timeController");
 window.TIME_FORM.addEventListener("submit", T.setTimeDelay);
@@ -35,6 +32,11 @@ window.OBSERVER_FORM.addEventListener("submit", (event) => {
   let items = S.createObject(event.target.id);
   console.log(items);
   P.print(items);
+});
+
+let options = document.getElementById('subjectOptions');
+options.addEventListener('submit', (event) => {
+  console.log("Form Submitted");
 });
 
 let testO = document.getElementById("testO");
