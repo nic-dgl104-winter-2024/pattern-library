@@ -38,12 +38,21 @@ export class Observer {
   constructor() {
     this.id = Date.now();
     this.subList = [];
+    this.logs = [];
   }
   
   update() {
-    console.log('update');
+    this.logs.forEach(log => {
+      log.textContent = this.getSubListData();
+    })
   }
-  
+  getSubListData() {
+    let data = [];
+    this.subList.forEach(subject => {
+      data.push(subject.getData());
+    })
+    return data;
+  }
   observing(subject) {
     this.subList.push(subject);
   }
@@ -54,6 +63,9 @@ export class Observer {
       dataArray.push(subject.getData());
     });
     return dataArray;
+  }
+  log(ele) {
+    this.logs.push(ele);
   }
 }
 

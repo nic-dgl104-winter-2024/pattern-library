@@ -5,11 +5,13 @@ import {Subject, Observer} from "./classes/ObserverPattern.js";
 */
 const subject = new Subject();
 const observer = new Observer();
+
+const tag = document.getElementById('subjectData');
+observer.log(tag);
 console.log(subject)
 console.log(observer)
-const tag = document.getElementById('subjectData');
 subject.subscribe(observer);
-subject.setData("New Data");
+subject.setData();
 subject.notify();
 (() =>{
   window.addEventListener("load", (event) =>{
