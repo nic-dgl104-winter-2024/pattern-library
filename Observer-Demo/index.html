@@ -41,26 +41,30 @@
 
       <section class="grid-cols-2 pattern">
         <div id="subjects">
-          <h2>Subjects</h2>
+          <form id="subjectForm" class="flex">
+            <label for="subject"><h2>Subjects</h2></label>
+            <div class="">
+              <input type="text" name="subject" placeholder="New Subject Name" />
+              <button type="submit">+</button>
+            </div>
+          </form>
           <ul id="allSubjects" class="border-2">
 
           </ul>
-          <form id="subjectForm">
-            <label for="subject">Create New Subject</label>
-            <input type="text" name="subject" placeholder="Subject Name" />
-            <button type="submit">Add</button>
-          </form>
+          
         </div>
 
         <div id="observers">
-          <h2>Observers</h2>
+          <form id="observerForm" class="flex">
+            <label for="observer"><h2>Observer</h2></label>
+            <div class="">
+              <input type="text" name="observer" placeholder="New Observer Name" />
+              <button type="submit">+</button>
+            </div>
+          </form>
           <ul id="allObservers" class="border-2">
           </ul>
-          <form id="observerForm">
-            <label for="observer">Create New Observer</label>
-            <input type="text" name="observer" placeholder="Observer Name" />
-            <button type="submit">Add</button>
-          </form>
+          
         </div>
       </section>
       <section id="actions">
