@@ -1,10 +1,10 @@
 export class Subject {
-  constructor(name, data = "") {
+  constructor(name, data = "", observerList = []) {
     this.id = Date.now();
     this.name = name;
     this.data = data;
     this.bind = "subject-bind";
-    this.observerList = [];
+    this.observerList = observerList;
   }
   subscribe(observer) {
     if (!this.observerList.includes(observer)) {
@@ -45,11 +45,11 @@ export class Subject {
 }
 
 export class Observer {
-  constructor(name = "") {
+  constructor(name = "", subList = []) {
     this.id = Date.now();
     this.name = name;
     this.bind = "observer-bind";
-    this.subList = [];
+    this.subList = subList;
   }
   update() {
     let ele = document.querySelectorAll(`[${this.bind}="${this.id}"]`);
