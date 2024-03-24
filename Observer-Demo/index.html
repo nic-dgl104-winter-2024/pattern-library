@@ -35,22 +35,15 @@
           <br />
           <small>1000ms = 1s</small>
         </form>
+        <button id="testS">Test Subject</button>
+        <button id="testO">Test Observer</button>
       </section>
 
       <section class="grid-cols-2 pattern">
-        <button id="test">Test Function</button>
         <div id="subjects">
           <h2>Subjects</h2>
-          <ul id="subjectList" class="border-2">
-            <li>
-              Subject
-              <ul>
-                <li id="bind">
-                  Observer
-                  <button ob-data="theId">Remove</button>
-                </li>
-              </ul>
-            </li>
+          <ul id="allSubjects" class="border-2">
+
           </ul>
           <form id="subjectForm">
             <label for="subject">Create New Subject</label>
@@ -61,16 +54,7 @@
 
         <div id="observers">
           <h2>Observers</h2>
-          <ul id="observerList" class="border-2">
-            <li>
-              Observer
-              <ul>
-                <li>
-                  Subjects
-                  <button ob-data="subscriber">Unsubscribe</button>
-                </li>
-              </ul>
-            </li>
+          <ul id="allObservers" class="border-2">
           </ul>
           <form id="observerForm">
             <label for="observer">Create New Observer</label>

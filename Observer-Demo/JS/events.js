@@ -14,6 +14,7 @@ window.TIME_FORM.addEventListener("submit", T.setTimeDelay);
 window.SUBJECT_FORM = document.getElementById("subjectForm");
 window.SUBJECT_FORM.addEventListener("submit", (event) => {
   let items = S.createObject(event.target.id);
+  console.log(items);
   P.print(items);
 });
 
@@ -24,8 +25,13 @@ window.OBSERVER_FORM.addEventListener("submit", (event) => {
   P.print(items);
 });
 
-let test = document.getElementById('test');
-test.addEventListener("click", (event) => {
+let testO = document.getElementById('testO');
+let testS = document.getElementById('testS');
+testO.addEventListener("click", (event) => {
   let items = S.getObjects("observer");
+  if (items !== null) P.print(items);
+});
+testS.addEventListener("click", (event) => {
+  let items = S.getObjects("subject");
   if (items !== null) P.print(items);
 });
