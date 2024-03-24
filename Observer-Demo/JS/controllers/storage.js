@@ -6,10 +6,11 @@ import { Subject, Observer } from "../classes/ObserverPattern.js";
  */
 export function createObject(id) {
   let instance = id === "observerForm" ? "observer" : "subject";
-  let name = document.querySelector(`[name="${instance}"]`);
+  let nameInput = document.querySelector(`[name="${instance}"]`);
+  let name = nameInput.value == "" ? instance : nameInput.value;
   console.log(name.value);
-  let object = instance === "observer" ? new Observer(name.value) : new Subject(name.value);
-  name.value = "";
+  let object = instance === "observer" ? new Observer(name) : new Subject(name);
+  nameInput.value = "";
   return storageController(object, instance);
 }
 export function getObjects(key) {
