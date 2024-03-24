@@ -19,7 +19,39 @@ The following entities are involved in this pattern when implementing using Java
 
 (Poorte, 2023)
 
-Here's an example demonstrating the Factory Method pattern in JavaScript:
+## Example demonstrating the Factory Method pattern in JavaScript:
+
+### Factory Function for Creating Foods
+
+The FoodFactory function serves as a factory for creating different types of foods, demonstrating the Factory Design Pattern. It contains a method createFood that takes a type as input and returns a corresponding food object. This approach abstracts the process of object creation, allowing the client code to create food objects without knowing the specific type being instantiated.
+
+```javascript
+// Factory Function for Creating Foods
+function FoodFactory() {
+    // Method to create different types of foods based on input type
+    this.createFood = function(type) {
+        let food;
+        
+        // Create different foods based on the type provided
+        if (type === "pizza") {
+            food = new Pizza();
+        } else if (type === "burger") {
+            food = new Burger();
+        } else if (type === "salad") {
+            food = new Salad();
+        }
+        
+        // Add common properties and methods to all created foods
+        food.type = type;
+        food.famousTo = function() {
+            console.log("The " + this.type + " is famous among: " + this.famousAudience);
+        }
+        
+        return food;
+    }
+}
+```
+
 
 
 
