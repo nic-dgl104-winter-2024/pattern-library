@@ -5,6 +5,10 @@ The Factory method is one of the most widely used design patterns. It functions 
 
 In JavaScript, calling a constructor function with the new operator is a common way to create an object. Nevertheless, there are situations in which the client doesn't know or shouldn't be concerned with which of multiple possible objects to create. The value of the Factory Method resides in its ability to enable the client to assign object creation while retaining control over the kind of object that is instantiated (Poorte, 2023).
 
+## Diagram
+
+![Factory Design Pattern Visual Representation](C:\Users\user\Desktop\DGL 103\pattern-library\Images\javascript-factory-method.jpg)
+
 
 Here's an example demonstrating the Factory Method pattern in JavaScript:
 
