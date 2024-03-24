@@ -51,6 +51,16 @@ function FoodFactory() {
     }
 }
 ```
+### Pizza Class 
+
+The Pizza class represents a type of food created by the FoodFactory factory function. It encapsulates the properties and behavior specific to pizza objects. By being created through the FoodFactory, the Pizza class adheres to the Factory Design Pattern, where the factory method (createFood) is responsible for creating instances of concrete classes (Pizza) without exposing the instantiation logic.
+
+```javascript
+// Pizza Class
+function Pizza() {
+    this.famousAudience = "youngers!";
+}
+```
 
 
 
