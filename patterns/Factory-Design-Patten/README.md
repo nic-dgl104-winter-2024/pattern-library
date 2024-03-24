@@ -109,8 +109,11 @@ function run() {
 // Execute the run function
 run();
 ```
+Idea extracted from (Harsh, 2023). Factory Method. Retrieved from [Kinsta Blog](https://kinsta.com/blog/javascript-design-patterns/#2-factory-method)
 
 # References
 Cocca, G. (2022, June 22). Factory Method Pattern. Retrieved from freeCodeCamp: https://www.freecodecamp.org/news/javascript-design-patterns-explained/#factory-method-pattern
+
+Harsh, K. (2023, October 23). Factory Method. Retrieved from Kinsta: https://kinsta.com/blog/javascript-design-patterns/#2-factory-method
 
 Poorte, J. (2023, September 30). JavaScript Factory Method Design Pattern. Retrieved from doFactory: https://www.dofactory.com/javascript/design-patterns/factory-method
