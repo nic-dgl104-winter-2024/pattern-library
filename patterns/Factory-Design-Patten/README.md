@@ -73,6 +73,18 @@ function Burger() {
 }
 ```
 
+### Salad Class 
+
+The Salad class represents yet another type of food created by the FoodFactory factory function. It encapsulates the properties and behavior specific to salad objects. As with the Pizza and Burger classes, the instantiation of Salad objects through the FoodFactory adheres to the Factory Design Pattern, promoting encapsulation and decoupling by separating the client code from the object creation logic.
+
+```javascript
+Copy code
+// Salad Class
+function Salad() {
+    this.famousAudience = "elders!";
+}
+```
+
 
 
 # References
