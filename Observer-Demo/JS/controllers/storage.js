@@ -8,19 +8,14 @@ export function createObject(id) {
   let instance = id === "observerForm" ? "observer" : "subject";
   let name = document.querySelector(`[name="${instance}"]`).value;
   let object = instance === "observer" ? new Observer(name) : new Subject(name);
-  return storageControl(object);
+  return storageController(object, instance);
 }
 
-function storageControl(object) {
-  let instance = object instanceof Observer ? "observers" : "subjects";
+function storageController(object, instance) {
   let list = retriveFromStorage(instance);
-  if (list.length === 0) {
-    addToStorage(list, object, instance);
-    return object;
-  } else {
-    addToStorage(list, object, instance);
-    return createInstance(list, instance);
-  }
+  addToStorage(list, object, instance);
+  if (list.length === 0) return object;
+  return createInstance(list, instance);
 }
 
 function addToStorage(list, object, instance) {
@@ -35,7 +30,7 @@ function retriveFromStorage(key) {
 
 function createInstance(list, instance) {
   let items = [];
-  if (instance === "observers") {
+  if (instance === "observer") {
     list.forEach((item) => {
       item = new Observer(item.name, item.subList);
       items.push(item);
