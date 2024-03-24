@@ -29,10 +29,10 @@
         <form id="timeController" class="">
           <h3>Delay Between Requests</h3>
           <label for="timeInput">Time in MS</label>
-          <br>
+          <br />
           <input name="timeInput" type="number" value="1000" />
           <button type="submit">Save</button>
-          <br>
+          <br />
           <small>1000ms = 1s</small>
         </form>
       </section>
@@ -53,7 +53,7 @@
           </ul>
           <form id="subjectForm">
             <label for="subject">Create New Subject</label>
-            <input type="text" name="subject" placeholder="Subject" />
+            <input type="text" name="subject" placeholder="Subject Name" />
             <button type="submit">Add</button>
           </form>
         </div>
@@ -73,7 +73,7 @@
           </ul>
           <form id="observerForm">
             <label for="observer">Create New Observer</label>
-            <input type="text" name="observer" placeholder="Observer" />
+            <input type="text" name="observer" placeholder="Observer Name" />
             <button type="submit">Add</button>
           </form>
         </div>
@@ -81,7 +81,35 @@
       <section id="actions">
         <h2>Actions</h2>
         <div class="">
-          <h3>Subject</h3>
+          <h3>Subjects</h3>
+          <select name="subjectActions" id="subjectActions">
+            Options
+          </select>
+          <h3>Subscriber List</h3>
+          <form action="">
+            <label for="observerListAdd">Add Observer To List</label>
+            <br>
+            <input type="text" name="observerListAdd" />
+            <button type="submit">Add</button>
+          </form>
+          <form action="">
+            <label for="observerListRemove">Remove Observer From List</label>
+            <br>
+            <input type="text" name="observerList" />
+            <button type="submit">Remove</button>
+          </form>
+          <form action="">
+            <label for="setData">Set Subject Data</label>
+            <br>
+            <input type="text" name="setData" />
+            <button type="submit">Set</button>
+          </form>
+          <form action="">
+            <button type="submit">Update</button>
+          </form>
+        </div>
+        <div class="">
+          <h3>Observers</h3>
         </div>
       </section>
       <section id="responses" class="responses">
