@@ -18,7 +18,76 @@ The elements that are involved in the Facade design pattern are:
 
 ## Example demonstrating the Facade Method pattern in JavaScript:
 
+### Step 1: Creation of Subsystem
+
+In JavaScript, we first define classes representing different subsystems. Each class encapsulates functionality related to a specific aspect of the system:
+
+``` javascript
+// Define a class for SoftwareDeveloper
+class SoftwareDeveloper {
+    // Define a method within the SoftwareDeveloper class to represent coding
+    code() {
+      console.log('Software Developer codes the frontend and backend for an application');
+    }
+}
+
+// Define a class for Designer
+class Designer {
+    // Define a method within the Designer class to represent designing
+    design() {
+      console.log('UI Designer creates the wireframes for the website.');
+    }
+}
+
+// Define a class for DatabaseEngineer
+class DatabaseEngineer {
+    // Define a method within the DatabaseEngineer class to represent connecting
+    connect() {
+      console.log('Database engineer performs the connection between the application and the database.');
+    }
+}
+```
+
+We have three classes here: SoftwareDeveloper, Designer, and DatabaseEngineer, each of which represents a subsystem responsible for a specific task in the software development process. The SoftwareDeveloper class's code() method takes handle of coding activities, the Designer class's design() method takes responsibility of designing tasks, and the DatabaseEngineer class's connect() method takes charge of database connection tasks. Each subsystem's behavior is specified by these classes.
+
+### Step 2: Creation of the Facade
+
+The `SoftwareFacade` class, which serves as a simplified interface to manage the software development process, is created in this stage. Instances of the classes "SoftwareDeveloper," "Designer," and "DatabaseEngineer" are initialized by the constructor. These subsystems are controlled by the `softwareDevelopmentProcess()` method, which calls particular code, design, and connect methods, respectively. The client's interaction is made simpler by this encapsulation, which conceals the complexity of various subsystems behind a single facade interface.
+
+``` javascript
+// Define a class for SoftwareFacade
+class SoftwareFacade {
+    // Constructor function to initialize instances of SoftwareDeveloper, Designer, and DatabaseEngineer classes
+    constructor() {
+        this.softwareDeveloper = new SoftwareDeveloper(); // Initialize instance of SoftwareDeveloper class
+        this.uiDesigner = new Designer(); // Initialize instance of Designer class
+        this.databaseEngineer = new DatabaseEngineer(); // Initialize instance of DatabaseEngineer class
+    }
+
+    // Method to represent the software development process, coordinating actions of SoftwareDeveloper, Designer, and DatabaseEngineer
+    softwareDevelopmentProcess() {
+        this.softwareDeveloper.code(); // Call the code method of SoftwareDeveloper
+        this.uiDesigner.design(); // Call the design method of Designer
+        this.databaseEngineer.connect(); // Call the connect method of DatabaseEngineer
+    }
+}
+```
+
+### Step 3: Usage and the Client code
+
+A new instance of 'SoftwareFacade' named `softwareFacade` is created by this line of code. Next, it calls the `softwareDevelopmentProcess()` function of the `softwareFacade` instance to start the software development process. The facade pattern provides a single interface that makes it easier to work with the `SoftwareDeveloper`, `Designer`, and `DatabaseEngineer` subsystems. This method coordinates the actions of these subsystems.
+
+```Javascript
+// Create an instance of the SoftwareFacade class
+const softwareFacade = new SoftwareFacade();
+
+// Call the softwareDevelopmentProcess method of the softwareFacade instance, initiating the software development process
+softwareFacade.softwareDevelopmentProcess();
+
+```
+
 
 ## Implementing Facade Method Pattern in Various Programming Languages
 
 # References
+
