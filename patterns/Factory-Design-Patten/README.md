@@ -9,6 +9,15 @@ In JavaScript, calling a constructor function with the new operator is a common 
 
 ![Factory Design Pattern Visual Representation](C:\Users\user\Desktop\DGL 103\pattern-library\Images\javascript-factory-method.jpg)
 
+The following entities are involved in this pattern when implementing using JavaScript:
+
+   - Creator: This corresponds to the 'factory' object in the provided visual representation, responsible for producing new products. It implements the 'factoryMethod', which yields freshly generated products.
+
+   - Concrete Product: These are the products being created, represented in the example code by the 'Employees' objects. Each product adheres to the same interface, comprising identical attributes and operations.
+
+**Abstract Product: This role is not commonly used in JavaScript. Traditionally, it would declare a product interface for various programming languages or scenarios. However, JavaScript does not specify interfaces explicitly. Instead, actual objects typically implement the relevant properties and methods directly, eliminating the need for an abstract product interface.**
+
+(Poorte, 2023)
 
 Here's an example demonstrating the Factory Method pattern in JavaScript:
 
