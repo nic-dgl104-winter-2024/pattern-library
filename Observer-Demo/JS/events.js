@@ -8,6 +8,18 @@ import { Subject, Observer } from "./classes/ObserverPattern.js";
  * P = printer
  */
 ("use strict");
+() => {
+  window.addEventListener("load", (event) => {
+    //Disable forms default behaviour
+    let forms = document.querySelectorAll("form");
+    forms.forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+    });
+  })();
+};
+
 window.TIME_FORM = document.getElementById("timeController");
 window.TIME_FORM.addEventListener("submit", T.setTimeDelay);
 
@@ -25,8 +37,8 @@ window.OBSERVER_FORM.addEventListener("submit", (event) => {
   P.print(items);
 });
 
-let testO = document.getElementById('testO');
-let testS = document.getElementById('testS');
+let testO = document.getElementById("testO");
+let testS = document.getElementById("testS");
 testO.addEventListener("click", (event) => {
   let items = S.getObjects("observer");
   if (items !== null) P.print(items);
@@ -35,3 +47,11 @@ testS.addEventListener("click", (event) => {
   let items = S.getObjects("subject");
   if (items !== null) P.print(items);
 });
+
+function printAll() {
+  let observerList = S.getObjects("observer");
+  if (observerList !== null) P.print(observerList);
+  let subjectList = S.getObjects("subject");
+  if (subjectList !== null) P.print(subjectList);
+}
+printAll();

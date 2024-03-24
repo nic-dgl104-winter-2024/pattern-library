@@ -1,7 +1,7 @@
-import {Subject, Observer} from "../classes/ObserverPattern.js";
+import { Subject, Observer } from "../classes/ObserverPattern.js";
 
 export function print(items) {
-  if(items[0] instanceof Observer) {
+  if (items[0] instanceof Observer) {
     printObservers(items);
   } else {
     printSubjects(items);
@@ -9,16 +9,19 @@ export function print(items) {
 }
 
 function printObservers(items) {
-  const ul = document.getElementById('allObservers');
-  items.forEach(item => {
-    const li = document.createElement('li');
-    li.append(item.name);
-    if(item.subList.length !== 0) {
-      const subUl = document.createElement('ul');
-      items.subList.forEach(sub => {
-        let subLi = document.createElement('li');
-        subLi.setAttribute(`[${item.bind}="${item.id}"]`);
-        subLi.append(sub);
+  const ul = document.getElementById("allObservers");
+  ul.textContent = "";
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    li.setAttribute('observer-id', item.id)
+    li.textContent = item.name;
+
+    if (item.subList.length !== 0) {
+      const subUl = document.createElement("ul");
+      items.subList.forEach((sub) => {
+        let subLi = document.createElement("li");
+        subLi.setAttribute(item.bind, item.id);
+        subLi.textContent = sub;
         subUl.appendChild(subLi);
       });
     }
@@ -27,26 +30,35 @@ function printObservers(items) {
 }
 
 function printSubjects(items) {
-  const ul = document.getElementById('allSubjects');
-  items.forEach(item => {
-    const li = document.createElement('li');
-    li.append(item.name);
+  const ul = document.getElementById("allSubjects");
+  ul.textContent = "";
+  items.forEach((item) => {
+    const li = document.createElement("li");
+    li.setAttribute('subject-id', item.id)
+    li.textContent = item.name;
+
+    const span = document.createElement("span");
+    span.setAttribute(item.bind, item.id)
+    span.textContent = item.data;
+
+    li.appendChild(span);
+
     if (item.observerList.length !== 0) {
-      const subUl = document.createElement('ul');
-      items.observerList.foreach(obs => {
-        let subLi = document.createElement('li');
-        subLi.setAttribute(`[${item.bind}="${item.id}"]`);
-        subLi.append(obs);
+      const subUl = document.createElement("ul");
+      items.observerList.foreach((obs) => {
+        let subLi = document.createElement("li");
+        subLi.setAttribute(obs.bind, obs.id);
+        subLi.textContent = obs.name;
         subUl.appendChild(subLi);
-      })
+      });
     }
     ul.appendChild(li);
   });
 }
 /**
  * Subject Template
- * 
- * 
+ *
+ *
  * Subject 1 -- data
  *  - Subscriber 1
  *  - Subscriber 2
@@ -56,8 +68,8 @@ function printSubjects(items) {
 
 /**
  * Observer Template
- * 
- * 
+ *
+ *
  * Observer 1
  *  - Observing -- data
  *  - Observing -- data
