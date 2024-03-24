@@ -1,7 +1,8 @@
 export class Subject {
-  constructor() {
+  constructor(name, data = "") {
     this.id = Date.now();
-    this.data = "";
+    this.name = name;
+    this.data = data
     this.observerList = [];
   }
   subscribe(observer) {
@@ -35,13 +36,14 @@ export class Subject {
 }
 
 export class Observer {
-  constructor() {
+  constructor(name = "") {
     this.id = Date.now();
-    this.bind;
+    this.name = name;
+    this.bind = 'observer-bind';
     this.subList = [];
   }
   update() {
-    let ele = document.querySelectorAll(this.bind);
+    let ele = document.querySelectorAll(`[${this.bind}="${this.id}"]`);
     ele.forEach((ele) => {
       ele.textContent = this.getSubListData();
     });
@@ -64,7 +66,7 @@ export class Observer {
     });
     return dataArray;
   }
-  dataBind(bindTo) {
-    this.bind = `[${bindTo}="${this.id}"]`;
+  dataBind(bind) {
+    this.bind = bind;
   }
 }
