@@ -62,6 +62,16 @@ function Pizza() {
 }
 ```
 
+### Burger Class 
+
+The Burger class represents another type of food created by the FoodFactory factory function. Similar to the Pizza class, it encapsulates the properties and behavior specific to burger objects. The instantiation of Burger objects through the FoodFactory aligns with the Factory Design Pattern, abstracting the object creation process and providing a common interface for creating different types of foods.
+
+```javascript
+// Burger Class
+function Burger() {
+    this.famousAudience = "Kids!";
+}
+```
 
 
 
