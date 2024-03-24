@@ -1,6 +1,6 @@
 export class Subject {
-  constructor(name, data = "", observerList = []) {
-    this.id = Date.now();
+  constructor(id = Date.now(), name, data = "", observerList = []) {
+    this.id = id;
     this.name = name;
     this.data = data;
     this.bind = "subject-bind";
@@ -45,8 +45,8 @@ export class Subject {
 }
 
 export class Observer {
-  constructor(name = "", subList = []) {
-    this.id = Date.now();
+  constructor(id = Date.now(), name = "", subList = []) {
+    this.id = id;
     this.name = name;
     this.bind = "observer-bind";
     this.subList = subList;
