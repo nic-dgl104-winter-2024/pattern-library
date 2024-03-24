@@ -1,13 +1,14 @@
 import { Subject, Observer } from "../classes/ObserverPattern.js";
 ("use strict");
 /**
- * @param string event.target.id
+ * @param string element#id || event.target.id
  * @returns array
  */
 export function createObject(id) {
   let instance = id === "observerForm" ? "observer" : "subject";
-  let name = document.querySelector(`[name="${instance}"]`).value;
-  let object = instance === "observer" ? new Observer(name) : new Subject(name);
+  let name = document.querySelector(`[name="${instance}"]`);
+  let object = instance === "observer" ? new Observer(name.value) : new Subject(name.value);
+  name.value = "";
   return storageController(object, instance);
 }
 
