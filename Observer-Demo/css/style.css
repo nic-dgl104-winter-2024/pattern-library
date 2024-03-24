@@ -42,6 +42,11 @@ section {
 .pattern {
   background-color: pink;
 }
+.pattern > * {
+  width: 50%;
+  min-width: 400px;
+  margin: auto;
+}
 .responses {
   background-color: orange;
 }
@@ -53,4 +58,8 @@ input {
 }
 button:hover {
   cursor: pointer;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }
