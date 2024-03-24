@@ -40,7 +40,7 @@ These patterns deal with the composition of classes or objects. They help ensure
 | Bridge         | Separates an object’s abstraction from its implementation so that the two can vary independently.                  |
 | Composite      | Composes objects into tree structures to represent part-whole hierarchies. It lets clients treat individual objects and compositions of objects uniformly. |
 | Decorator      | Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality. |
-| Facade         | Provides a simplified interface to a complex subsystem.                                                            |
+| [Facade](./Facade-Pattern/)         | Provides a simplified interface to a complex subsystem.                                                            |
 | Flyweight      | Reduces the cost of creating and manipulating a large number of similar objects.                                   |
 | Proxy          | Provides a surrogate or placeholder for another object to control access to it.                                    |
 
