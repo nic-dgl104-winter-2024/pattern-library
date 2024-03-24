@@ -5,6 +5,7 @@ export function print(items) {
     printObservers(items);
   } else {
     printSubjects(items);
+    populateSelect(items);
   }
 }
 
@@ -14,7 +15,7 @@ function printObservers(items) {
   items.forEach((item) => {
     const li = document.createElement("li");
     li.setAttribute('observer-id', item.id)
-    li.textContent = item.name;
+    li.textContent = item.name + (item.name === 'observer' ? `@${item.id}` : '');
 
     if (item.subList.length !== 0) {
       const subUl = document.createElement("ul");
@@ -35,7 +36,7 @@ function printSubjects(items) {
   items.forEach((item) => {
     const li = document.createElement("li");
     li.setAttribute('subject-id', item.id)
-    li.textContent = item.name;
+    li.textContent = item.name + (item.name === 'subject' ? `@${item.id}` : '');
 
     const span = document.createElement("span");
     span.setAttribute(item.bind, item.id)
@@ -54,6 +55,44 @@ function printSubjects(items) {
     }
     ul.appendChild(li);
   });
+}
+
+function populateSelect(items) {
+  const select = document.getElementById('selectSubject');
+  select.textContent = "";
+  const defaultOption = document.createElement('option');
+  defaultOption.textContent = "Subjects";
+  defaultOption.disabled = true;
+  defaultOption.selected = true;
+  select.appendChild(defaultOption)
+  items.forEach(item => {
+    const option = document.createElement('option');
+    option.value = item.id;
+    option.textContent = item.name;
+    select.appendChild(option)
+    option.addEventListener('click', event => {
+      actions(item);
+    });
+  });
+}
+function actions(subject) {
+  const options = document.getElementById('subjectOptions');
+  options.textContent = "";
+  const label = document.createElement('label');
+  label.htmlFor = "updateData";
+  label.textContent = `Update the Data for "${subject.name}"`;
+  const input = document.createElement('input');
+  input.name = "updateData";
+  input.value = subject.getData();
+
+  const button = document.createElement('button');
+  button.type = "submit";
+  button.textContent = "Update";
+
+  options.appendChild(label);
+  options.appendChild(input);
+  options.appendChild(button);
+  
 }
 /**
  * Subject Template
