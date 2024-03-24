@@ -12,5 +12,11 @@ window.SUBJECT_FORM = document.getElementById('subjectForm');
 window.SUBJECT_FORM.addEventListener('submit', S.createSubject);
 
 window.OBSERVER_FORM = document.getElementById('observerForm');
-window.OBSERVER_FORM.addEventListener('submit', S.createObserver);
+window.OBSERVER_FORM.addEventListener('submit', (event) =>{
+  let items = S.createObserver();
+  console.log(items);
+});
 
+function printToPage(objects) {
+  console.log(objects);
+}
