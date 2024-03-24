@@ -1,20 +1,11 @@
 import { Subject, Observer } from "../classes/ObserverPattern.js";
 ("use strict");
 
-export function createSubject() {
-  event.preventDefault();
-  let name = document.querySelector('[name="subject"]').value;
-  let subject = new Subject(name);
-  let items = addToStorage(subject);
-  return items;
-}
-
-export function createObserver() {
-  event.preventDefault();
-  let name = document.querySelector('[name="observer"]').value;
-  let observer = new Observer(name);
-  let items = addToStorage(observer);
-  return items;
+export function createObject(id) {
+  let instance = id == "observerForm" ? "observer" : "subject";
+  let name = document.querySelector(`[name="${instance}"]`).value;
+  let object = instance === 'observer' ? new Observer(name) : new Subject(name);
+  return addToStorage(object);
 }
 
 function addToStorage(object) {

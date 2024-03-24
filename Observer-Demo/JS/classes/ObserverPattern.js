@@ -2,24 +2,26 @@ export class Subject {
   constructor(name, data = "") {
     this.id = Date.now();
     this.name = name;
-    this.data = data
+    this.data = data;
+    this.bind = "subject-bind";
     this.observerList = [];
   }
   subscribe(observer) {
-    if (this.observerList.includes(observer)) {
-      return "Observer already subscribed";
-    } else {
-      observer.observing(this);
+    if (!this.observerList.includes(observer)) {
       this.observerList.push(observer);
+      observer.addObservable(this);
       return "Observer is now subscribed";
+    } else {
+      return "Observer already subscribed";
     }
   }
   unsubscribe(observer) {
     if (this.observerList.includes(observer)) {
       this.observerList.pop(observer);
-      return (success = `Observer is now unsubscribed to subject@${this.id}`);
+      observer.removeObservable(this);
+      return "Observer is not unsubscribed";
     } else {
-      return (error = `Observer is not subscribed to subject@${this.id}`);
+      return "Observer is not subscribed";
     }
   }
   notify() {
@@ -29,9 +31,16 @@ export class Subject {
   }
   setData(data) {
     this.data = data;
+    let ele = document.querySelectorAll(`[${this.bind}="${this.id}"]`);
+    ele.forEach((ele) => {
+      ele.textContent = this.data;
+    });
   }
   getData() {
     return this.data;
+  }
+  dataBind(bind) {
+    this.bind = bind;
   }
 }
 
@@ -39,7 +48,7 @@ export class Observer {
   constructor(name = "") {
     this.id = Date.now();
     this.name = name;
-    this.bind = 'observer-bind';
+    this.bind = "observer-bind";
     this.subList = [];
   }
   update() {
@@ -55,8 +64,11 @@ export class Observer {
     });
     return data;
   }
-  observing(subject) {
+  addObservable(subject) {
     this.subList.push(subject);
+  }
+  removeObservable(subject) {
+    this.subList.pop(subject);
   }
 
   data() {
