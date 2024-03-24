@@ -75,3 +75,28 @@ public class AverageDisplay : IObserver
         Console.WriteLine("Updated average: " + aggregator.CalculateAverage());
     }
 }
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create subject
+        NumberAggregator aggregator = new NumberAggregator();
+
+        // Create observers
+        AverageDisplay averageDisplay1 = new AverageDisplay(aggregator);
+        AverageDisplay averageDisplay2 = new AverageDisplay(aggregator);
+
+        // Add numbers
+        aggregator.AddNumber(10);
+        aggregator.AddNumber(20);
+        aggregator.AddNumber(30);
+
+        // Detach observer
+        aggregator.Detach(averageDisplay2);
+
+        // Add more numbers
+        aggregator.AddNumber(40);
+
+        Console.ReadLine();
+    }
+}
