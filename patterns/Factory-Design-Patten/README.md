@@ -85,7 +85,30 @@ function Salad() {
 }
 ```
 
+### Run function to execute the program
 
+The run() function is invoked to demonstrate the usage of the Factory Method pattern. Within this function, a FoodFactory instance is created to produce different types of foods. Each food type (pizza, burger, salad) is created using the factory method createFood() of the FoodFactory. This showcases the core principle of the Factory Method pattern, where object creation is delegated to a factory object, allowing the client code to create objects without specifying their concrete classes.
+
+```javascript
+// Run function to demonstrate the usage of the Factory Method
+function run() {
+    let foods = [];
+    let foodFactory = new FoodFactory();
+    
+    // Create different foods using the factory
+    foods.push(foodFactory.createFood("pizza"));
+    foods.push(foodFactory.createFood("burger"));
+    foods.push(foodFactory.createFood("salad"));
+    
+    // Make the foods speak
+    for (let i = 0; i < foods.length; i++) {
+        foods[i].famousTo();
+    }
+}
+
+// Execute the run function
+run();
+```
 
 # References
 Cocca, G. (2022, June 22). Factory Method Pattern. Retrieved from freeCodeCamp: https://www.freecodecamp.org/news/javascript-design-patterns-explained/#factory-method-pattern
