@@ -68,7 +68,7 @@ function populateSelect(items) {
   items.forEach(item => {
     const option = document.createElement('option');
     option.value = item.id;
-    option.textContent = item.name;
+    option.textContent = item.name + (item.name === 'subject' ? `@${item.id}` : '');
     select.appendChild(option)
     option.addEventListener('click', event => {
       actions(item);
