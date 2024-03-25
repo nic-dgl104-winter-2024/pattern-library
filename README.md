@@ -1,6 +1,9 @@
 # DGL 104 Pattern Library
 A multi-language library containing implementations of common software design and architecture patterns 
 
+
+<a id="design_pattern"></a>
+
 ## Design Patterns
 
 Design patterns are like templates or solutions to common problems encountered in software design. They represent the best practices used by experienced object-oriented software developers. Design patterns are about reusing designs that have been proven effective, rather than reinventing the wheel. They help you solve specific problems in your code, making your software easier to understand, maintain, and scale.
@@ -9,11 +12,15 @@ Design patterns are like templates or solutions to common problems encountered i
 
 Here's a brief overview and a list of some fundamental design patterns, divided into three main categories:Here's a brief overview and a list of some fundamental design patterns, divided into three main categories.
 
-See the [Design Patterns section](./patterns/)
+See the [Design Patterns section](#/patterns/)
 
 ## Documentation Table of Contents
+- [Design Patterns Definition](#design_pattern)
 - [Observer Pattern Definition](#observer-pattern)
 - [Singleton Pattern Definition](#singleton-pattern)
+- [Model View View Model Definition](#model_view_view_model)
+- [Articles and Websites](#articles_websites)
+- [Contributing](#contributions)
 
 ## Library Table of Contents
 
@@ -25,6 +32,10 @@ See the [Design Patterns section](./patterns/)
 - [Kotlin](patterns/Creational/singleton/Kotlin)
 - [Dart](patterns/Creational/singleton/Dart)
 - [Lua](patterns/Creational/singleton/Lua)
+
+### [Abstract Factory](patterns/Creational/abstract-factory/)
+- [JavaScript](patterns/Creational/abstract-factory/JavaScript/)
+
 
 ### [Behavioral Patterns](patterns/Behavioral)
 
@@ -70,6 +81,7 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 ### References
 
+<a id="model_view_view_model"></a>
 
 ## Model View View-Model (MVVM) - Architectural Pattern
 
@@ -153,10 +165,10 @@ Michaelstonis. (2022, November 4). _Model-View-ViewModel - .NET._ Microsoft Lear
 Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture explained._ Web Design, UI/UX, Branding, and App Development Blog. https://www.ramotion.com/blog/what-is-mvvm/ 
 
 
-
+<a id="articles_websites"></a>
 
 ## Articles / Websites
 
-
+<a id="contributions"></a>
 
 ## Contributions 
