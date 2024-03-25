@@ -17,9 +17,10 @@ class ConcreteSubject implements Subject {
         return state;
     }
 
+    
     public void setState(int state) {
         this.state = state;
-        notifyObservers();
+       
     }
 
     @Override
@@ -71,5 +72,6 @@ public class Main {
         subject.removeObserver(observer1);
 
         subject.setState(2);
+        subject.notifyObservers();
     }
 }
