@@ -43,9 +43,9 @@ section {
   background-color: pink;
 }
 .pattern > * {
-  width: 50%;
-  min-width: 400px;
-  margin: auto;
+  width: 80%;
+  position: relative;
+  left: 10%;
 }
 .responses {
   background-color: orange;

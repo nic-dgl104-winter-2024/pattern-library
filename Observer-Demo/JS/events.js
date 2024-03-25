@@ -34,8 +34,8 @@ window.OBSERVER_FORM.addEventListener("submit", (event) => {
   P.print(items);
 });
 
-let options = document.getElementById('subjectOptions');
-options.addEventListener('submit', (event) => {
+let options = document.getElementById("subjectOptions");
+options.addEventListener("submit", (event) => {
   console.log("Form Submitted");
 });
 
@@ -50,10 +50,17 @@ testS.addEventListener("click", (event) => {
   if (items !== null) P.print(items);
 });
 
-function printAll() {
-  let observerList = S.getObjects("observer");
-  if (observerList !== null) P.print(observerList);
-  let subjectList = S.getObjects("subject");
-  if (subjectList !== null) P.print(subjectList);
+function print() {
+  printObjects("observer", "allObservers");
+  printObjects("subject", "allSubjects");
 }
-printAll();
+
+function printObjects(type, parentId) {
+  let objectList = S.getObjects(type);
+  if (objectList !== null) {
+    let parent = document.getElementById(parentId);
+    P[type](parent, objectList);
+  }
+}
+
+print();
