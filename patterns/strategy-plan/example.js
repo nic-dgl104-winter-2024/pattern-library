@@ -42,9 +42,33 @@ class AuthenticationContext {
         return this.strategy.authenticate(...args);
     }
 }
+// Context class for authorization
+class AuthorizationContext {
+    constructor(strategy) {
+      this.strategy = strategy;
+    }
+  
+    setStrategy(strategy) {
+      this.strategy = strategy;
+    }
+  
+    authorize(...args) {
+      return this.strategy.authorize(...args);
+    }
+  }  
 
 const authenticationContext = new AuthenticationContext(basicAuthStrategy);
 console.log(authenticationContext.authenticate("admin", "password")); // Output: true
 
 authenticationContext.setStrategy(oauthStrategy);
 console.log(authenticationContext.authenticate("valid_token")); // Output: true
+
+const authorizationContext = new AuthorizationContext(roleBasedAuthorizationStrategy);
+const user = { role: "admin" };
+console.log(authorizationContext.authorize(user, "admin")); // Output: true
+console.log(authorizationContext.authorize(user, "user")); // Output: false
+
+authorizationContext.setStrategy(permissionBasedAuthorizationStrategy);
+user.permissions = ["read", "write"];
+console.log(authorizationContext.authorize(user, "read")); // Output: true
+console.log(authorizationContext.authorize(user, "delete")); // Output: false
