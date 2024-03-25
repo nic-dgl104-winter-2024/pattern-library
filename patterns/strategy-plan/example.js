@@ -21,6 +21,14 @@ const roleBasedAuthorizationStrategy = {
     }
   };
 
+const permissionBasedAuthorizationStrategy = {
+    authorize: function(user, permission) {
+      // Perform permission-based authorization logic
+      return user.permissions.includes(permission);
+    }
+  };
+  
+
 // Context class for authentication
 class AuthenticationContext {
     constructor(strategy) {
