@@ -24,14 +24,14 @@ window.SUBJECT_FORM = document.getElementById("subjectForm");
 window.SUBJECT_FORM.addEventListener("submit", (event) => {
   let items = S.createObject(event.target.id);
   console.log(items);
-  P.print(items);
+  P.subject(items);
 });
 
 window.OBSERVER_FORM = document.getElementById("observerForm");
 window.OBSERVER_FORM.addEventListener("submit", (event) => {
   let items = S.createObject(event.target.id);
   console.log(items);
-  P.print(items);
+  P.observer(items);
 });
 
 let options = document.getElementById("subjectOptions");
@@ -54,6 +54,7 @@ function print() {
   printObjects("observer", "allObservers");
   printObjects("subject", "allSubjects");
   printSelects("subject", "selectSubject", "subjectOptions");
+  printSelects("observer", "selectObserver", "observerOptions");
 }
 
 function printObjects(type, parentId) {
@@ -69,7 +70,7 @@ function printSelects(type, parentId, target) {
     let parent = document.getElementById(parentId);
     let events = {
       click: "click",
-      change: (event) => {action(target)},
+      change: (event) => action(target),
     };
     P.select(type, parent, objectList, events);
   }
@@ -77,6 +78,8 @@ function printSelects(type, parentId, target) {
 
 function action(target) {
   const parent = document.getElementById(target);
-  P.getActions(parent, event.target);
+  P.actions(parent, event.target);
+  let s = S.getSubscribers(true, event.target.value, 'subject');
+  console.log(s)
 }
 print();

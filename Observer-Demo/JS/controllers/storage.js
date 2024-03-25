@@ -18,6 +18,18 @@ export function getObjects(key) {
   if (items.length === 0) return null;
   return createInstance(items, key);
 }
+
+
+export function getSubscribers(bool, id, key) {
+  if(bool) {
+    let subs = createInstance(retriveFromStorage(key), key);
+    for(let i = 0; i <= subs.length; i++) {
+      if (subs[i].id == id) {
+        return subs[i];
+      }
+    }
+  }
+}
 function storageController(object, instance) {
   let list = retriveFromStorage(instance);
   addToStorage(list, object, instance);

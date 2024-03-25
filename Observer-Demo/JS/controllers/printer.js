@@ -43,7 +43,7 @@ export function select(type, parent, items, events) {
   });
 }
 
-export function getActions(parent, object) {
+export function actions(parent, object) {
   clearParent(parent);
   const title = document.createElement("h3");
   title.textContent = `Options for ${object.getAttribute("name")}`;
