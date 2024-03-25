@@ -40,4 +40,8 @@ class ConcreteSubject implements Subject {
     }
 }
 
+// Observer interface
+interface Observer {
+    void update();
+}
 }
