@@ -44,4 +44,14 @@ class ConcreteSubject implements Subject {
 interface Observer {
     void update();
 }
+
+// Concrete Observer
+class ConcreteObserver implements Observer {
+    private ConcreteSubject subject;
+
+    public ConcreteObserver(ConcreteSubject subject) {
+        this.subject = subject;
+        this.subject.addObserver(this);
+    }
+
 }
