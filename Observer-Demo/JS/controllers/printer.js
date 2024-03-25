@@ -1,3 +1,4 @@
+//print all observers
 export function observer(parent, observers) {
   clearParent(parent);
 
@@ -11,6 +12,7 @@ export function observer(parent, observers) {
   });
 }
 
+//print all subjects
 export function subject(parent, subjects) {
   clearParent(parent);
 
@@ -27,47 +29,7 @@ export function subject(parent, subjects) {
   });
 }
 
-export function subjectList(parent, subjects) {
-  clearParent(parent);
-}
-export function observerList(parent, observers) {}
-
-function clearParent(parent) {
-  return (parent.textContent = "");
-}
-
-function getName(object, type) {
-  return object.name + (object.name === type ? `@${object.id}` : "");
-}
-function sub(list, type) {
-  const ul = document.createElement("ul");
-  list.forEach((item) => {
-    const ele = li(item, list);
-    bind(ele, item);
-    if (type === "observer") {
-      const data = span(item.getData());
-      bind(data, item);
-    }
-    ul.appendChild(ele);
-  });
-}
-
-function li(object, type) {
-  const li = document.createElement("li");
-  li.textContent = getName(object, type);
-  return li;
-}
-
-function span(subject) {
-  const span = document.createElement("span");
-  span.textContent = subject.data;
-  return span;
-}
-
-function bind(ele, item) {
-  return ele.setAttribute(item.bind, item.id);
-}
-
+//print a select and all options in items, also adds eventListeners on option clicks
 export function select(type, parent, items, events) {
   clearParent(parent);
 
@@ -80,39 +42,65 @@ export function select(type, parent, items, events) {
     parent.appendChild(option);
   });
 }
-function options(item, type) {
+
+//clear the parent element
+function clearParent(parent) {
+  return (parent.textContent = "");
+}
+
+//return the name, if the name is the same as the type add the id to 'serialize' it?
+function getName(object, type) {
+  return object.name + (object.name === type ? `@${object.id}` : "");
+}
+
+//create a sublist
+function sub(list, type) {
+  const ul = document.createElement("ul");
+  list.forEach((object) => {
+    const ele = li(object, list);
+    bind(ele, object);
+    if (type === "observer") {
+      const data = span(object.getData());
+      bind(data, object);
+    }
+    ul.appendChild(ele);
+  });
+}
+
+//create list element
+function li(object, type) {
+  const li = document.createElement("li");
+  li.textContent = getName(object, type);
+  return li;
+}
+
+//create span, used to store object data
+function span(object) {
+  const span = document.createElement("span");
+  span.textContent = object.data;
+  return span;
+}
+
+//binds element to object
+function bind(ele, object) {
+  return ele.setAttribute(object.bind, object.id);
+}
+
+//create options
+function options(object, type) {
   const option = document.createElement('option');
-  option.value = item.id;
-  option.textContent = getName(item, type);
+  option.value = object.id;
+  option.textContent = getName(object, type);
   return option;
 }
+
+//create option title
 function optionTitle(type) {
   const option = document.createElement("option");
   option.textContent = `${type}s`;
   option.disabled = true;
   option.selected = true;
   return option;
-}
-
-function populateSelect(items) {
-  const select = document.getElementById("selectSubject");
-  select.textContent = "";
-
-  select.appendChild(defaultOption);
-  items.forEach((item) => {
-    const option = document.createElement("option");
-    option.value = item.id;
-    option.textContent =
-      item.name + (item.name === "subject" ? `@${item.id}` : "");
-    select.appendChild(option);
-    option.addEventListener("click", (event) => {
-      actions(item);
-    });
-  });
-}
-
-function getObservers(subject, observers) {
-  console.log(observers);
 }
 
 /**
