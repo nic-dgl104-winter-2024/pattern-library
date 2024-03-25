@@ -1,72 +1,73 @@
-
 import java.util.ArrayList;
 import java.util.List;
 
-// Subject interface which store value of list
-interface Subject {
-    void addObserver(Observer observer);
-    void removeObserver(Observer observer);
+// Subject interface which store list
+interface StockMarket {
+    void addObserver(Investor investor);
+    void removeObserver(Investor investor);
     void notifyObservers();
 }
 
 // Observer interface
-interface Observer {
-    void update();
+interface Investor {
+    void update(String stock, double price);
 }
 
 // Concrete Subject
-class ConcreteSubject implements Subject {
-    private List<Observer> observers = new ArrayList<>();
+class StockMarketImpl implements StockMarket {
+    private List<Investor> investors = new ArrayList<>();
+    private String stock;
+    private double price;
 
     @Override
-    public void addObserver(Observer observer) {
-        observers.add(observer);
+    public void addObserver(Investor investor) {
+        investors.add(investor);
     }
 
     @Override
-    public void removeObserver(Observer observer) {
-        observers.remove(observer);
+    public void removeObserver(Investor investor) {
+        investors.remove(investor);
     }
 
     @Override
     public void notifyObservers() {
-        for (Observer observer : observers) {
-            observer.update();
+        for (Investor investor : investors) {
+            investor.update(stock, price);
         }
     }
 
-    // Additional methods and state for the subject can be added here
+    public void setStockPrice(String stock, double price) {
+        this.stock = stock;
+        this.price = price;
+        notifyObservers();
+    }
 }
 
 // Concrete Observer
-class ConcreteObserver implements Observer {
+class InvestorImpl implements Investor {
     private String name;
 
-    public ConcreteObserver(String name) {
+    public InvestorImpl(String name) {
         this.name = name;
     }
 
     @Override
-    public void update() {
-        System.out.println(name + " received update from the subject.");
+    public void update(String stock, double price) {
+        System.out.println(name + " received update - " + stock + " price: " + price);
     }
 }
 
-// Main class
-public class Observer_patten {
+//Main Class(Usage example)
+public class Observer_patten  {
     public static void main(String[] args) {
-        // Creating a concrete subject
-        ConcreteSubject subject = new ConcreteSubject();
+        StockMarketImpl stockMarket = new StockMarketImpl();
 
-        // Creating concrete observers
-        ConcreteObserver observer1 = new ConcreteObserver("Observer 1");
-        ConcreteObserver observer2 = new ConcreteObserver("Observer 2");
+        Investor investor1 = new InvestorImpl("Alice");
+        Investor investor2 = new InvestorImpl("Bob");
 
-        // Adding observers to the subject
-        subject.addObserver(observer1);
-        subject.addObserver(observer2);
+        stockMarket.addObserver(investor1);
+        stockMarket.addObserver(investor2);
 
-        // Notifying observers
-        subject.notifyObservers();
+        stockMarket.setStockPrice("ABC", 100.0);
     }
 }
