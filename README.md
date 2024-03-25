@@ -190,11 +190,11 @@ console.log(doubled); // [2, 4, 6, 8, 10]
 
 **Pattern Matching:** FP languages like Haskell or Scala offer pattern matching, allowing elegant handling of different cases. This contrasts with traditional switch-case or if-else statements in OOP.
 
-| Aspect               | Functional Programming (FP)                                      | Object-Oriented Programming (OOP)                                             |
-|----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------|
-| Immutability                | Favors immutable data to reduce unintended state changes.      | Supports immutability but often relies on mutable state within objects.        |
-| Composition vs. Inheritance | Emphasizes composition over inheritance, using functions for complex behaviors. | Often relies on class hierarchies and inheritance for code organization.        |
-| Pattern Matching    | Offers pattern matching for elegant handling of different cases. | Relies on traditional switch-case or if-else statements for conditional logic. |
+| Aspect               | Definition                                                      |
+|----------------------|-----------------------------------------------------------------|
+| Immutability        | "An immutable value is one whose content cannot be changed without creating an entirely new value" ([Developer Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Immutable)). |
+| Composition vs. Inheritance | "Composition involves a "has-a" relationship between objects, while inheritance involves an "is-a" relationship between classes. Composition is more flexible and allows objects to be reused in different contexts, while inheritance promotes code reuse and can simplify code by reducing duplication" ([Prepbytes](https://www.prepbytes.com/blog/general/difference-between-composition-and-inheritance/#:~:text=Composition%20involves%20a%20%22has%2Da,simplify%20code%20by%20reducing%20duplication.)). |
+| Pattern Matching    | "Pattern matching is a mechanism for checking a value against a pattern and, based on the match, performing some kind of action" ([Dev Community](https://dev.to/nexxeln/expressive-code-with-pattern-matching-3de6)). |
 
 ### Conclusion
 While OOP design patterns are specific to class-based systems, functional programming offers alternative patterns that address similar concerns. Functional patterns emphasize immutability, higher-order functions, and composition, leading to concise and expressive code. While the transition from OOP to FP may require a mindset shift, understanding both paradigms equips developers with a broader toolkit for solving problems.
