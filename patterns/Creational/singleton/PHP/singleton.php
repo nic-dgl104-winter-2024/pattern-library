@@ -41,7 +41,7 @@ class DatabaseConnection
 }
 
 // Usage
-$db = DatabaseConnection::getInstance();
-$result = $db->query("SELECT * FROM users");
+$stmt = "SELECT * FROM users";
+$results = $db->query($stmt, []);
 
 // In this example, we've added PDO connection handling within the constructor to connect to a MySQL database. We also added two magic methods, `__clone` and `__wakeup`, and made them private to prevent cloning and unserialization of the instance, which are other ways the singleton property could be violated.
