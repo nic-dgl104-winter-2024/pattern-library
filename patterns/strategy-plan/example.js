@@ -16,3 +16,6 @@ class AuthenticationContext {
         return this.strategy.authenticate(...args);
     }
 }
+
+const authenticationContext = new AuthenticationContext(basicAuthStrategy);
+console.log(authenticationContext.authenticate("admin", "password")); // Output: true
