@@ -29,6 +29,17 @@ class DatabaseConnection
     return $stmt;
   }
 
+  // Method that executes a query and throws an exception if no result is found.
+  public function findOrFail($sql, $params = [])
+  {
+    $stmt = $this->query($sql, $params);
+    $result = $stmt->fetch();
+    if (!$result) {
+      throw new Exception("No result found.");
+    }
+    return $result;
+  }
+
   // Prevent the instance from being cloned
   private function __clone()
   {
