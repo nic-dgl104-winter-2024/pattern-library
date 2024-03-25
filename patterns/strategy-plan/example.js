@@ -13,12 +13,21 @@ const oauthStrategy = {
     }
   };
 
+// Define authorization strategies
+const roleBasedAuthorizationStrategy = {
+    authorize: function(user, role) {
+      // Perform role-based authorization logic
+      return user.role === role;
+    }
+  };
+
 // Context class for authentication
 class AuthenticationContext {
     constructor(strategy) {
       this.strategy = strategy;
     }
     setStrategy(strategy) {
+        this.strategy = strategy;
       }
     
     authenticate(...args) {
