@@ -62,17 +62,6 @@
 
       // Subscribe the observer functions to the buttonSubject
       buttonSubject.subscribe(function (buttonId) {
-        // switch(buttonId) {
-        //   case "button1":
-        //     document.getElementById("output").textContent =
-        //       "Button Click Observer 1 is clicked!\n";
-        //     break;
-        //   case "button2":
-        //     document.getElementById("output").textContent =
-        //       "Button Click Observer 2 is clicked!\n";
-        //     break;
-        // }
-
         const message = `Observer of ${buttonId} has been notified\n`;
         document.getElementById("output").textContent = message;  
       });
