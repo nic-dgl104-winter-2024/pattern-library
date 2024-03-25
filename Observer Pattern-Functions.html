@@ -56,7 +56,7 @@
       // Notify Observers on Button Click
 
       // Function to handle button click events and notify observers
-      function handleButtonClick(event) {
+      function sendButtonClickNotif(event) {
         buttonSubject.notify(event.target.id);
       }
 
@@ -69,10 +69,10 @@
       // Attach event listener to the buttons for click events
       document
         .getElementById("button1")
-        .addEventListener("click", handleButtonClick);
+        .addEventListener("click", sendButtonClickNotif);
       document
         .getElementById("button2")
-        .addEventListener("click", handleButtonClick);
+        .addEventListener("click", sendButtonClickNotif);
     </script>
   </body>
 </html>
