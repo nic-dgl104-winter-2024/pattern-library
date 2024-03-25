@@ -6,6 +6,13 @@ const basicAuthStrategy = {
     }
   };
 
+const oauthStrategy = {
+    authenticate: function(token) {
+      // Perform OAuth authentication logic
+      return token === "valid_token";
+    }
+  };
+
 // Context class for authentication
 class AuthenticationContext {
     constructor(strategy) {
