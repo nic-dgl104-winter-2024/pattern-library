@@ -9,6 +9,7 @@ The facade design pattern is a structural design pattern that enables users to c
 (Poorte, 2023)
 
 ## Diagram
+![javascript-facade](https://github.com/nazrinzuwair/pattern-library/assets/144160072/757bff23-d434-4189-8006-db5b1415989e)
 
 The elements that are involved in the Facade design pattern are:
 1. Subsystem: The entire intricate logic and implementation are handled by a class, collection of classes, or interfaces that make up the Subsystem.
