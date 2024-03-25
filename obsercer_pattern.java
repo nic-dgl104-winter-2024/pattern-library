@@ -54,4 +54,16 @@ class ConcreteObserver implements Observer {
         this.subject.addObserver(this);
     }
 
+public class Main {
+    public static void main(String[] args) {
+        ConcreteSubject subject = new ConcreteSubject();
+        ConcreteObserver observer1 = new ConcreteObserver(subject);
+        ConcreteObserver observer2 = new ConcreteObserver(subject);
+
+        subject.setState(1);
+
+        subject.removeObserver(observer1);
+
+        subject.setState(2);
+    }
 }
