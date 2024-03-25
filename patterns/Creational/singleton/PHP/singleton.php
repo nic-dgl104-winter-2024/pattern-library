@@ -51,6 +51,9 @@ class DB
   }
 }
 
+// Obtain the singleton instance of the DB class
+$db = DB::getInstance();
+
 // Usage
 $stmt = "SELECT * FROM users";
 $results = $db->query($stmt, []);
