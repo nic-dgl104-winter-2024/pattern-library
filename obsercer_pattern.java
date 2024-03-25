@@ -54,6 +54,12 @@ class ConcreteObserver implements Observer {
         this.subject.addObserver(this);
     }
 
+    @Override
+    public void update() {
+        System.out.println("Observer updated. New state: " + subject.getState());
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         ConcreteSubject subject = new ConcreteSubject();
