@@ -1,5 +1,5 @@
 <?php
-class DatabaseConnection
+class DB
 {
   private static $instance = null;
   private $connection;
@@ -16,7 +16,7 @@ class DatabaseConnection
   public static function getInstance()
   {
     if (self::$instance === null) {
-      self::$instance = new DatabaseConnection();
+      self::$instance = new DB();
     }
     return self::$instance;
   }
