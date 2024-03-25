@@ -58,7 +58,7 @@ class InvestorImpl implements Investor {
 }
 
 //Main Class(Usage example)
-public class Observer_patten  {
+public class observer_patten {
     public static void main(String[] args) {
         StockMarketImpl stockMarket = new StockMarketImpl();
 
