@@ -2,7 +2,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Subject interface
+// Subject interface which store value of list
 interface Subject {
     void addObserver(Observer observer);
     void removeObserver(Observer observer);
@@ -53,7 +53,7 @@ class ConcreteObserver implements Observer {
 }
 
 // Main class
-public class Observer_patter {
+public class Observer_patten {
     public static void main(String[] args) {
         // Creating a concrete subject
         ConcreteSubject subject = new ConcreteSubject();
