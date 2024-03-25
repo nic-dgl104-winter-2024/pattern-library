@@ -21,10 +21,12 @@ class DatabaseConnection
     return self::$instance;
   }
 
-  // Method to execute a query
-  public function query($sql)
+  // Method to execute a query safely with prepared statements
+  public function query($sql, $params = [])
   {
-    return $this->connection->query($sql);
+    $stmt = $this->connection->prepare($sql);
+    $stmt->execute($params);
+    return $stmt;
   }
 
   // Prevent the instance from being cloned
