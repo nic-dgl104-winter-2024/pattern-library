@@ -32,3 +32,11 @@ class NamesDatabase : NamesTemplate() {
         println("Current names in the database: $namesList")
     }
 }
+
+fun main() {
+    val namesDatabase = NamesDatabase()
+
+    println("Processing names in the database:")
+    namesDatabase.manageNames("Lara")
+    namesDatabase.manageNames("Katrina")
+}
