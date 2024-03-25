@@ -10,3 +10,7 @@ The fundamental goal of the Observer pattern is to establish communication and i
 * ConcreteSubject holds the actual state and notifies observers when it changes.
 * ConcreteObserver implements the observer interface, registering with a subject and reacting to state changes.
 (https://www.geeksforgeeks.org/observer-pattern-set-1-introduction/)
+
+### Refernces
+* GfG. (2024, February 6). Observer design pattern. GeeksforGeeks. https://www.geeksforgeeks.org/
+* Refactoring.Guru. (2024b, January 1). Observer in Java. https://refactoring.guru/design-patterns/observer/java/example
