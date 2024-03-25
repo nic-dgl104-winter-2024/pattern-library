@@ -191,6 +191,12 @@ console.log(doubled); // [2, 4, 6, 8, 10]
 
 **Pattern Matching:** FP languages like Haskell or Scala offer pattern matching, allowing elegant handling of different cases. This contrasts with traditional switch-case or if-else statements in OOP.
 
+| Aspect               | Functional Programming (FP)                                      | Object-Oriented Programming (OOP)                                             |
+|----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Immutability                | Favors immutable data to reduce unintended state changes.      | Supports immutability but often relies on mutable state within objects.        |
+| Composition vs. Inheritance | Emphasizes composition over inheritance, using functions for complex behaviors. | Often relies on class hierarchies and inheritance for code organization.        |
+| Pattern Matching    | Offers pattern matching for elegant handling of different cases. | Relies on traditional switch-case or if-else statements for conditional logic. |
+
 ### Conclusion
 While OOP design patterns are specific to class-based systems, functional programming offers alternative patterns that address similar concerns. Functional patterns emphasize immutability, higher-order functions, and composition, leading to concise and expressive code. While the transition from OOP to FP may require a mindset shift, understanding both paradigms equips developers with a broader toolkit for solving problems.
 
