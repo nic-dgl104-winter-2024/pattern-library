@@ -11,14 +11,15 @@ export function createObject(id) {
   console.log(name.value);
   let object = instance === "observer" ? new Observer(name) : new Subject(name);
   nameInput.value = "";
-  return storageController(object, instance);
+  let list = retriveFromStorage(instance);
+  addToStorage(list, object, instance);
 }
+
 export function getObjects(key) {
   let items = retriveFromStorage(key)
   if (items.length === 0) return null;
   return createInstance(items, key);
 }
-
 
 export function getSubscribers(bool, id, key) {
   if(bool) {
@@ -29,12 +30,6 @@ export function getSubscribers(bool, id, key) {
       }
     }
   }
-}
-function storageController(object, instance) {
-  let list = retriveFromStorage(instance);
-  addToStorage(list, object, instance);
-  if (list.length === 0) return object;
-  return createInstance(list, instance);
 }
 
 function addToStorage(list, object, instance) {

@@ -22,16 +22,14 @@ window.TIME_FORM.addEventListener("submit", T.setTimeDelay);
 
 window.SUBJECT_FORM = document.getElementById("subjectForm");
 window.SUBJECT_FORM.addEventListener("submit", (event) => {
-  let items = S.createObject(event.target.id);
-  console.log(items);
-  P.subject(items);
+  S.createObject(event.target.id);
+  printObjects("subject", "allSubjects");
 });
 
 window.OBSERVER_FORM = document.getElementById("observerForm");
 window.OBSERVER_FORM.addEventListener("submit", (event) => {
-  let items = S.createObject(event.target.id);
-  console.log(items);
-  P.observer(items);
+  S.createObject(event.target.id);
+  printObjects("observer", "allObservers");
 });
 
 let options = document.getElementById("subjectOptions");
