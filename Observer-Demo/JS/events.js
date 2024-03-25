@@ -53,8 +53,7 @@ testS.addEventListener("click", (event) => {
 function print() {
   printObjects("observer", "allObservers");
   printObjects("subject", "allSubjects");
-
-  printSelects("subject", "selectSubject");
+  printSelects("subject", "selectSubject", "subjectOptions");
 }
 
 function printObjects(type, parentId) {
@@ -64,19 +63,20 @@ function printObjects(type, parentId) {
     P[type](parent, objectList);
   }
 }
-function printSelects(type, parentId) {
+function printSelects(type, parentId, target) {
   let objectList = S.getObjects(type);
   if (objectList !== null) {
     let parent = document.getElementById(parentId);
     let events = {
       click: "click",
-      change: action,
+      change: (event) => {action(target)},
     };
     P.select(type, parent, objectList, events);
   }
 }
 
-function action() {
-  console.log("action");
+function action(target) {
+  const parent = document.getElementById(target);
+  P.getActions(parent, event.target);
 }
 print();

@@ -43,6 +43,13 @@ export function select(type, parent, items, events) {
   });
 }
 
+export function getActions(parent, object) {
+  clearParent(parent);
+  const title = document.createElement("h3");
+  title.textContent = `Options for ${object.getAttribute("name")}`;
+  parent.appendChild(title);
+}
+
 //clear the parent element
 function clearParent(parent) {
   return (parent.textContent = "");
@@ -90,6 +97,7 @@ function bind(ele, object) {
 function options(object, type) {
   const option = document.createElement('option');
   option.value = object.id;
+  option.setAttribute('name', object.name);
   option.textContent = getName(object, type);
   return option;
 }
