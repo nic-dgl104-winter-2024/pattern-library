@@ -18,7 +18,9 @@ class AuthenticationContext {
     constructor(strategy) {
       this.strategy = strategy;
     }
-
+    setStrategy(strategy) {
+      }
+    
     authenticate(...args) {
         return this.strategy.authenticate(...args);
     }
@@ -26,3 +28,6 @@ class AuthenticationContext {
 
 const authenticationContext = new AuthenticationContext(basicAuthStrategy);
 console.log(authenticationContext.authenticate("admin", "password")); // Output: true
+
+authenticationContext.setStrategy(oauthStrategy);
+console.log(authenticationContext.authenticate("valid_token")); // Output: true
