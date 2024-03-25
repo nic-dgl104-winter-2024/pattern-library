@@ -9,3 +9,4 @@ The fundamental goal of the Observer pattern is to establish communication and i
 * Observer defines an interface with an update method for receiving updates from the subject.
 * ConcreteSubject holds the actual state and notifies observers when it changes.
 * ConcreteObserver implements the observer interface, registering with a subject and reacting to state changes.
+
