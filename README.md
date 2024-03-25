@@ -66,11 +66,34 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 <a id="#singleton-pattern"></a> 
 
-## Definition of Singleton Pattern
+
+## Definition of Strategy pattern
+
+Rather than statically selecting a single algorithm or behaviour, an object can select from a variety of them at runtime thanks to the Strategy pattern. Based on the idea of composition over inheritance, it defines a family of algorithms, encapsulates them all, and allows for runtime substitution. By separating the algorithms from the main object, this pattern enables the main object to assign the behaviour of the algorithm to one of its contained strategies. It encourages flexibility and reusability by separating the behaviour into distinct classes that can be added or removed at runtime, making it simple to add or alter different strategies without altering the object's core code. The Strategy pattern improves the flexibility and reusability of the calling code by postponing the choice of which algorithm to use until runtime.
+
+### Components of the Strategy Design Pattern
+
+* Context: This class may define an interface that allows the strategy to access its data and holds a reference to a strategy object. The strategy object receives the algorithm from the context class.
+
+* Strategy Interface: An interface or abstract class that defines a collection of methods to carry out a specific behaviour is called a strategy. Using a particular algorithm, each concrete method puts this interface into practice.
+
+
+* Concrete Strategies: These are the ways in which the strategy interface is put into practice. For every concrete strategy, there is a unique algorithm that the context can apply.
+
+### Benifits of using Strategy pattern
+
+* Flexibility and Extensibility: 
+* Promotes Reusability
+* Enhances Testability
+* Easy to  Maintenance
 
 ### References
 
+Wikipedia page on Strategy pattern(10 May 2023).https://en.wikipedia.org/wiki/Strategy_pattern.
 
+Ashutosh Krishna.(MAY 4, 2023).A Beginner's Guide to the Strategy Design Pattern.https://www.freecodecamp.org/news/a-beginners-guide-to-the-strategy-design-pattern/
+
+Sulabh Kumar.(09 Feb, 2024).Strategy Design Pattern.https://www.geeksforgeeks.org/strategy-pattern-set-1/
 ## Model View View-Model (MVVM) - Architectural Pattern
 
 ### Overview of the concept
