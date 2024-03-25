@@ -7,7 +7,7 @@ React Native is a framework developed by Facebook. It helps make mobile apps tha
 Here are some of the benefits of react-native:
 
 * Speedy Development: Quickens app creation by reusing code components.
-* Instant Updates: Visualize changes immediately during development.
+* Instant Updates:  Visualize changes immediately during development.
 * Comparable Performance: React Native apps perform nearly as well as native ones.
 * Universal Compatibility: Develop once, deploy on both iOS and Android.
 * Abundant Third-Party Resources: Access a wide selection of pre-existing components for added functionality.
