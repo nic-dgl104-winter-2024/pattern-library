@@ -171,8 +171,7 @@ Functional programming emphasizes immutable data and pure functions without side
 
 One common pattern in FP is the Higher-Order Function pattern. Higher-order functions take other functions as arguments or return them, enabling composition and abstraction.
 
-```
-JavaScript
+```JavaScript
 // Example of map, a higher-order function
 
 const numbers = [1, 2, 3, 4, 5];
