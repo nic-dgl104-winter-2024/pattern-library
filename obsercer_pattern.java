@@ -7,4 +7,13 @@ interface Subject {
     void removeObserver(Observer observer);
     void notifyObservers();
 }
+
+// Concrete Subject
+class ConcreteSubject implements Subject {
+    private List<Observer> observers = new ArrayList<>();
+    private int state;
+
+    public int getState() {
+        return state;
+    }
 }
