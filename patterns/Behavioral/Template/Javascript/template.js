@@ -45,10 +45,10 @@ class CardDispenser extends CommunicateWithDevice {
 
 class BillAcceptor extends CommunicateWithDevice {
 	on() {
-		console.log("card dispenser on");
+		console.log("bill acceptor on");
 	}
 	off() {
-		console.log("card dispenser off");
+		console.log("card acceptor off");
 	}
 	process() {
 		this.collectBills();
@@ -61,7 +61,7 @@ class BillAcceptor extends CommunicateWithDevice {
 		console.log("Counting bills...");
 	}
 }
-class MembershipCard {
+class MembershipCardCreator {
 	#cardDispenser = null;
 	#billAcceptor = null;
 
@@ -85,8 +85,7 @@ class MembershipCard {
 
 const cardDispenser = new CardDispenser();
 const billAcceptor = new BillAcceptor();
-const memberOne = new MembershipCard();
-const membershipCardCreator = new MembershipCardCreator(cardDispenser, billAcceptor);
+const membershipCard = new MembershipCardCreator(cardDispenser, billAcceptor);
 
-membershipCardCreator.initialize();
-membershipCardCreator.getPhysicalCard();
+membershipCard.initialize();
+membershipCard.getPhysicalCard();
