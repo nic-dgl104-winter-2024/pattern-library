@@ -22,10 +22,10 @@ class CommunicateWithDevice {
 
 class CardDispenser extends CommunicateWithDevice {
 	on() {
-		console.log("card dispenser on");
+		console.log("Card dispenser on");
 	}
 	off() {
-		console.log("card dispenser off");
+		console.log("Card dispenser off");
 	}
 	process() {
 		this.checkRemainCardQuantity();
@@ -33,22 +33,22 @@ class CardDispenser extends CommunicateWithDevice {
 		this.dispenseCard();
 	}
 	checkRemainCardQuantity() {
-		console.log("check quantity....");
+		console.log("Check quantity....");
 	}
 	writeByteToCard() {
-		console.log("writing....");
+		console.log("Writing....");
 	}
 	dispenseCard() {
-		console.log("dispensing...");
+		console.log("Dispensing...");
 	}
 }
 
 class BillAcceptor extends CommunicateWithDevice {
 	on() {
-		console.log("bill acceptor on");
+		console.log("Bill acceptor on");
 	}
 	off() {
-		console.log("card acceptor off");
+		console.log("Card acceptor off");
 	}
 	process() {
 		this.collectBills();
