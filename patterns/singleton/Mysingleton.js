@@ -28,8 +28,6 @@ class MySingleton {
   }
 }
 
-Object.freeze(MySingleton);
-
 // Usage in a React Native component
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
