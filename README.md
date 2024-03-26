@@ -153,7 +153,63 @@ Michaelstonis. (2022, November 4). _Model-View-ViewModel - .NET._ Microsoft Lear
 Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture explained._ Web Design, UI/UX, Branding, and App Development Blog. https://www.ramotion.com/blog/what-is-mvvm/ 
 
 
+## Functional Patterns vs. OOP Design Patterns in JavaScript
 
+### Introduction: 
+
+In traditional Object-Oriented Programming (OOP), design patterns are widely used to solve common problems by providing structured approaches to design and development. However, with the rise of Functional Programming (FP), there's a shift towards different paradigms and patterns. In this Section, we'll explore the contrast between OOP design patterns and functional patterns in JavaScript.
+
+### OOP Design Patterns
+OOP design patterns like Singleton, Factory, Observer, and others are well-established concepts in JavaScript development. They focus on class hierarchies, encapsulation, and inheritance to achieve modularity and extensibility.
+
+For example, the Singleton pattern ensures that a class has only one instance and provides a global point of access to it. In JavaScript:
+
+Please see the example for [Singleton pattern in JavaScript](https://github.com/nic-dgl104-winter-2024/pattern-library/blob/main/patterns/Creational/singleton/JavaScript/singleton.js)
+
+### Functional Patterns
+Functional programming emphasizes immutable data and pure functions without side effects. While traditional OOP design patterns may not directly translate, functional programming offers its own set of patterns to address similar concerns.
+
+One common pattern in FP is the Higher-Order Function pattern. Higher-order functions take other functions as arguments or return them, enabling composition and abstraction.
+
+```JavaScript
+// Example of map, a higher-order function
+
+const numbers = [1, 2, 3, 4, 5];
+// Using the map method, which is a higher-order function,
+// to apply the arrow function to each element of the numbers array.
+// The arrow function takes an argument 'x' and returns 'x * 2'.
+const doubled = numbers.map(x => x * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+```
+### Definitions
+
+| Aspect               | Definition                                                      |
+|----------------------|-----------------------------------------------------------------|
+| Immutability        | "An immutable value is one whose content cannot be changed without creating an entirely new value" ([Developer Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Immutable)). |
+| Composition  | "Object composition refers to the logical or conceptual structure of the information, not the implementation or physical data structure used to represent it" ([Wikipedia](https://en.wikipedia.org/wiki/Object_composition)). |
+| Inheritance  | "In object-oriented programming, inheritance is the mechanism of basing an object or class upon another object (prototype-based inheritance) or class (class-based inheritance), retaining similar implementation" ([Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))). |
+| Pattern Matching    | "Pattern matching is a mechanism for checking a value against a pattern and, based on the match, performing some kind of action" ([Dev Community](https://dev.to/nexxeln/expressive-code-with-pattern-matching-3de6)). |
+
+
+### Contrast and Comparison
+
+| Aspect               | Functional Programming (FP)                                      | Object-Oriented Programming (OOP)                                             |
+|----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Immutability                | Favors immutable data to reduce unintended state changes.      | Supports immutability but often relies on mutable state within objects.        |
+| Composition vs. Inheritance | Emphasizes composition over inheritance, using functions for complex behaviors. | Often relies on class hierarchies and inheritance for code organization.        |
+| Pattern Matching    | Offers pattern matching for elegant handling of different cases. | Relies on traditional switch-case or if-else statements for conditional logic. |
+
+
+
+### Conclusion
+While OOP design patterns are specific to class-based systems, functional programming offers alternative patterns that address similar concerns. Functional patterns emphasize immutability, higher-order functions, and composition, leading to concise and expressive code. While the transition from OOP to FP may require a mindset shift, understanding both paradigms equips developers with a broader toolkit for solving problems.
+
+### References
+
+* [javascript-functional-programming-vs-oop](https://anywhere.epam.com/en/blog/javascript-functional-programming-vs-oop)
+* [Comparing Dessign Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
+* [singleton-pattern](https://www.patterns.dev/vanilla/singleton-pattern/)
+* [functional-programming-javascript](https://www.toptal.com/javascript/functional-programming-javascript)
 
 ## Articles / Websites
 
