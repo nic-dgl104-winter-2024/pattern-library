@@ -76,8 +76,18 @@ function printSelects(type, parentId, target) {
 
 function action(target) {
   const parent = document.getElementById(target);
+  const bind = event.target.getAttribute("bind");
   P.actions(parent, event.target);
-  let s = S.getSubscribers(true, event.target.value, 'subject');
+  let s = S.getSubscribers(true, event.target.value, bind);
+  P.createSelect(parent, 'subscribedObservers', getArray(s), s.sub);
   console.log(s)
+}
+// brought to you by chatGPT
+function getArray(object) {
+  for (let key in object) {
+    if (Array.isArray(object[key])) {
+      return object[key];
+    }
+  }
 }
 print();
