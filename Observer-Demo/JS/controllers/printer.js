@@ -36,7 +36,7 @@ export function select(type, parent, items, events) {
   const option = optionTitle(type);
   parent.appendChild(option);
 
-  items.forEach(item => {
+  items.forEach((item) => {
     const option = options(item, type);
     option.addEventListener(events.click, events.change);
     parent.appendChild(option);
@@ -50,6 +50,12 @@ export function actions(parent, object) {
   parent.appendChild(title);
 }
 
+export function createSelect(parent, id, items, type) {
+  const select = document.createElement("select");
+  select.setAttribute("id", id);
+  select.appendChild(optionTitle(type));
+  parent.appendChild(select);
+}
 //clear the parent element
 function clearParent(parent) {
   return (parent.textContent = "");
@@ -72,6 +78,7 @@ function sub(list, type) {
     }
     ul.appendChild(ele);
   });
+  li()
 }
 
 //create list element
@@ -90,14 +97,17 @@ function span(object) {
 
 //binds element to object
 function bind(ele, object) {
-  return ele.setAttribute(object.bind, object.id);
+  let bind = object.bind ? object.bind : "bind";
+  let id = object.id ? object.id : object;
+  return ele.setAttribute(bind, id);
 }
 
 //create options
 function options(object, type) {
-  const option = document.createElement('option');
+  const option = document.createElement("option");
   option.value = object.id;
-  option.setAttribute('name', object.name);
+  option.setAttribute("name", object.name);
+  bind(option, type);
   option.textContent = getName(object, type);
   return option;
 }
@@ -112,23 +122,34 @@ function optionTitle(type) {
 }
 
 /**
+ *  iconography reference
+ *  [ - ] -> remove [Observer, Subject] from [Subject, Observer]
+ *  [ + ] -> add    [Observer, Subject] to   [Subject, Observer]
+ *  [ * ] -> delete [Observer, Subject]
+ *  [ = ] -> update [Subject] Data
+ *  [ ! ] -> notify [Subject] -> [Subscribers]
+ * 
  * Subject Template
- *
- *
- * Subject 1 -- data
- *  - Subscriber 1
- *  - Subscriber 2
- * Subject 2 -- data
- *  - Subscriber
+ * 
+ * # Subjects 
+ * Subject 1 -- data [ * ] [ = ] [ ! ]
+ *  - Subscriber 1 [ - ]
+ *  - Subscriber 2 [ - ]
+ *  - [ + ]
+ * Subject 2 -- data [ * ] [ = ] [ ! ]
+ *  - Subscriber 1 [ - ]
+ *  - [ + ]
  */
 
 /**
  * Observer Template
  *
- *
- * Observer 1
- *  - Observing -- data
- *  - Observing -- data
- * Observer 2
- *  - Observing -- data
+ * # Observers
+ * Observer 1 [ * ]
+ *  - Observing -- data [ - ]
+ *  - Observing -- data [ - ]
+ *  - [ + ]
+ * Observer 2 [ * ]
+ *  - Observing -- data [ - ]
+ *  - [ + ]
  */
