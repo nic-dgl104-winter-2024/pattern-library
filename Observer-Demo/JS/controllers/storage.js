@@ -22,11 +22,12 @@ export function getObjects(key) {
 }
 
 export function getSubscribers(bool, id, key) {
+  let subbed = bool ? "subscriber" : "nonsubscriber";
   if(bool) {
     let subs = createInstance(retriveFromStorage(key), key);
     for(let i = 0; i <= subs.length; i++) {
       if (subs[i].id == id) {
-        return subs[i];
+        return {...subs[i], sub: subbed};
       }
     }
   }
