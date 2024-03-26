@@ -33,3 +33,32 @@ class FileDataProcessor extends DataProcessor {
         System.out.println("Processing data from file: " + fileName);
     }
 }
+
+class DatabaseDataProcessor extends DataProcessor {
+
+    private String databaseName;
+
+    public DatabaseDataProcessor(String databaseName) {
+        this.databaseName = databaseName;
+    }
+
+    @Override
+    void processData() {
+        System.out.println("Processing Data from database: " + databaseName);
+    }
+}
+
+
+
+
+public class Main {
+    public static void main(String[] args) {
+        DataProcessor fileProcessor = new FileDataProcessor("data.txt");
+        System.out.println("Processing file data");
+        fileProcessor.process();
+
+        System.out.println("\nProcessing database data:");
+        DataProcessor databaseProcessor = new DatabaseDataProcessor("my_database");
+        databaseProcessor.process();
+    }
+}
