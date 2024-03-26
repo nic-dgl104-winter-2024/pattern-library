@@ -30,9 +30,9 @@ public sealed class Student
     // Method to update student details
     public void UpdateDetails(string name, int age, string grade)
     {
-        this.name = Name;
-        this.age = Age;
-        this.grade = Grade;
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
     }
 
     // Method to display student details
@@ -98,11 +98,10 @@ class Program
             Console.WriteLine("Both objects are same");   
         }
  
-        secondaryStudent.UpdateDetails("Ravi", 30, "A");  // updating the grade of student class using secondaryStudent object
+        secondaryStudent.UpdateDetails("Shubham", 32, "A");  // updating the grade of student class using secondaryStudent object
 
-        Console.WriteLine("\nUpdated Details: using Student1 object");
+        Console.WriteLine("\nUpdated Details: using secondaryStudent object");
         primaryStudent.DisplayDetails(); // Showing the details using the student object
     }
 
-    }
 }
