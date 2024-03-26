@@ -3,9 +3,9 @@ using System;
 public sealed class Student
 {
     // Properties of the student
-    public string Name { get; set; }
-    public int Age { get; set; }
-    public string Grade { get; set; }
+    public string name { get; set; }
+    public int age { get; set; }
+    public string grade { get; set; }
 
     // Private static instance variable using Lazy initialization
     private static readonly Lazy<Student> instance = new Lazy<Student>(() => new Student("Default",0,"None"));
@@ -22,25 +22,25 @@ public sealed class Student
     // Constructor
     private Student(string name, int age, string grade)  // Making private constructor to prevent instantiation from outside
     {
-        Name = name;
-        Age = age;
-        Grade = grade;
+        this.name = name;
+        this.age = age;
+        this.grade = grade;
     }
 
     // Method to update student details
-    public void UpdateDetails(string Name, int Age, string Grade)
+    public void UpdateDetails(string name, int age, string grade)
     {
-        this.Name = Name;
-        this.Age = Age;
-        this.Grade = Grade;
+        this.name = Name;
+        this.age = Age;
+        this.grade = Grade;
     }
 
     // Method to display student details
     public void DisplayDetails()
     {
-        Console.WriteLine($"Name: {Name}");
-        Console.WriteLine($"Age: {Age}");
-        Console.WriteLine($"Grade: {Grade}");
+        Console.WriteLine($"Name: {name}");
+        Console.WriteLine($"Age: {age}");
+        Console.WriteLine($"Grade: {grade}");
     }
 }
 
@@ -49,18 +49,18 @@ class Program
     static void Main(string[] args)
     {
         // Accessing the singleton instance
-        Student student = Student.Instance;
+        Student primaryStudent = Student.Instance;
 
         // Display original details
         Console.WriteLine("Original Details:");
-        student.DisplayDetails();
+        primaryStudent.DisplayDetails();
 
         // Update student details
-        student.UpdateDetails("Ravi", 30, "B");
+        primaryStudent.UpdateDetails("Ravi", 30, "B");
 
         // Display updated details
         Console.WriteLine("\nUpdated Details:");
-        student.DisplayDetails();
+        primaryStudent.DisplayDetails();
 
         /// <summary>
         ///  If developer try to create the new object of student class, he will get error at the compile time
@@ -69,8 +69,8 @@ class Program
         
         // <example> 
 
-        //Student student1 = new Student("",0,""); 
-        //student1.UpdateDetails("R",12,"C");
+        //Student primaryStudent = new Student("",0,""); 
+        //primaryStudent.UpdateDetails("R",12,"C");
         
         // </example>
 
@@ -91,17 +91,17 @@ class Program
         /// Developer can Create the another instance and can access the Student class and able to perform action 
         ///  Output: Both object are same (true)
         /// </summary>
-        Student student1 = Student.Instance;  // creating new object referring to same class 
+        Student secondaryStudent = Student.Instance;  // creating new object referring to same class 
 
-        if(student == student1)  // comaparing the both instances
+        if(primaryStudent == secondaryStudent)  // comaparing the both instances
         {
             Console.WriteLine("Both objects are same");   
         }
  
-        student1.UpdateDetails("Ravi", 30, "A");  // updating the grade of student class using student1 object
+        secondaryStudent.UpdateDetails("Ravi", 30, "A");  // updating the grade of student class using secondaryStudent object
 
         Console.WriteLine("\nUpdated Details: using Student1 object");
-        student.DisplayDetails(); // Showing the details using the student object
+        primaryStudent.DisplayDetails(); // Showing the details using the student object
     }
 
     }
