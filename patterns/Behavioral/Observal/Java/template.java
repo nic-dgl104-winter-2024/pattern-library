@@ -1,3 +1,5 @@
+package patterns.Behavioral.Observal.Java;
+
 abstract class DataProcessor {
 
     public final void process() {
@@ -16,8 +18,18 @@ abstract class DataProcessor {
 
     abstract void processData();
 
+}
 
+class FileDataProcessor extends DataProcessor {
 
+    private String fileName;
 
+    public FileDataProcessor(String fileName) {
+        this.fileName = fileName;
+    }
 
+    @Override
+    void processData() {
+        System.out.println("Processing data from file: " + fileName);
+    }
 }
