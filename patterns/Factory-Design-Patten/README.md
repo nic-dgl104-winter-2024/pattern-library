@@ -10,9 +10,9 @@ In JavaScript, calling a constructor function with the new operator is a common 
 
 The following entities are involved in this pattern when implementing using JavaScript:
 
-   - Creator: This corresponds to the 'factory' object in the provided visual representation, responsible for producing new products. It implements the 'factoryMethod', which yields freshly generated products.
+   - Creator: This corresponds to the factory object in the provided visual representation, responsible for producing new products. It implements the factoryMethod, which yields freshly generated products.
 
-   - Concrete Product: These are the products being created, represented in the example code by the 'Employees' objects. Each product adheres to the same interface, comprising identical attributes and operations.
+   - Concrete Product: These are the products being created, where each product adheres to the same interface, comprising identical attributes and operations.
 
    - Abstract Product: This role is not commonly used in JavaScript. Traditionally, it would declare a product interface for various programming languages or scenarios. However, JavaScript does not specify interfaces explicitly. Instead, actual objects typically implement the relevant properties and methods directly, eliminating the need for an abstract product interface.
 
@@ -22,7 +22,7 @@ The following entities are involved in this pattern when implementing using Java
 
 ### Factory Function for Creating Foods
 
-The FoodFactory function serves as a factory for creating different types of foods, demonstrating the Factory Design Pattern. It contains a method createFood that takes a type as input and returns a corresponding food object. This approach abstracts the process of object creation, allowing the client code to create food objects without knowing the specific type being instantiated.
+The `FoodFactory` function serves as a factory for creating different types of foods, demonstrating the Factory Design Pattern. It contains a method `createFood` that takes a type as input and returns a corresponding `food` object. This approach abstracts the process of object creation, allowing the client code to create `food` objects without knowing the specific type being instantiated.
 
 ```javascript
 // Factory Function for Creating Foods
@@ -50,9 +50,9 @@ function FoodFactory() {
     }
 }
 ```
-### Pizza Class 
+### `Pizza` Class 
 
-The Pizza class represents a type of food created by the FoodFactory factory function. It encapsulates the properties and behavior specific to pizza objects. By being created through the FoodFactory, the Pizza class adheres to the Factory Design Pattern, where the factory method (createFood) is responsible for creating instances of concrete classes (Pizza) without exposing the instantiation logic.
+The `Pizza` class represents a type of food created by the `FoodFactory` factory function. It encapsulates the properties and behavior specific to pizza objects. By being created through the `FoodFactory`, the `Pizza` class adheres to the Factory Design Pattern, where the factory method (`createFood`) is responsible for creating instances of concrete classes (`Pizza`) without exposing the instantiation logic.
 
 ```javascript
 // Pizza Class
@@ -61,9 +61,9 @@ function Pizza() {
 }
 ```
 
-### Burger Class 
+### `Burger` Class 
 
-The Burger class represents another type of food created by the FoodFactory factory function. Similar to the Pizza class, it encapsulates the properties and behavior specific to burger objects. The instantiation of Burger objects through the FoodFactory aligns with the Factory Design Pattern, abstracting the object creation process and providing a common interface for creating different types of foods.
+The `Burger` class represents another type of food created by the `FoodFactory` factory function. Similar to the `Pizza` class, it encapsulates the properties and behavior specific to burger objects. The instantiation of `Burger` objects through the `FoodFactory` aligns with the Factory Design Pattern, abstracting the object creation process and providing a common interface for creating different types of foods.
 
 ```javascript
 // Burger Class
@@ -72,9 +72,9 @@ function Burger() {
 }
 ```
 
-### Salad Class 
+### `Salad` Class 
 
-The Salad class represents yet another type of food created by the FoodFactory factory function. It encapsulates the properties and behavior specific to salad objects. As with the Pizza and Burger classes, the instantiation of Salad objects through the FoodFactory adheres to the Factory Design Pattern, promoting encapsulation and decoupling by separating the client code from the object creation logic.
+The `Salad` class represents yet another type of food created by the `FoodFactory` factory function. It encapsulates the properties and behavior specific to salad objects. As with the `Pizza` and `Burger` classes, the instantiation of `Salad` objects through the `FoodFactory` adheres to the Factory Design Pattern, promoting encapsulation and decoupling by separating the client code from the object creation logic.
 
 ```javascript
 Copy code
@@ -86,7 +86,7 @@ function Salad() {
 
 ### Run function to execute the program
 
-The run() function is invoked to demonstrate the usage of the Factory Method pattern. Within this function, a FoodFactory instance is created to produce different types of foods. Each food type (pizza, burger, salad) is created using the factory method createFood() of the FoodFactory. This showcases the core principle of the Factory Method pattern, where object creation is delegated to a factory object, allowing the client code to create objects without specifying their concrete classes.
+The `run()` function is invoked to demonstrate the usage of the Factory Method pattern. Within this function, a `FoodFactory` instance is created to produce different types of foods. Each food type (`pizza`, `burger`, `salad`) is created using the factory method `createFood()` of the `FoodFactory`. This showcases the core principle of the Factory Method pattern, where object creation is delegated to a factory object, allowing the client code to create objects without specifying their concrete classes.
 
 ```javascript
 // Run function to demonstrate the usage of the Factory Method
