@@ -31,7 +31,7 @@ function FoodFactory() {
 
 // Pizza Class
 function Pizza() {
-    this.famousAudience = "youngers!";
+    this.famousAudience = "youngsters!";
 }
 
 // Burger Class

@@ -63,7 +63,7 @@ The `Pizza` class represents a type of food created by the `FoodFactory` factory
 ```javascript
 // Pizza Class
 function Pizza() {
-    this.famousAudience = "youngers!";
+    this.famousAudience = "youngsters!";
 }
 ```
 
@@ -119,7 +119,7 @@ Idea extracted from (Harsh, 2023). Factory Method. Retrieved from [Kinsta Blog](
 ### Output
 
 ```
-The pizza is famous among: youngers!
+The pizza is famous among: youngsters!!
 The burger is famous among: Kids!
 The salad is famous among: elders!
 ```
