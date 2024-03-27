@@ -1,3 +1,9 @@
+              /* ------>  Reference singleton pattern <--------  */  
+// https://www.c-sharpcorner.com/UploadFile/8911c4/singleton-design-pattern-in-C-Sharp/
+// https://medium.com/developer-rants/singletons-in-c-2c53a846b246
+              
+
+
 using System;
 
 public sealed class Student
@@ -70,26 +76,37 @@ class Program
         // <example> 
 
         //Student primaryStudent = new Student("",0,""); 
-        //primaryStudent.UpdateDetails("R",12,"C");
+        //primaryStudent.UpdateDetails("Parminder",12,"C");
         
         // </example>
 
         /// <summary>
-        /// Developer can Create the another instance and can access the Student class and able to perform action 
-        ///  Output: Both object are same (true)
+        /// Developer can create another instance of Student singleton class and update the details
         /// </summary>
-        Student secondaryStudent = Student.Instance;  // creating new object referring to same class 
-
-        if(primaryStudent == secondaryStudent)  // comaparing the both instances
-        {
-            Console.WriteLine("Both objects are same");   
-        }
- 
+        
+        /// <example>
+        Student secondaryStudent = Student.Instance;  // creating new object referring to same class
         secondaryStudent.UpdateDetails("Shubham", 32, "A");  // updating the grade of student class using secondaryStudent object
 
         Console.WriteLine("\nUpdated Details: using secondaryStudent object");
         primaryStudent.DisplayDetails(); // Showing the details using the student object
+        
+        ///</example>
 
+        /// <summary>
+        /// Developer can compare the both instances by comparing each other 
+        ///  Output: Both object are same (true)
+        /// </summary>
+        
+        /// <example> 
+
+        if(primaryStudent == secondaryStudent)  // comaparing the both instances
+        {
+            Console.WriteLine("\nComapare both instances: primaryStudent and secondaryStudent");
+            Console.WriteLine("Both objects are same");   
+        }
+        /// </example>
+       
 
          /// <summary>
         /// Developer can check the using the bool if the instance is exist before operating the operation 
