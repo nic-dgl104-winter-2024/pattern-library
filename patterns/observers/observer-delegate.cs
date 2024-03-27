@@ -52,3 +52,31 @@ public class ConcreteObserver : IObserver<Data>
         Console.WriteLine($"{name} received message: {data.Message}");
     }
 }
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Create subject
+        Subject<Data> subject = new Subject<Data>();
+
+        // Create observers
+        IObserver<Data> observer1 = new ConcreteObserver("Observer 1");
+        IObserver<Data> observer2 = new ConcreteObserver("Observer 2");
+
+        // Subscribe observers to the subject
+        subject.DataChanged += observer1.Update;
+        subject.DataChanged += observer2.Update;
+
+        // Notify observers of data change
+        Data newData = new Data { Message = "First message" };
+        subject.Notify(newData);
+
+        // Unsubscribe observer1 from the subject
+        subject.DataChanged -= observer1.Update;
+
+        // Notify observers of another data change
+        newData = new Data { Message = "Second message" };
+        subject.Notify(newData);
+    }
+}
