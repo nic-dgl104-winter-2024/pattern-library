@@ -17,3 +17,16 @@ public interface IObserver<T>
 {
     void Update(T data);
 }
+
+// Define the Subject class
+public class Subject<T>
+{
+    // Event 'DataChanged' to which observers can subscribe
+    public event EventHandler<T> DataChanged;
+
+    // Method to notify observers when state of the subject changes
+    public void Notify(T data)
+    {
+        DataChanged?.Invoke(data);
+    }
+}
