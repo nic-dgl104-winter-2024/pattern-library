@@ -59,7 +59,7 @@ class Program
         primaryStudent.UpdateDetails("Ravi", 30, "B");
 
         // Display updated details
-        Console.WriteLine("\nUpdated Details:");
+        Console.WriteLine("\nUpdated Details: using primaryStudent object");
         primaryStudent.DisplayDetails();
 
         /// <summary>
@@ -73,19 +73,6 @@ class Program
         //primaryStudent.UpdateDetails("R",12,"C");
         
         // </example>
-
-        /// <summary>
-        /// Developer can check the using the bool if the instance is exist before operating the operation 
-        ///  Output if Instace exist: Is the instance created? True
-        /// </summary>
-        
-        //  <example>
-
-        bool isInstanceCreated = Student.Instance != null; //Checking if the instance has been created yet
-        Console.WriteLine($"Is the instance created? {isInstanceCreated}"); 
-
-        // </example>
-
 
         /// <summary>
         /// Developer can Create the another instance and can access the Student class and able to perform action 
@@ -102,6 +89,20 @@ class Program
 
         Console.WriteLine("\nUpdated Details: using secondaryStudent object");
         primaryStudent.DisplayDetails(); // Showing the details using the student object
+
+
+         /// <summary>
+        /// Developer can check the using the bool if the instance is exist before operating the operation 
+        ///  Output if Instace exist: Is the instance created? True
+        /// </summary>
+        
+        //  <example>
+
+        bool isInstanceCreated = Student.Instance != null; //Checking if the instance has been created yet
+        Console.WriteLine("\nCheck instance");
+        Console.WriteLine($"Is the instance created? {isInstanceCreated}"); 
+
+        // </example>
     }
 
 }
