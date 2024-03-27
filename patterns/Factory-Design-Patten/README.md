@@ -32,12 +32,18 @@ function FoodFactory() {
         let food;
         
         // Create different foods based on the type provided
-        if (type === "pizza") {
-            food = new Pizza();
-        } else if (type === "burger") {
-            food = new Burger();
-        } else if (type === "salad") {
-            food = new Salad();
+        switch(type) {
+            case "pizza":
+                food = new Pizza();
+                break;
+            case "burger":
+                food = new Burger();
+                break;
+            case "salad":
+                food = new Salad();
+                break;
+            default:
+                // Handle default case if necessary
         }
         
         // Add common properties and methods to all created foods
