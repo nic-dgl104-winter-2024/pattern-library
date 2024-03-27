@@ -20,6 +20,10 @@ The Template Method design pattern is a behavioral approach where a superclass o
 
 ----
 
+## How it works! 
+
+In the Template Method pattern, it's like following a recipe. The main recipe acts as an abstract class, giving you a structured way to cook. Some parts are flexible, like adding seasoning. The steps are laid out in order, like a checklist (template method). You can customize certain steps with your own twist using abstract methods. As the chef (subclass), you fill in these customizable parts with your own ingredients and techniques, allowing for different versions of the dish while sticking to the basic cooking steps.
+
 ## Benefits
 
 * Reuse: Template Method lets us reuse the same basic process across different situations.
