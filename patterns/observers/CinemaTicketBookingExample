@@ -1,0 +1,83 @@
+import java.util.ArrayList;
+import java.util.List;
+
+// Subject interface
+interface TicketSubject {
+    void registerObserver(TicketObserver observer);
+    void removeObserver(TicketObserver observer);
+    void notifyObservers();
+}
+
+// Concrete subject
+class TicketBookingSystem implements TicketSubject {
+    private List<TicketObserver> observers;
+    private boolean ticketAvailable;
+
+    public TicketBookingSystem() {
+        observers = new ArrayList<>();
+        ticketAvailable = false;
+    }
+
+    public void setTicketAvailable(boolean available) {
+        this.ticketAvailable = available;
+        notifyObservers();
+    }
+
+    @Override
+    public void registerObserver(TicketObserver observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(TicketObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (TicketObserver observer : observers) {
+            observer.update(ticketAvailable);
+        }
+    }
+}
+
+// Observer interface
+interface TicketObserver {
+    void update(boolean ticketAvailable);
+}
+
+// Concrete observer
+class User implements TicketObserver {
+    private String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void update(boolean ticketAvailable) {
+        if (ticketAvailable) {
+            System.out.println(name + ": Ticket is available! Booking ticket now.");
+        } else {
+            System.out.println(name + ": No tickets available. Waiting for next availability.");
+        }
+    }
+}
+
+public class CinemaTicketBookingExample {
+    public static void main(String[] args) {
+        // Create subject
+        TicketBookingSystem ticketBookingSystem = new TicketBookingSystem();
+
+        // Create observers (users)
+        User user1 = new User("Alice");
+        User user2 = new User("Bob");
+
+        // Register observers with the subject
+        ticketBookingSystem.registerObserver(user1);
+        ticketBookingSystem.registerObserver(user2);
+
+        // Ticket becomes available
+        ticketBookingSystem.setTicketAvailable(true);
+    }
+}
