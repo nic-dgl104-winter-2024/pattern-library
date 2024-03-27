@@ -1,0 +1,2 @@
+# Contrast functional patterns vs. OOP design patterns
+Sumiit have worked on the README file, but I want to do more with the code. Ashley suggested some areas to focus on. I want to make sure I'm helping the project in the right way. 
