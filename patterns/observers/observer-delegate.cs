@@ -11,3 +11,9 @@ using System;
 
 // Define the generic delegate for the event handler
 public delegate void EventHandler<T>(T data);
+
+// Define the Observer interface
+public interface IObserver<T> 
+{
+    void Update(T data);
+}
