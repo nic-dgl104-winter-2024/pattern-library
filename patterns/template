@@ -1,14 +1,46 @@
 # Template Pattern
 
-# Defination
+## Definition
 
 The Template Method design pattern is a behavioral approach where a superclass outlines the framework of an algorithm, permitting subclasses to modify particular steps without altering its overall structure. This pattern encourages code reuse by consolidating the core algorithmic framework in the superclass, empowering subclasses to offer specific implementations for individual steps, facilitating customization and adaptability.
 
-The Template Method design pattern is like a recipe: it gives you the basic steps to follow. But, just like how you might add your own twist to a recipe.
+----
 
+## Components
 
-# References
+1. Abstract Class (or Interface): This defines the template method, which is the skeleton of the algorithm. It contains one or more abstract methods or hooks that the subclasses need to implement.
+
+2. Concrete Class (Subclass): Subclasses inherit from the abstract class and provide concrete implementations for the abstract methods or hooks defined in the abstract class.
+
+3. Template Method: This is the method declared in the abstract class, outlining the algorithm's structure by calling the abstract methods or hooks in a specific order. It's often marked as final to prevent subclasses from changing its structure.
+
+4. Abstract Methods (or Hooks): These are declared in the abstract class and must be implemented by subclasses. They allow subclasses to provide specific implementations for parts of the algorithm.
+
+5. Concrete Methods: These are methods implemented in the abstract class and called by the template method. They provide common behavior that doesn't change across subclasses.
+
+----
+
+## Benefits
+
+* Reuse: Template Method lets us reuse the same basic process across different situations.
+
+* Less Repeat Work: We avoid writing the same code over and over by putting it in one place.
+
+* Change Only What's Needed: Subclasses can change parts of the process without affecting everything else.
+
+* Consistent Results: Because the basic process stays the same, we get consistent results every time.
+
+* Easier Management: It's easier to manage and understand the code when the structure is clear and consistent.
+
+* Adding New Options: We can easily add new ways of doing things without breaking what's already there.
+
+----
+
+## References
+
 
 Refactoring Guru. (n.d.). Template Method Design Pattern. https://refactoring.guru/design-patterns/template-method
 
 GeeksforGeeks. (n.d.). Template Method Design Pattern. https://www.geeksforgeeks.orgtemplate-method-design-pattern/
+
+Tutorialspoint. (n.d.). Template Method Design Pattern. https://www.tutorialspoint.com/design_pattern/template_pattern.htm
