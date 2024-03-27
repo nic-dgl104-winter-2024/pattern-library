@@ -49,7 +49,7 @@ class DatabaseEngineer {
 }
 ```
 
-We have three classes here: SoftwareDeveloper, Designer, and DatabaseEngineer, each of which represents a subsystem responsible for a specific task in the software development process. The SoftwareDeveloper class's code() method takes handle of coding activities, the Designer class's design() method takes responsibility of designing tasks, and the DatabaseEngineer class's connect() method takes charge of database connection tasks. Each subsystem's behavior is specified by these classes.
+We have three classes here: `SoftwareDeveloper`, `Designer`, and `DatabaseEngineer`, each of which represents a subsystem responsible for a specific task in the software development process. The `SoftwareDeveloper` class's `code()` method takes handle of coding activities, the `Designer` class's `design()` method takes responsibility of designing tasks, and the `DatabaseEngineer` class's `connect()` method takes charge of database connection tasks. Each subsystem's behavior is specified by these classes.
 
 ### Step 2: Creation of the Facade
 
@@ -108,6 +108,8 @@ The Facade design pattern can be implemented in various programming languages. S
 # References
 
 GeeksforGeeks. (2023, October 31). Facade Design Pattern | JavaScript Design Pattern. Retrieved from GeeksforGeeks: https://www.geeksforgeeks.org/facade-design-patterns-javascript-design-pattern/
+
 GeeksforGeeks. (2023, October 31). Facade Design Pattern | JavaScript Design Pattern. Retrieved from GeeksforGeeks: https://www.geeksforgeeks.org/facade-design-patterns-javascript-design-pattern/
+
 Poorte, J. (2023, September 30). JavaScript Façade Design Pattern. Retrieved from doFactory: https://dofactory.com/javascript/design-patterns/facade
 

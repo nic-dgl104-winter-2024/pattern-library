@@ -14,7 +14,7 @@ The following entities are involved in this pattern when implementing using Java
 
    - Concrete Product: These are the products being created, represented in the example code by the 'Employees' objects. Each product adheres to the same interface, comprising identical attributes and operations.
 
-**Abstract Product: This role is not commonly used in JavaScript. Traditionally, it would declare a product interface for various programming languages or scenarios. However, JavaScript does not specify interfaces explicitly. Instead, actual objects typically implement the relevant properties and methods directly, eliminating the need for an abstract product interface.**
+   - Abstract Product: This role is not commonly used in JavaScript. Traditionally, it would declare a product interface for various programming languages or scenarios. However, JavaScript does not specify interfaces explicitly. Instead, actual objects typically implement the relevant properties and methods directly, eliminating the need for an abstract product interface.
 
 (Poorte, 2023)
 
