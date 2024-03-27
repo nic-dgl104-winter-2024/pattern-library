@@ -36,3 +36,19 @@ public class Data
 {
     public string Message { get; set; }
 }
+
+// Implements the Observer Interface
+public class ConcreteObserver : IObserver<Data>
+{
+    private string name;
+
+    public ConcreteObserver(string name)
+    {
+        this.name = name;
+    }
+
+    public void Update(Data data)
+    {
+        Console.WriteLine($"{name} received message: {data.Message}");
+    }
+}
