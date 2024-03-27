@@ -30,3 +30,9 @@ public class Subject<T>
         DataChanged?.Invoke(data);
     }
 }
+
+// Define an example data class
+public class Data
+{
+    public string Message { get; set; }
+}
