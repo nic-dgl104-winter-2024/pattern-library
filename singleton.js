@@ -1,45 +1,78 @@
+import React, { Component } from 'react';
+import { View, Text, Button } from 'react-native';
 
+// Singleton Class
+class Singleton {
+  // Private static instance variable
+  static _instance;
 
-class MySingleton {
-  static instance;
-
-  // Private constructor to prevent direct construction calls with the `new` operator.
   constructor() {
-    if (MySingleton.instance !== null) {
-      throw new Error("Singleton instance already exists. Use getInstance method.");
+    // Check if an instance already exists
+    if (Singleton._instance) {
+      // Return the existing instance if constructor is called again
+      return Singleton._instance;
     }
 
-    // Initialize properties
-    this.myProperty = "Initial Value";
+    // Initialize state or other properties
+    this.state = { value: "Initial Singleton State" };
 
-    MySingleton.instance = this;
-    Object.freeze(MySingleton.instance); // Ensure the instance is immutable
+    // Assign this new instance to the private static variable
+    Singleton._instance = this;
   }
 
-// Static method to get instance
-  static getInstance() {
-    if (!MySingleton.instance) {
-      MySingleton.instance = new MySingleton();
+  // Static getter to access the instance
+  static get instance() {
+    // Create a new instance if one doesn't already exist
+    if (!this._instance) {
+      this._instance = new Singleton();
     }
-    return MySingleton.instance;
+    // Return the Singleton instance
+    return this._instance;
   }
 
-  // Instance method example
-  myMethod() {
-    console.log('Singleton method has been called.');
+  // Method to get the current state
+  getState() {
+    return this.state;
+  }
+
+  // Method to update the state
+  setState(newState) {
+    // Merges the existing state with the new state
+    this.state = { ...this.state, ...newState };
   }
 }
 
-// Ensure the constructor cannot be called from outside
-Object.freeze(MySingleton);
+// Prevent further modifications to the Singleton class
+Object.freeze(Singleton);
 
-// Usage within the same file
-const instance1 = MySingleton.getInstance();
-const instance2 = MySingleton.getInstance();
+// React Native component to demonstrate Singleton usage
+export default class SingletonDemo extends Component {
+  constructor(props) {
+    super(props);
+    // Accessing the Singleton instance
+    this.singleton = Singleton.instance;
+  }
 
-console.log(instance1 === instance2); // true, both variables hold the same instance
+  // Handler to update the Singleton's state
+  updateSingletonState = () => {
+    // Demonstrates updating shared state via Singleton
+    this.singleton.setState({ value: "Updated Singleton State" });
+  };
 
-// Accessing a method of the Singleton instance
-instance1.myMethod(); // Outputs: Singleton method has been called.
+  // Renders the current state of the Singleton
+  renderSingletonState = () => {
+    const singletonState = this.singleton.getState();
+    return <Text>Current Singleton State: {singletonState.value}</Text>;
+  };
 
-
+  render() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        {/* Display the Singleton's current state */}
+        {this.renderSingletonState()}
+        {/* Button to trigger state update */}
+        <Button title="Update Singleton State" onPress={this.updateSingletonState} />
+      </View>
+    );
+  }
+}
