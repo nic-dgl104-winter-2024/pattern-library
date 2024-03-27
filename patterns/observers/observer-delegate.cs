@@ -13,7 +13,7 @@ using System;
 public delegate void EventHandler<T>(T data);
 
 // Define the Observer interface
-public interface IObserver<T> 
+public interface IObserver<T>
 {
     void Update(T data);
 }
