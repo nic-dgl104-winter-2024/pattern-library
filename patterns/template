@@ -1,0 +1,14 @@
+# Template Pattern
+
+# Defination
+
+The Template Method design pattern is a behavioral approach where a superclass outlines the framework of an algorithm, permitting subclasses to modify particular steps without altering its overall structure. This pattern encourages code reuse by consolidating the core algorithmic framework in the superclass, empowering subclasses to offer specific implementations for individual steps, facilitating customization and adaptability.
+
+The Template Method design pattern is like a recipe: it gives you the basic steps to follow. But, just like how you might add your own twist to a recipe.
+
+
+# References
+
+Refactoring Guru. (n.d.). Template Method Design Pattern. https://refactoring.guru/design-patterns/template-method
+
+GeeksforGeeks. (n.d.). Template Method Design Pattern. https://www.geeksforgeeks.orgtemplate-method-design-pattern/
