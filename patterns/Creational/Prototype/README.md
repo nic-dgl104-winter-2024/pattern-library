@@ -27,9 +27,9 @@ Imagine you’re working on a drawing application, and you need to create and ma
 
 ![alt text](image.png)
 
-In the file [Prototipe.java](./Prototype.java) there is example code on how to implement the prototype pattern in java.
+In the file [Prototype.java](./Prototype.java) there is example code on how to implement the prototype pattern in java.
 
-Below is an explanation of the [Prototipe.java](./Prototype.java) code.
+Below is an explanation of the [Prototype.java](./Prototype.java) code.
 
 **1. Prototype Interface (Shape):**
 
@@ -49,9 +49,9 @@ We create a client class, ShapeClient, which will use the prototype to create ne
 
 It promotes the creation of objects without specifying the exact class of object to create. This pattern is particularly useful when you want to create instances of complex objects efficiently.
 
-In the file [Prototipe.js](./Prototype.js) there is example code on how to implement the prototype pattern in javascrip.
+In the file [Prototype.js](./Prototype.js) there is example code on how to implement the prototype pattern in javascrip.
 
-Below is an explanation of the [Prototipe.js](./Prototype.js) code.
+Below is an explanation of the [Prototype.js](./Prototype.js) code.
 
 
 **1. Prototype object**
@@ -73,7 +73,7 @@ Below is an explanation of the [Prototipe.js](./Prototype.js) code.
 
 **3. Logging details of each instance**
 
-- The `getDetails(**)` methods are used on each instance (`car1` and `car2`) to obtain and record the details of each vehicle in the console.
+- The `getDetails()` methods are used on each instance (`car1` and `car2`) to obtain and record the details of each vehicle in the console.
 
 
 In this example, `vehiclePrototype` acts as a common prototype for all objects of type vehicle, and new vehicle instances (`car1` and `car2`) can be created using this prototype as a base.
@@ -92,7 +92,6 @@ In this example, `vehiclePrototype` acts as a common prototype for all objects o
 
 1. [GeeksforGeeks - Prototype Pattern](https://www.geeksforgeeks.org/prototype-design-pattern/)
 
+2. [Turing - Prototype Pattern](https://www.turing.com/kb/prototype-vs-class-in-js)
 
-2. [Alex Merced - Prototype Pattern](https://dev.to/alexmercedcoder/oop-design-patterns-in-javascript-3i98)
-
-3. [Turing - Prototype Pattern](https://www.turing.com/kb/prototype-vs-class-in-js)
+3. [Alex Merced - Prototype Pattern](https://dev.to/alexmercedcoder/oop-design-patterns-in-javascript-3i98)
