@@ -1,6 +1,6 @@
 # React-native
 
-React Native is a framework developed by Facebook. It helps make mobile apps that work well on iPhones and Android phones. It uses React, which is a JavaScript tool many developers are familiar with. This makes it easy to create apps that perform and look like they're meant for each device. React Native lets developers reuse code across different projects and see changes instantly while they're working. It's popular because it has a big community of users who share helpful tools and tips, making it a top pick for building mobile apps quickly and effectively.
+React Native is a framework developed by Facebook. It helps make mobile apps that work well on iPhones and Android phones. This makes it easy to create apps that perform and look like they're meant for each device. React Native lets developers reuse code across different projects and see changes instantly while they're working. It's popular because it has a big community of users who share helpful tools and tips, making it a top pick for building mobile apps quickly and effectively.
 
 # Why to use for singleton pattern
 
