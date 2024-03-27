@@ -53,7 +53,7 @@ We have three classes here: `SoftwareDeveloper`, `Designer`, and `DatabaseEngine
 
 ### Step 2: Creation of the Facade
 
-The `SoftwareFacade` class, which serves as a simplified interface to manage the software development process, is created in this stage. Instances of the classes "SoftwareDeveloper," "Designer," and "DatabaseEngineer" are initialized by the constructor. These subsystems are controlled by the `softwareDevelopmentProcess()` method, which calls particular code, design, and connect methods, respectively. The client's interaction is made simpler by this encapsulation, which conceals the complexity of various subsystems behind a single facade interface.
+The `SoftwareFacade` class, which serves as a simplified interface to manage the software development process, is created in this stage. Instances of the classes  `SoftwareDeveloper`, `Designer`, and `DatabaseEngineer` are initialized by the constructor. These subsystems are controlled by the `softwareDevelopmentProcess()` method, which calls particular `code`, `design`, and `connect` methods, respectively. The client's interaction is made simpler by this encapsulation, which conceals the complexity of various subsystems behind a single facade interface.
 
 ``` javascript
 // Define a class for SoftwareFacade
@@ -76,7 +76,7 @@ class SoftwareFacade {
 
 ### Step 3: Usage and the Client code
 
-A new instance of 'SoftwareFacade' named `softwareFacade` is created by this line of code. Next, it calls the `softwareDevelopmentProcess()` function of the `softwareFacade` instance to start the software development process. The facade pattern provides a single interface that makes it easier to work with the `SoftwareDeveloper`, `Designer`, and `DatabaseEngineer` subsystems. This method coordinates the actions of these subsystems.
+A new instance of `SoftwareFacade` named `softwareFacade` is created by this line of code. Next, it calls the `softwareDevelopmentProcess()` function of the `softwareFacade` instance to start the software development process. The facade pattern provides a single interface that makes it easier to work with the `SoftwareDeveloper`, `Designer`, and `DatabaseEngineer` subsystems. This method coordinates the actions of these subsystems.
 
 ```Javascript
 // Create an instance of the SoftwareFacade class
