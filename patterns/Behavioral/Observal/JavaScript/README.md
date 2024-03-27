@@ -14,7 +14,15 @@ Take a look at the diagram below.
 
 ![Observer Pattern](/patterns/Behavioral/Observal/JavaScript/images/javascript-observer.jpg)
 
-With two main objects involved as shown in the diagram above, let's take a closer look at the key aspects of this pattern:
+The Subject has three methods to subscribe, unsubscribe, and notify its list of Observers.
+The Observers are interested in knowing about the Subject's state changes, like button click events. So they must subscribe to the Subject to be notified. When a user clicks the button, the observers update the user interface to reflect the user activity.
+
+Consider the Facebook Page as an example. Facebook Page acts as the Subject which has a list of followers (observers) who wish to receive updates. And it has the following methods:
+- Subscribe: A user subscribes by Following
+- Unsubscribe: They can unsubscribe by Unfollowing the page
+- Notify: It notifies all followers (observers) whenever there is a new post and every time a user engages with it. Then the user's UI updates in real-time to show the post and comments on their feed.
+
+Now, let's dive deeper into this pattern with the below discussion on its key aspects.
 
 1. Subject Implementation
 Subject (Observable):
