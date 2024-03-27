@@ -56,34 +56,22 @@ function FoodFactory() {
     }
 }
 ```
-### `Pizza` Class 
 
-The `Pizza` class represents a type of food created by the `FoodFactory` factory function. It encapsulates the properties and behavior specific to pizza objects. By being created through the `FoodFactory`, the `Pizza` class adheres to the Factory Design Pattern, where the factory method (`createFood`) is responsible for creating instances of concrete classes (`Pizza`) without exposing the instantiation logic.
+### `Pizza`, `Burger`, and `Salad` Classes
+
+The `Pizza`, `Burger`, and `Salad` classes represent different types of food created by the `FoodFactory` factory function. Each class encapsulates the properties and behavior specific to its respective food type. By being created through the `FoodFactory`, these classes adhere to the Factory Design Pattern. The factory method (`createFood`) is responsible for creating instances of concrete classes (`Pizza`, `Burger`, and `Salad`) without exposing the instantiation logic. This approach promotes encapsulation and decoupling by separating the client code from the object creation logic, enhancing maintainability and flexibility in the codebase.
 
 ```javascript
 // Pizza Class
 function Pizza() {
     this.famousAudience = "youngsters!";
 }
-```
 
-### `Burger` Class 
-
-The `Burger` class represents another type of food created by the `FoodFactory` factory function. Similar to the `Pizza` class, it encapsulates the properties and behavior specific to burger objects. The instantiation of `Burger` objects through the `FoodFactory` aligns with the Factory Design Pattern, abstracting the object creation process and providing a common interface for creating different types of foods.
-
-```javascript
 // Burger Class
 function Burger() {
     this.famousAudience = "Kids!";
 }
-```
 
-### `Salad` Class 
-
-The `Salad` class represents yet another type of food created by the `FoodFactory` factory function. It encapsulates the properties and behavior specific to salad objects. As with the `Pizza` and `Burger` classes, the instantiation of `Salad` objects through the `FoodFactory` adheres to the Factory Design Pattern, promoting encapsulation and decoupling by separating the client code from the object creation logic.
-
-```javascript
-Copy code
 // Salad Class
 function Salad() {
     this.famousAudience = "elders!";
