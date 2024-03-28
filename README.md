@@ -64,7 +64,7 @@ Refactoring Guru. (2014). Observer. Refactoring.guru. https://refactoring.guru/d
 Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/Observer_pattern#:~:text=In%20software%20design%20and%20engineering
 
 
-<a id="#singleton-pattern"></a> 
+<a id="singleton-pattern"></a> 
 
 ## Definition of Singleton Pattern
 
