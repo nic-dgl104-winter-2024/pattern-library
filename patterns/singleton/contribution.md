@@ -1,49 +1,33 @@
-# React-native for Singleton Pattern
+# 🌟 React-native for Singleton Pattern
 
-## Defination
+## 🌟 Definition of React-native
 
 React Native is a framework developed by Facebook. It helps make mobile apps that work well on iPhones and Android phones. This makes it easy to create apps that perform and look like they're meant for each device. React Native lets developers reuse code across different projects and see changes instantly while they're working. It's popular because it has a big community of users who share helpful tools and tips, making it a top pick for building mobile apps quickly and effectively.
 
-# Why to use for singleton pattern
+## 🌟 Definition of Singleton Pattern
 
-Using React Native for a singleton, which is a design pattern where only one instance of a class exists in an application, is beneficial because React Native allows you to write code once and use it on both iOS and Android devices. It also makes development faster by letting you reuse code components. Additionally, React Native apps perform well and benefit from a supportive community and tools for easier implementation and management of singleton pattern.
+The Singleton pattern is a design principle that ensures a class has a single instance and provides a centralized method for accessing that instance across the entire application.
+ 
+## 🌟 Why to use for singleton pattern?
 
-# Example
+Implement the Singleton pattern in your React Native application for various reasons:
 
-## Display a text message using react-native
+* *Global State Management* : Singleton pattern ensures 
+that there is only one instance of a particular class throughout. This can be useful for managing global state in the React Native application, such as user authentication state, theme preferences, or application configuration.
 
-import React from 'react';
-import { Text, View } from 'react-native';
+* *Resource Sharing* : If you have resources that need to be shared across different parts of your application, such as database connections, network clients, or event emitters, using the Singleton pattern can provide a convenient way to access these resources from anywhere in your codebase.
 
-const SimpleComponent = () => {
-  return (
-    <View>
-      <Text>Hello, React Native!</Text>
-    </View>
-  );
-}
+* *Performance Optimization* : Creating multiple instances of certain objects can sometimes be resource-intensive. By using the Singleton pattern, you can ensure that these resources are instantiated only once, improving the overall performance of your application.
 
-export default SimpleComponent;
+* *Consistency* : Singleton pattern promotes consistency by providing a single point of access to resources or services. This can make your codebase more maintainable and easier to reason about, especially as your application grows in size and complexity.
 
+* *Third-party Libraries* : Sometimes, third-party libraries or SDKs are designed to be used as singletons. In such cases, implementing the Singleton pattern can align well with the usage patterns of these libraries and make integration smoother.
 
-## React-native using props component
+## 🌟 Example
 
 
-import React from 'react';
-import { View, Text } from 'react-native';
 
-const Greeting = (props) => {
-  return (
-    <View>
-      <Text>Hello, {props.name}!</Text>
-    </View>
-  );
-};
-
-export default Greeting;
-
-
-# Reference
+## 🌟 Reference
 
 Singleton Pattern - Design Patterns. (2019, February 21). https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
