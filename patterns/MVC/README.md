@@ -6,13 +6,11 @@ In programming, model-view-controller (MVC) is an architectural design pattern t
 - View : Presents the user interface to the user, rendering data received from the Model layer in a format suitable for presentation.
 - Controller : Interprets user input from the View layer, processes it, and interacts with the Model layer to retrieve or manipulate data accordingly.
 
-
-
 *Sheldon, Robert. “What Is Model-View-Controller (MVC)?: Definition from TechTarget.” WhatIs, TechTarget, 12 Sept. 2023, [techtarget.com](www.techtarget.com/whatis/definition/model-view-controller-MVC#:~:text=In%20programming%2C%20model%2Dview%2D,a%20specific%20set%20of%20tasks)*
 
 # Visual representation of MVC architecture
 
-![image](https://github.com/YogeshManni/pattern-library/assets/29475936/96056260-a719-4651-bee0-685ce6390af8)
+![MVC architecture](https://github.com/YogeshManni/pattern-library/assets/29475936/96056260-a719-4651-bee0-685ce6390af8)
 
 *sadikarahmantanisha, "the-mvc-architecture", medium.com,19 Sept. 2023, [MVC architecture](https://medium.com/@sadikarahmantanisha/the-mvc-architecture-97d47e071eb2)*
 
@@ -30,11 +28,9 @@ In programming, model-view-controller (MVC) is an architectural design pattern t
 
 For this issue, I will be explaining MVC architecture by writing code for to-do task list application. The Tech stack that I will be using is
 
-
 - [Mongodb and Javascript - For Model part (Database)](https://www.mongodb.com/)
 - [React - For View Part](https://react.dev/learn)
 - [Node.js - For Controller part](https://nodejs.org/en)
-
 
 # Folder Structure
 
@@ -122,9 +118,7 @@ module.exports = Todo;
 
 The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/models/tasksModel.js)
 
-<br>
-
-*Mongoose, "Schemas", mongoosejs.com, Jan. 2024, [Mongoose Schema](https://mongoosejs.com/docs/guide.html)*
+*Mongoose, `Schemas`, mongoosejs.com, Jan. 2024, [Mongoose Schema](https://mongoosejs.com/docs/guide.html)*
 
 ---
 
@@ -184,9 +178,7 @@ export default Todo;
 ```
 The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/views/Todo.js)
 
-<br>
-
-*React community, "Your First Component", react.dev, Feb. 2024, [React components](https://react.dev/learn/your-first-component)*
+*React community, 'Your First Component', react.dev, Feb. 2024, [React components](https://react.dev/learn/your-first-component)*
 
 ---
 
@@ -221,7 +213,7 @@ const todoController = {
       // If an error occurs, respond with an error message
       res.status(500).json({ message: error.message });
     }
-  },
+  }},
 
   // Create a new Todo task
   createTodo: async (req, res) => {
@@ -247,14 +239,11 @@ const todoController = {
 
 The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/controllers/tasks.js)
 
-<br>
-
-*MDN contributors, "Routes and controllers", developer.mozilla.org, 18 Oct. 2023, [Node Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)*
+*MDN contributors, `Routes and controllers`, developer.mozilla.org, 18 Oct. 2023, [Node Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)*
 
 ---
 
 ## Commands to run the project files
-
 
 ### For View (React) part
 
@@ -275,11 +264,9 @@ Once all node dependencies are install, you can now run the react application wi
 ```
 npm start
 ```
-If everything works and your code gets compiled, you can see you website live on `http://localhost:3000/`
+If everything works and your code gets compiled, you can see you website live on [Local Host](http://localhost:3000/)
 
-<br>
-
-*Luke Karrys, "Create React App", create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)*
+*Luke Karrys, `Create React App`, create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)*
 
 ---
 
@@ -308,9 +295,7 @@ node server.js
 
 If everything works out and your code compile successfully, you will see success message and your server will be running at `http://localhost:5000/`
 
-<br>
-
-*Mohammed Ibrahim, "Node.js: Step-by-Step", medium.com, 05 Nov. 2023, [Node.js Guide](https://medium.com/@ibrahimhz/creating-your-first-backend-with-node-js-step-by-step-guide-892769af4cb0)*
+*Mohammed Ibrahim, `Node.js: Step-by-Step`, medium.com, 05 Nov. 2023, [Node.js Guide](https://medium.com/@ibrahimhz/creating-your-first-backend-with-node-js-step-by-step-guide-892769af4cb0)*
 
 -----------------------------------------------
 
@@ -377,8 +362,3 @@ _Note_ - Please go through all the files in [MVC](https://github.com/YogeshManni
 ## Conclusion
 
 The MVC architecture plays a crucial role in the development of the Todo Task List application, providing a structured and organized approach to building web applications. By separating the application into Models, Views, and Controllers, MVC promotes code reusability, maintainability, and scalability, ultimately enhancing the overall quality and performance of the application.
-
-
-   
-    
-   
