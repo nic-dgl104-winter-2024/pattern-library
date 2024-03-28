@@ -72,5 +72,12 @@ public class CandyFactory {
         CandyMaker FirstKitKat = new KitKat();
         FirstKitKat.makeCandy();
         
+        System.out.println("Making Diary Milk:");
+        CandyMaker FirstDiaryMilk = new DairyMilk();
+        FirstDiaryMilk.makeCandy();
+
+        System.out.println("Making Snickers:");
+        CandyMaker FirstSnickers = new Snickers();
+        FirstSnickers.makeCandy();
     }
 }
