@@ -28,6 +28,23 @@ class KitKat extends CandyMaker {
     
 }
 
+class DairyMilk extends CandyMaker {
+
+    @Override
+    protected void prepareIngredients() {
+        System.out.println("Preparing milk chocolate mixture for DairyMilk.");
+    }
+    @Override
+    protected void moldShape() {
+        System.out.println("Molding the milk chocolate mixture into DairyMilk shape.");
+    }
+    @Override
+    protected void wrapCandy() {
+        System.out.println("Wrapping DairyMilk with paper wrapper.");
+    }
+    
+}
+
 
 
 
