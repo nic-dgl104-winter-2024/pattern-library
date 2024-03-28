@@ -23,7 +23,19 @@ public class Subject<T>
 {
     // Event 'DataChanged' to which observers can subscribe
     public event EventHandler<T> DataChanged;
-
+    
+    // Method to subscribe an observer to the subject
+    public void Subscribe(IObserver<T> observer)
+    {
+        DataChanged += observer.Update;
+    }
+    
+    // Method to unsubscribe an observer from the subject
+    public void Unsubscribe(IObserver<T> observer)
+    {
+        DataChanged -= observer.Update;
+    }
+    
     // Method to notify observers when state of the subject changes
     public void Notify(T data)
     {
@@ -65,15 +77,15 @@ class Program
         IObserver<Data> observer2 = new ConcreteObserver("Observer 2");
 
         // Subscribe observers to the subject
-        subject.DataChanged += observer1.Update;
-        subject.DataChanged += observer2.Update;
+        subject.Subscribe(observer1);
+        subject.Subscribe(observer2);
 
         // Notify observers of data change
         Data newData = new Data { Message = "First message" };
         subject.Notify(newData);
 
         // Unsubscribe observer1 from the subject
-        subject.DataChanged -= observer1.Update;
+        subject.Unsubscribe(observer1);
 
         // Notify observers of another data change
         newData = new Data { Message = "Second message" };
