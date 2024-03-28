@@ -68,7 +68,9 @@ class Snickers extends CandyMaker {
 
 public class CandyFactory {
     public static void main(String[] args) {
-        System.out.println("Making candy");
+        System.out.println("Making KitKat:");
+        CandyMaker FirstKitKat = new KitKat();
+        FirstKitKat.makeCandy();
         
     }
 }
