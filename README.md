@@ -88,7 +88,7 @@ Rahman, S. (2023, April 3). The 3 Types of Design Patterns All Developers Should
 
 ### Overview of the concept
 
-Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) is an architectural pattern in software development whose purpose is to provide a clear separation of concerns in applications, especially those with complex user interfaces and interactive features. In both patterns, the program logic of your application (the model) is kept separate from the user interface (the view). The View-Model acts as the mediator between the Model and View. This separation enhances the structure and maintainability of the code, making it easier to develop, test and manage. 
+Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) is an architectural pattern in software development whose purpose is to provide a clear separation of concerns in applications, especially those with complex user interfaces and interactive features. In both patterns, the program logic of your application (the model) is kept separate from the user interface (the view). The View-Model acts as the mediator between the Model and View. This separation enhances the structure and maintainability of the code, making it easier to develop, test, and manage. 
 
 ![MVVM Diagram](Images/mvvm-diagram.png)
 
@@ -96,19 +96,19 @@ Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) 
 
 ### Which problems does it solve?
 
-MVVM was developed to address several problems in the development of graphical user interfaces (GUIs), particularly those related to separation of concerns, testability and maintanability. Here are two key issues MVVM aims to solve:
+MVVM was developed to address several problems in the development of graphical user interfaces (GUIs), particularly those related to separation of concerns, testability, and maintainability. Here are two key issues MVVM aims to solve:
 
-1. Tight coupling between UI and backend logic: in traditional GUI development approaches, UI code often becomes intertwined with backend program logic which makes it hard to test, maintain and scale.
-**Solution:** MVVM introduces a ViewModel layer that acts as an intermediary betwen the View (UI) and the Model (backend logic and data). This separation ensures that changes to the View don't directly impact the program logic, and vice versa. The key benefits to decoupling the UI from the backend logic include: UI and backend code can be tested separately, it promotes code reusability (the Model and ViewModel logic can be reused or easily adapted for different interfaces), and frequent design changes don't impact underlying program logic.
+1. Tight coupling between UI and backend logic: in traditional GUI development approaches, UI code often becomes intertwined with backend program logic, which makes it hard to test, maintain, and scale.
+**Solution:** MVVM introduces a ViewModel layer that acts as an intermediary between the View (UI) and the Model (backend logic and data). This separation ensures that changes to the View don't directly impact the program logic, and vice versa. The key benefits of decoupling the UI from the backend logic include: UI and backend code can be tested separately; it promotes code reusability (the Model and ViewModel logic can be reused or easily adapted for different interfaces); and frequent design changes don't impact the underlying program logic.
 
-2. Complexity in managing Stateful UIs and Data Binding: managing synchronization between the UI and underlying data models can be complex and error-prone especially in dynamic applications where the UI needs to reflect changes in real-time.
+2. Complexity in managing Stateful UIs and Data Binding: managing synchronization between the UI and underlying data models can be complex and error-prone, especially in dynamic applications where the UI needs to reflect changes in real-time.
 **Solution:** By leveraging data-binding mechanisms, MVVM automates View-ViewModel synchronization. Changes in the data layer are reflected in the UI automatically, and user interactions with the UI are propagated back to the model via the ViewModel. This simplifies the development of complex, stateful user interfaces.
 
 **Key benefits:**
 * Reduces dependencies and conflicts 
 * Facilitates testability
 * Improves maintainability
-* Data binding reduces need for boilerplate code
+* Data binding reduces the need for boilerplate code
 * Enhanced UI responsiveness
 * Simplifies UI state management
 * Facilitates rich and interactive UIs
@@ -116,11 +116,11 @@ MVVM was developed to address several problems in the development of graphical u
 
 ### Enhancements over MVC
 
-MVVM evolvees from MVC but introduces two crucial distinctions:
+MVVM evolves from MVC but introduces two crucial distinctions:
 
 * Data-binding: Unlike MVC, MVVM's View is fully decoupled from the Model, heavily relying on data binding for synchronization, thus minimizing direct UI-program logic interaction and facilitating dynamic UI responsiveness.
 
-* ViewModel's role: the ViewModel is primarily concerned with preparing data for display while the Controller in MVC directly manages application flow, deciding which content to display and reacting to user inputs by updating the Model or selecting a different view.
+* ViewModel's role: the ViewModel is primarily concerned with preparing data for display, while the Controller in MVC directly manages application flow, deciding which content to display and reacting to user inputs by updating the Model or selecting a different view.
 
 ### Data Binding Explained
 
@@ -134,7 +134,7 @@ From View to ViewModel: Data binding also works in the opposite direction. If a 
 
 **Benefits of Data Binding in MVVM**
 * Reducing boilerplate code by eliminating the need for manual UI updates
-* Helps maintain clean separation between the View and ViewModel
+* Helps maintain a clean separation between the View and ViewModel
 * Simplifies state management and enhances maintanability 
 
 ### Use Cases
