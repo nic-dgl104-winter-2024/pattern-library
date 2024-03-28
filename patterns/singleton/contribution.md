@@ -1,4 +1,6 @@
-# React-native
+# React-native for Singleton Pattern
+
+## Defination
 
 React Native is a framework developed by Facebook. It helps make mobile apps that work well on iPhones and Android phones. This makes it easy to create apps that perform and look like they're meant for each device. React Native lets developers reuse code across different projects and see changes instantly while they're working. It's popular because it has a big community of users who share helpful tools and tips, making it a top pick for building mobile apps quickly and effectively.
 
@@ -43,17 +45,17 @@ export default Greeting;
 
 # Reference
 
-https://www.youtube.com/watch?v=sJ-c3BA-Ypo
+Singleton Pattern - Design Patterns. (2019, February 21). https://www.youtube.com/watch?v=sJ-c3BA-Ypo
 
-https://www.youtube.com/playlist?list=PLTgRMOcmRb3M2cPN_6iDDOYn8FONTkc3N
+React Native Design Patterns tutorial. (2019, Aug 12). https://www.youtube.com/playlist?list=PLTgRMOcmRb3M2cPN_6iDDOYn8FONTkc3N
 
-https://www.youtube.com/watch?v=rFy2hAq5xm4&t=140s
+How to use Singleton in react native?.(2019, Mar 2). https://www.youtube.com/watch?v=rFy2hAq5xm4&t=140s
 
-https://stackoverflow.com/questions/44023879 react-native-best-way-to-create-singleton-pattern
+react-native-best-way-to-create-singleton-pattern.(n.d.). https://stackoverflow.com/questions/44023879
 
-https://dev.to/antonzo/using-singleton-pattern-in-react-268n
+Using the Singleton Pattern in React. (2024 ,Mar 17). https://dev.to/antonzo/using-singleton-pattern-in-react-268n
 
-https://reactnative.dev/docs/intro-react
+React Fundamentals. (n.d.). https://reactnative.dev/docs/intro-react
 
 
 
