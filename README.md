@@ -96,7 +96,7 @@ Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) 
 
 ### Which problems does it solve?
 
-MVVM was developed to address several problems in the development of graphical user interfaces (GUIs), particularly those related to separation of concerns, testability and maintanability. Here are two key issues MVVM aims to solve:
+MVVM was developed to address several problems in the development of graphical user interfaces (GUIs), particularly those related to separation of concerns, testability and maintainability. Here are two key issues MVVM aims to solve:
 
 1. Tight coupling between UI and backend logic: in traditional GUI development approaches, UI code often becomes intertwined with backend program logic which makes it hard to test, maintain and scale.
 **Solution:** MVVM introduces a ViewModel layer that acts as an intermediary betwen the View (UI) and the Model (backend logic and data). This separation ensures that changes to the View don't directly impact the program logic, and vice versa. The key benefits to decoupling the UI from the backend logic include: UI and backend code can be tested separately, it promotes code reusability (the Model and ViewModel logic can be reused or easily adapted for different interfaces), and frequent design changes don't impact underlying program logic.
@@ -135,7 +135,7 @@ From View to ViewModel: Data binding also works in the opposite direction. If a 
 **Benefits of Data Binding in MVVM**
 * Reducing boilerplate code by eliminating the need for manual UI updates
 * Helps maintain clean separation between the View and ViewModel
-* Simplifies state management and enhances maintanability 
+* Simplifies state management and enhances maintainability 
 
 ### Use Cases
 
@@ -220,7 +220,7 @@ While OOP design patterns are specific to class-based systems, functional progra
 ### References
 
 * [javascript-functional-programming-vs-oop](https://anywhere.epam.com/en/blog/javascript-functional-programming-vs-oop)
-* [Comparing Dessign Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
+* [Comparing Design Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
 * [singleton-pattern](https://www.patterns.dev/vanilla/singleton-pattern/)
 * [functional-programming-javascript](https://www.toptal.com/javascript/functional-programming-javascript)
 
