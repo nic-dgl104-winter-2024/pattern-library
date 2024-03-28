@@ -76,8 +76,8 @@ public class CinemaTicketBookingExample {
         TicketBookingSystem ticketBookingSystem = new TicketBookingSystem();
 
         // Create observers (users who want to book tickets).
-        User user1 = new User("Alice");
-        User user2 = new User("Bob");
+        User user1 = new User("Jay");
+        User user2 = new User("Medrin");
 
         // Register observers with the subject to get ticket availability updates.
         ticketBookingSystem.registerObserver(user1);
