@@ -11,6 +11,23 @@ abstract class  CandyMaker {
 }
 
 
+class KitKat extends CandyMaker {
+
+    @Override
+    protected void prepareIngredients(){
+        System.out.println("Preparing wafer and chocolate mixture for KitKat.");
+    }
+    @Override
+    protected void moldShape(){
+        System.out.println("Molding the wafer and chocolate mixture into KitKat shape.");
+    }
+    @Override
+    protected void wrapCandy() {
+        System.out.println("Wrapping KitKat with foil.");
+    }
+    
+}
+
 
 
 
