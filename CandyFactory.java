@@ -5,7 +5,9 @@ abstract class  CandyMaker {
         moldShape();
         wrapCandy();
     }
-    
+    protected abstract void prepareIngredients();
+    protected abstract void moldShape();
+    protected abstract void wrapCandy();
 }
 
 
