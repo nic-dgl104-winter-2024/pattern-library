@@ -170,7 +170,7 @@ Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture 
 
 ### Introduction: 
 
-In traditional Object-Oriented Programming (OOP), design patterns are widely used to solve common problems by providing structured approaches to design and development. However, with the rise of Functional Programming (FP), there's a shift towards different paradigms and patterns. In this Section, we'll explore the contrast between OOP design patterns and functional patterns in JavaScript.
+In traditional Object-Oriented Programming (OOP), design patterns are widely used to solve common problems by providing structured approaches to design and development. However, with the rise of Functional Programming (FP), there's a shift towards different paradigms and patterns. In this section, we'll explore the contrast between OOP design patterns and functional patterns in JavaScript.
 
 ### OOP Design Patterns
 OOP design patterns like Singleton, Factory, Observer, and others are well-established concepts in JavaScript development. They focus on class hierarchies, encapsulation, and inheritance to achieve modularity and extensibility.
