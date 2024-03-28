@@ -41,5 +41,4 @@ Using the Singleton Pattern in React. (2024 ,Mar 17). https://dev.to/antonzo/usi
 
 React Fundamentals. (n.d.). https://reactnative.dev/docs/intro-react
 
-
-
+Singleton Method Design Pattern in JavaScript. (n.d.). https://www.geeksforgeeks.org/singleton-design-pattern-introduction/
