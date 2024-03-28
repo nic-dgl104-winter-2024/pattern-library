@@ -1,59 +1,64 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Subject interface
+// Defines the Subject interface that allows observers to register, unregister, and be notified.
 interface TicketSubject {
     void registerObserver(TicketObserver observer);
     void removeObserver(TicketObserver observer);
     void notifyObservers();
 }
 
-// Concrete subject
+// Implements the TicketSubject interface to manage ticket availability and observers.
 class TicketBookingSystem implements TicketSubject {
-    private List<TicketObserver> observers;
-    private boolean ticketAvailable;
+    private List<TicketObserver> observers; // List to hold all registered observers.
+    private boolean ticketAvailable; // Flag to track ticket availability status.
 
     public TicketBookingSystem() {
-        observers = new ArrayList<>();
-        ticketAvailable = false;
+        observers = new ArrayList<>(); // Initialize the list of observers.
+        ticketAvailable = false; // Initially, tickets are not available.
     }
 
+    // Sets the ticket availability and notifies all observers about the change.
     public void setTicketAvailable(boolean available) {
-        this.ticketAvailable = available;
-        notifyObservers();
+        this.ticketAvailable = available; // Update ticket availability status.
+        notifyObservers(); // Notify all registered observers about the status change.
     }
 
+    // Adds an observer to the list of observers.
     @Override
     public void registerObserver(TicketObserver observer) {
-        observers.add(observer);
+        observers.add(observer); // Add the observer to the list.
     }
 
+    // Removes an observer from the list of observers.
     @Override
     public void removeObserver(TicketObserver observer) {
-        observers.remove(observer);
+        observers.remove(observer); // Remove the observer from the list.
     }
 
+    // Notifies all registered observers about the ticket availability status.
     @Override
     public void notifyObservers() {
-        for (TicketObserver observer : observers) {
-            observer.update(ticketAvailable);
+        for (TicketObserver observer : observers) { // Loop through each observer in the list.
+            observer.update(ticketAvailable); // Notify the observer with the current ticket availability status.
         }
     }
 }
 
-// Observer interface
+// Defines the Observer interface for receiving updates from the Subject.
 interface TicketObserver {
     void update(boolean ticketAvailable);
 }
 
-// Concrete observer
+// Implements the TicketObserver interface to react to ticket availability changes.
 class User implements TicketObserver {
-    private String name;
+    private String name; // Holds the name of the user.
 
     public User(String name) {
-        this.name = name;
+        this.name = name; // Initializes the user with a name.
     }
 
+    // Updates the user with the ticket availability status.
     @Override
     public void update(boolean ticketAvailable) {
         if (ticketAvailable) {
@@ -64,20 +69,22 @@ class User implements TicketObserver {
     }
 }
 
+// Demonstrates the usage of the Observer pattern in a ticket booking system.
 public class CinemaTicketBookingExample {
     public static void main(String[] args) {
-        // Create subject
+        // Create the subject (the ticket booking system).
         TicketBookingSystem ticketBookingSystem = new TicketBookingSystem();
 
-        // Create observers (users)
+        // Create observers (users who want to book tickets).
         User user1 = new User("Alice");
         User user2 = new User("Bob");
 
-        // Register observers with the subject
+        // Register observers with the subject to get ticket availability updates.
         ticketBookingSystem.registerObserver(user1);
         ticketBookingSystem.registerObserver(user2);
 
-        // Ticket becomes available
+        // Change the ticket availability status to true to simulate tickets becoming available.
+        // This will notify all registered observers about the change.
         ticketBookingSystem.setTicketAvailable(true);
     }
 }
