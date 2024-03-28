@@ -1,15 +1,25 @@
-// Abstract class defining the template method and steps
 abstract class NamesTemplate {
-    // Template method to manage names
+    // Template method to manage names with input validation
     fun manageNames(name: String) {
         println("Starting to manage the name: $name")
-        val response = addName(name)
-        if (response) {
-            println("$name added successfully. Names in DB " + listNames())
+        if (isValidName(name)) {
+            val response = addName(name)
+            if (response) {
+                println("$name added successfully. Names in DB " + listNames())
+            } else {
+                println("Failed to add the $name")
+            }
         } else {
-            println("Failed to add the $name")
+            println("Invalid name: $name")
         }
         println("Finished managing the name: $name\n")
+    }
+
+    // Validation logic for the name
+    private fun isValidName(name: String): Boolean {
+        
+        // Name should not be empty and should start with an uppercase letter
+        return name.isNotEmpty() && name[0].isUpperCase()
     }
 
     // Steps to be implemented by subclasses
@@ -18,7 +28,6 @@ abstract class NamesTemplate {
     abstract fun listNames(): MutableList<String>
 }
 
-// Concrete class implementing the steps for the names database
 class NamesDatabase : NamesTemplate() {
     private val namesList = mutableListOf<String>()
 
@@ -36,11 +45,10 @@ class NamesDatabase : NamesTemplate() {
     }
 }
 
-// Main function to demonstrate the template pattern with names database
 fun main() {
     val namesDatabase = NamesDatabase()
 
     println("Processing names in the database:")
-    namesDatabase.manageNames("Lara")
-    namesDatabase.manageNames("Katrina")
+    namesDatabase.manageNames("Lara")  // This will succeed
+    namesDatabase.manageNames("katrina")  // This will fail due to lowercase starting letter
 }
