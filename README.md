@@ -5,9 +5,9 @@ A multi-language library containing implementations of common software design an
 
 Design patterns are like templates or solutions to common problems encountered in software design. They represent the best practices used by experienced object-oriented software developers. Design patterns are about reusing designs that have been proven effective, rather than reinventing the wheel. They help you solve specific problems in your code, making your software easier to understand, maintain, and scale.
 
-> Design templates work as a key to producing a perfect and functional framework and are helpful for developers in easily comprehending their code. In addition to solving common problems they help, also, to avoid duplication that would arise in case the code was not moduled.
+> Design templates work as a key to producing a perfect and functional framework and are helpful for developers in easily comprehending their code. In addition to solving common problems, they help to avoid duplication that would arise if the code was not moduled.
 
-Here's a brief overview and a list of some fundamental design patterns, divided into three main categories:Here's a brief overview and a list of some fundamental design patterns, divided into three main categories.
+Here's a brief overview and a list of some fundamental design patterns, divided into three main categories: 
 
 See the [Design Patterns section](./patterns/)
 
