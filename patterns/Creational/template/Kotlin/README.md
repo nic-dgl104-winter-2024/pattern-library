@@ -39,3 +39,17 @@ fun main() {
     namesDatabase.manageNames("Lara")
     namesDatabase.manageNames("Katrina")
 }
+
+## Updates
+
+#### Modifications in `NamesTemplate` class
+
+- Okay, so we've added a new private method called `isValidName` to the `NamesTemplate` class. This method is a real game changer as it checks if the input name isn’t just a bunch of blank spaces and kicks off with a capital letter. Yay!
+
+#### Enhancements in `NamesDatabase` class
+
+- Now, in the `NamesDatabase` class, there's this `addName` method that’s doing double duty. Not only does it tuck the name into the internal list, but it also runs a quick check with the `checkName` method. This is our double-check mechanism ensuring the name gets onboard without a hitch. Ta-da!
+
+#### Example Usage
+
+- Here’s the scoop in the `main` function example: it showcases our validation logic. The name "Lara" (yep, starting with an uppercase letter) sails through and gets added, while "katrina" (oh no, a lowercase starter) flunks the validation and doesn’t make the cut in the `manageNames` method. Aha, that’s how our validation rolls!
