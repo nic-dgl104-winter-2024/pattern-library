@@ -1,1 +1,11 @@
-# ABOUT PROJECT
+#64 ABOUT PROJECT
+* SetS up Java development environment and ensures there is the Java Development Kit (JDK) installed on the machine.
+* Created a new Java project in NetBeans Integrated Development Environment (IDE).
+* Inside the Java project, created a package named templatemethod to organize the classes.
+* Created an abstract class named AbstractTemplate within the templatemethod package. This class will define the template method and placeholder methods that subclasses can override.
+* Created concrete subclasses that extend AbstractTemplate and provide implementations for the placeholder methods.
+
+In this implementation, AbstractTemplate defines the template method templateMethod() and the placeholder methods stepOne(), stepTwo(), and stepThree(). ConcreteClassA and ConcreteClassB are concrete subclasses that override these placeholder methods. The isExtraStepRequired() method is a hook method that can be optionally overridden in subclasses, and extraStep() is an optional hook method that provides additional functionality if needed.
+
+The Main class demonstrates how to use these classes by creating instances of ConcreteClassA and ConcreteClassB and invoking their templateMethod() to see the template method pattern in action.
+
