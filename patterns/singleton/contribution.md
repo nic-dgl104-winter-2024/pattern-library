@@ -23,10 +23,6 @@ that there is only one instance of a particular class throughout. This can be us
 
 * *Third-party Libraries* : Sometimes, third-party libraries or SDKs are designed to be used as singletons. In such cases, implementing the Singleton pattern can align well with the usage patterns of these libraries and make integration smoother.
 
-## 🌟 Example
-
-
-
 ## 🌟 Reference
 
 Singleton Pattern - Design Patterns. (2019, February 21). https://www.youtube.com/watch?v=sJ-c3BA-Ypo
