@@ -141,34 +141,34 @@ Overall, Singleton is an easy and practical design pattern for both dart and obj
 
 ### Documentation:
 
-[1] https://dart.dev/language 
+[1] [Language](https://dart.dev/language) 
 
-[2] https://www.dhiwise.com/post/enriching-flutter-architecture-dart-singleton
+[2] [Enriching flutter architechure dart singleton](https://www.dhiwise.com/post/enriching-flutter-architecture-dart-singleton)
 
-[3] https://flutterbyexample.com/lesson/singletons
+[3] [Singleton](https://flutterbyexample.com/lesson/singletons)
 
-[4] https://stackoverflow.com/questions/12649573/how-do-you-build-a-singleton-in-dart
+[4] [How to biult a singleton in datr](https://stackoverflow.com/questions/12649573/how-do-you-build-a-singleton-in-dart)
 
-[5] https://github.com/nic-dgl104-winter-2024/pattern-library/issues/6 
+[5] [issue](https://github.com/nic-dgl104-winter-2024/pattern-library/issues/6 )
 
-[6] https://en.wikipedia.org/wiki/Singleton_pattern 
+[6] [Signleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern )
 
-[7] https://dart.dev/language/constructors#factory-constructors
+[7] [Factory constructors](https://dart.dev/language/constructors#factory-constructors)
 
-[8] https://refactoring.guru/design-patterns/creational-patterns
+[8] [Creational pattern](https://refactoring.guru/design-patterns/creational-patterns)
 
-[9] https://refactoring.guru/design-patterns/structural-patterns
+[9] [Structural patterns](https://refactoring.guru/design-patterns/structural-patterns)
 
-[10] https://refactoring.guru/design-patterns/behavioral-patterns
+[10] [Behavioral patterns](https://refactoring.guru/design-patterns/behavioral-patterns)
  
-[11] https://www.cleancode.studio/design-patterns/single-responsibility-design-pattern
+[11] [Single responisbility design pattern](https://www.cleancode.studio/design-patterns/single-responsibility-design-pattern)
 
 ### Repositories: 
 
-[12] https://github.com/jnhyatt/pattern/blob/master/lib/pattern.dart
+[12] [Pattern.dart](https://github.com/jnhyatt/pattern/blob/master/lib/pattern.dart)
 
-[13] https://github.com/ArunPrakashG/wordpress_client
+[13] [Wordpress client](https://github.com/ArunPrakashG/wordpress_client)
 
-[14] https://github.com/yarn-rp/case_matcher
+[14] [Case matcher](https://github.com/yarn-rp/case_matcher)
 
-[15] https://github.com/IliaKhuzhakhmetov/DesignPatterns-Dart
+[15] [Design pattern dart](https://github.com/IliaKhuzhakhmetov/DesignPatterns-Dart)
