@@ -139,10 +139,10 @@ From View to ViewModel: Data binding also works in the opposite direction. If a 
 
 ### Use Cases
 
-MVVM is a desirable architectural pattern in scenarios requiring complex UIs, dynamic data presentation and sophisticated interaction logic, such as:
+MVVM is a desirable architectural pattern in scenarios requiring complex UIs, dynamic data presentation, and sophisticated interaction logic, such as:
 
-* Rich Desktop and Web Application: offers as seamless user experience with dynamic UI updates.
-* Mobile Applications: supports cross-platform development with shared UI logic.
+* Rich Desktop and Web Application: offers a seamless user experience with dynamic UI updates.
+* Mobile Applications: support cross-platform development with shared UI logic.
 * Interactive content and games: facilitates complex game logic and UI separation
 * UI prototyping: accelerates prototyping with parallel design and development
 
