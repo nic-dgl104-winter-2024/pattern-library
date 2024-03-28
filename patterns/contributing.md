@@ -2,6 +2,18 @@
 
 ### ISSUE: Add React Native implementation for Singleton pattern #8
 
+React Native is a framework created by Facebook that empowers developers to construct mobile apps using JavaScript and React. It facilitates the development of cross-platform mobile applications compatible with both iOS and Android platforms, utilizing a unified codebase. By rendering native user interface components, React Native ensures that the resulting applications exhibit the appearance and behavior of native apps, while enabling code sharing across platforms. This approach simplifies development, enhances performance, and promotes code maintainability.
+
+Now, let's discuss how to use a Singleton pattern in a React Native application:
+
+- Create the Singleton Class: Define your Singleton class, which will manage shared state or provide access to a shared resource. This class should have a static instance property to hold the single instance of the class.
+
+- Implement the Singleton Logic: Within the Singleton class constructor, check if an instance already exists. If it does, return the existing instance; otherwise, create a new instance and store it in the static instance property.
+
+- Use the Singleton in React Native Components: In your React Native components, you can access the Singleton instance using its static getter method (Singleton.instance). You can then use this instance to access shared state or perform operations provided by the Singleton.
+
+- Update and Retrieve Singleton State: React Native components can interact with the Singleton instance by calling its methods to update or retrieve its state. This allows components to share data and communicate with each other through the Singleton.
+
 # React Native Singleton Pattern Implementation
 
 This implementation of the Singleton pattern in React Native provides a structured approach to manage shared state across multiple components within a React Native application.
