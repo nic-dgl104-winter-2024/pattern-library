@@ -21,7 +21,16 @@ The fundamental goal of the Observer pattern is to establish communication and i
 
 (https://www.linkedin.com/pulse/dive-real-world-examples-design-patterns-simplified-everyone-a-r)
 
+### Advantage:
+The primary benefit of the Observer Design Pattern in Java is its promotion of loose coupling between objects referred to as observers and observables. The subject is only aware of the list of observers and does not concern itself with their specific implementations. Furthermore, all observers receive notifications from the subject through a single event call, facilitating broadcast communication.
+
+### Disadvantage:
+One drawback is the potential difficulty in debugging when issues arise, as the flow of control between observers and observables is implicit. Predicting when an observer will trigger becomes challenging, particularly in cases where there's a chain between observers, leading to increased complexity in debugging. Additionally, memory management poses another concern, as the subject retains references to all observers. Failing to unregister objects can result in memory-related problems.
+(https://javarevisited.blogspot.com/2011/12/observer-design-pattern-java-example.html?m=1)
 
 ### Refernces
 * GfG. (2024, February 6). Observer design pattern. GeeksforGeeks. https://www.geeksforgeeks.org/
 * Refactoring.Guru. (2024b, January 1). Observer in Java. https://refactoring.guru/design-patterns/observer/java/example
+* Paul, Javin. “Javarevisited: Observer Design Pattern in Java with Real World Code Example.” Javarevisited, 21 Aug. 2021, javarevisited.blogspot.com/2011/12/observer-design-pattern-java-example.html?m=1. Accessed 28 Mar. 2024.
+
+
