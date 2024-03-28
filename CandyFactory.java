@@ -45,6 +45,24 @@ class DairyMilk extends CandyMaker {
     
 }
 
+class Snickers extends CandyMaker {
+
+    @Override
+    protected void prepareIngredients() {
+        System.out.println("Preparing chocolate and peanut mixture for Snickers.");
+    }
+    @Override
+    protected void moldShape() {
+        System.out.println("Molding the chocolate and peanut mixture into Snickers shape.");
+    }
+    @Override
+    protected void wrapCandy() {
+        System.out.println("Wrapping Snickers with plastic wrapper.");
+    }
+    
+}
+
+
 
 
 
