@@ -81,12 +81,12 @@ item2.display();
 
 This way of separating the code responsible for making a particular object type and the code that uses this object is very convenient, facilitating object code maintenance and large-scale code extension.
 
-## Resources
+## Source Code
 
-1. [Java Script Code](./abstract-factory.js)  
+[Java Script Code](./abstract-factory.js)  
 
-# References
+## References
 
-1. [GeeksforGeeks - Abstract Factory Pattern](https://www.geeksforgeeks.org/abstract-factory-pattern/)
+[GeeksforGeeks - Abstract Factory Pattern](https://www.geeksforgeeks.org/abstract-factory-pattern/)
 
-2. [Refactoring Guru - Abstract Factory Design Pattern](https://refactoring.guru/design-patterns/abstract-factory)
+[Refactoring Guru - Abstract Factory Design Pattern](https://refactoring.guru/design-patterns/abstract-factory)
