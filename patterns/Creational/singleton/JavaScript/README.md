@@ -8,8 +8,6 @@ Sun or moon no matter how many time we see them, they are always the same one. A
 
 - The global nature of the pattern may lead to name conflicts
 
-  
-
 ## 📦 Use cases
 
 - Modal
@@ -23,8 +21,6 @@ Sun or moon no matter how many time we see them, they are always the same one. A
 - Global state magement
 
 ​	As global state management involves sharing data across the entire 	application, it's crucial to ensure that the instance is instantiated only 	once. This guarantee ensures persistent access to shared data across 	different components and modules of the application.
-
-
 
 ## 👩‍💻 Implement
 
@@ -59,7 +55,6 @@ console.log(instance2.getData());
 
 console.log(instance1 === instance2); // Output: true
 ```
-
 
 ### Advance example - Lazy version
 
@@ -106,7 +101,6 @@ document.body.addEventListener("click", function () {
 });
 ```
 
-
 ### General Method
 
 Base on above concepts, we can create a method for the specific function we want it only instantiate once
@@ -119,8 +113,6 @@ const getSingle = function(fn) {
 	}
 }
 ```
-
-
 
 Because `getSingle` is solely focused on ensuring that the instance is created only once, without being responsible for the specific content of the instance.
 
