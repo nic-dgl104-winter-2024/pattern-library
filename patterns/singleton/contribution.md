@@ -8,7 +8,7 @@ React Native is a framework developed by Facebook. It helps make mobile apps tha
 
 The Singleton pattern is a design principle that ensures a class has a single instance and provides a centralized method for accessing that instance across the entire application.
  
-## 🌟 Why to use for singleton pattern?
+## 🌟 Why to use react-native for singleton pattern?
 
 Implement the Singleton pattern in your React Native application for various reasons:
 
