@@ -1,102 +1,95 @@
+// References : 
+// https://www.codeproject.com/Articles/5326833/Observer-Pattern-in-Csharp
+// https://refactoring.guru/design-patterns/observer/csharp/example
+
+
 using System;
-using System.Collections.Generic;
 
-// Subject interface
-public interface ISubject
+// HealthChangedEventArgs to pass information about the change in health
+public class HealthChangedEventArgs : EventArgs
 {
-    void Attach(IObserver observer);
-    void Detach(IObserver observer);
-    void Notify();
-}
+    public int HealthChange { get; }
 
-// Observer interface
-public interface IObserver
-{
-    void Update(int number);
-}
-// Concrete subject
-public class NumberAggregator : ISubject
-{
-    private List<int> numbers = new List<int>();
-    private List<IObserver> observers = new List<IObserver>();
-
-    public void Attach(IObserver observer)
+    // Constructor to initialize the HealthChangedEventArgs with the health change
+    public HealthChangedEventArgs(int healthChange)
     {
-        observers.Add(observer);
-    }
-
-    public void Detach(IObserver observer)
-    {
-        observers.Remove(observer);
-    }
-
-    public void Notify()
-    {
-        foreach (var observer in observers)
-        {
-            observer.Update(numbers[numbers.Count - 1]);
-        }
-    }
-
-    public void AddNumber(int number)
-    {
-        numbers.Add(number);
-        Notify(); // Notify observers about the change
-    }
-
-    public double CalculateAverage()
-    {
-        if (numbers.Count == 0)
-            return 0;
-
-        int sum = 0;
-        foreach (var num in numbers)
-        {
-            sum += num;
-        }
-
-        return (double)sum / numbers.Count;
+        HealthChange = healthChange;
     }
 }
 
-// Concrete observer
-public class AverageDisplay : IObserver
+// HealthSystem class with events
+public class HealthSystem
 {
-    private NumberAggregator aggregator;
+    private int health = 0;
 
-    public AverageDisplay(NumberAggregator aggregator)
+    // Event declaration for health changes
+    public event EventHandler<HealthChangedEventArgs> HealthChanged;
+
+    // Constructor to initialize the health system with initial health
+    public HealthSystem(int initialHealth)
     {
-        this.aggregator = aggregator;
-        aggregator.Attach(this);
+        health = initialHealth;
     }
 
-    public void Update(int number)
+    // Method to increase health
+    public void IncreaseHealth(int amount)
     {
-        Console.WriteLine("Updated average: " + aggregator.CalculateAverage());
+        health += amount;
+        // Raise the HealthChanged event with the positive amount indicating increase
+        OnHealthChanged(amount);
+    }
+
+    // Method to decrease health
+    public void DecreaseHealth(int amount)
+    {
+        health -= amount;
+        // Raise the HealthChanged event with the negative amount indicating decrease
+        OnHealthChanged(-amount);
+    }
+
+    // Method to invoke the HealthChanged event
+    protected virtual void OnHealthChanged(int healthChange)
+    {
+        // Check if there are any subscribers to the HealthChanged event and invoke them
+        HealthChanged?.Invoke(this, new HealthChangedEventArgs(healthChange));
+    }
+
+    // Property to expose the current health value
+    public int Health => health;
+}
+
+// HealthDisplay class to display health changes
+public class HealthDisplay
+{
+    // Constructor to subscribe to the HealthChanged event of the provided HealthSystem instance
+    public HealthDisplay(HealthSystem healthSystem)
+    {
+        // Subscribe to the HealthChanged event with the event handler method
+        healthSystem.HealthChanged += HealthSystem_HealthChanged;
+    }
+
+    // Event handler method for health changes
+    private void HealthSystem_HealthChanged(object sender, HealthChangedEventArgs e)
+    {
+        // Display the health change and the new health value
+        Console.WriteLine($"Player health changed by {e.HealthChange}. New health: {(sender as HealthSystem).Health}");
     }
 }
+
 class Program
 {
     static void Main(string[] args)
     {
-        // Create subject
-        NumberAggregator aggregator = new NumberAggregator();
+        // Create health system
+        HealthSystem healthSystem = new HealthSystem(100);
 
-        // Create observers
-        AverageDisplay averageDisplay1 = new AverageDisplay(aggregator);
-        AverageDisplay averageDisplay2 = new AverageDisplay(aggregator);
+        // Create health display
+        HealthDisplay healthDisplay = new HealthDisplay(healthSystem);
 
-        // Add numbers
-        aggregator.AddNumber(10);
-        aggregator.AddNumber(20);
-        aggregator.AddNumber(30);
+        // Call events (increasing/decreasing health)
+        healthSystem.DecreaseHealth(20);
+        healthSystem.IncreaseHealth(10);
+        healthSystem.DecreaseHealth(50);
 
-        // Detach observer
-        aggregator.Detach(averageDisplay2);
-
-        // Add more numbers
-        aggregator.AddNumber(40);
-
-        Console.ReadLine();
     }
 }
