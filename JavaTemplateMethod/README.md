@@ -1,6 +1,6 @@
 # Template Method Design Pattern
 
-This Java project demonstrates the Template Method design pattern. The Template Method pattern is a behavioral design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses. This allows subclasses to provide specific implementations for certain steps while keeping the overall structure of the algorithm intact.
+This Java project demonstrates the Template Method design pattern. The Template Method pattern is a behavioural design pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses. This allows subclasses to provide specific implementations for certain steps while keeping the overall structure of the algorithm intact.
 
 ## Files
 # AbstractTemplate.java: 
@@ -34,6 +34,7 @@ java templatemethod.Main
 AbstractTemplate templateA = new ConcreteClassA();
 templateA.templateMethod();
 ```
+This line demonstrates creating an instance of `ConcreteClassA` and invoking its `templateMethod()`, which follows the Template Method design pattern.
 
 ## Output
 You should see the following output when you run the Main class:
