@@ -5,9 +5,8 @@ export function observer(parent, observers) {
   observers.forEach((observer) => {
     const ele = li(observer, "observer");
     bind(ele, observer);
-    if (observer.subList.length !== 0) {
-      ele.appendChild(sub(observer.subList));
-    }
+    ele.appendChild(removeEvent());
+    ele.appendChild(sub(observer.subList, "observer"));
     parent.appendChild(ele);
   });
 }
@@ -17,17 +16,17 @@ export function subject(parent, subjects) {
   clearParent(parent);
 
   subjects.forEach((subject) => {
-    const ele = li(subject, "subject");
-    const data = span(subject);
-
+    const ele = document.createElement('li');
+    const title = h3(getName(subject, "subject"));
+    title.appendChild(removeEvent());
+    ele.appendChild(title);
     bind(ele, subject);
-    ele.appendChild(data);
-    if (subject.observerList.length !== 0) {
-      ele.appendChild(sub(subject.observerList));
-    }
+    ele.appendChild(span(subject));
+    ele.appendChild(sub(subject.observerList, "subject"));
     parent.appendChild(ele);
   });
 }
+
 
 //print a select and all options in items, also adds eventListeners on option clicks
 export function select(type, parent, items, events) {
@@ -69,23 +68,80 @@ function getName(object, type) {
 //create a sublist
 function sub(list, type) {
   const ul = document.createElement("ul");
-  list.forEach((object) => {
-    const ele = li(object, list);
-    bind(ele, object);
-    if (type === "observer") {
-      const data = span(object.getData());
-      bind(data, object);
-    }
-    ul.appendChild(ele);
-  });
-  li()
+  ul.classList.add('sub');
+  if (list.length !== 0) {
+    list.forEach((object) => {
+      const ele = li(object, list);
+      bind(ele, object);
+      if (type === "observer") {
+        const data = span(object.getData());
+        bind(data, object);
+      }
+      ele.appendChild(removeEvent());
+      ul.appendChild(ele);
+    });
+  }
+  ul.appendChild(li("test", type));
+  ul.appendChild(addEvent());
+  return ul;
+}
+function h3(title) {
+  const ele = document.createElement('h3');
+  ele.classList.add('subject-title');
+  ele.textContent = title;
+  return ele;
 }
 
 //create list element
-function li(object, type) {
+function li(object, type, ignoreName = false) {
   const li = document.createElement("li");
-  li.textContent = getName(object, type);
+  if (!ignoreName) {
+    li.textContent = getName(object, type);
+    return li;
+  }
+  li.appendChild(object);
   return li;
+}
+function addEvent() {
+  let ele = document.createElement("li");
+  let a = document.createElement("a");
+  a.classList.add('cursor','add');
+  a.textContent = "Add";
+  ele.appendChild(a);
+  ele.addEventListener("click", (event) => {
+    console.log("Add Event");
+  });
+  return ele;
+}
+function removeEvent() {
+  let ele = document.createElement("a");
+
+  let del = document.createElement("a");
+  del.classList.add('cursor', 'remove');
+  del.textContent = "Delete";
+  del.addEventListener("click", (event) => {
+    console.log("Remove Event");
+  });
+
+  let edit = document.createElement("a");
+  edit.classList.add('cursor', 'edit');
+  edit.textContent = "Edit";
+  edit.addEventListener("click", (event) => {
+    console.log("Edit Event");
+  });
+
+  let notify = document.createElement("a");
+  notify.classList.add('cursor', 'notify');
+  notify.textContent = "Notify";
+  notify.addEventListener("click", (event) => {
+    console.log("Edit Event");
+  });
+
+  ele.appendChild(edit);
+  ele.appendChild(notify);
+  ele.appendChild(del);
+
+  return ele;
 }
 
 //create span, used to store object data
@@ -128,10 +184,10 @@ function optionTitle(type) {
  *  [ * ] -> delete [Observer, Subject]
  *  [ = ] -> update [Subject] Data
  *  [ ! ] -> notify [Subject] -> [Subscribers]
- * 
+ *
  * Subject Template
- * 
- * # Subjects 
+ *
+ * # Subjects
  * Subject 1 -- data [ * ] [ = ] [ ! ]
  *  - Subscriber 1 [ - ]
  *  - Subscriber 2 [ - ]
