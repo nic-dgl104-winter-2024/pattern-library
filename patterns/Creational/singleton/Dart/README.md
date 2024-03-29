@@ -7,7 +7,7 @@ Singleton is an object-oriented programming language pattern with only one insta
 
 Singleton ensures that objects have only one instance, allowing for easy reference and access to the singleton class and finally helping to control the instance, such as private data, changing variables, or other run-time paradigms. 
 
-Singleton mainly attempts to solve the problem of overusing global variables to change instance data, as they “do not pollute the global namespace _(or their containing namespace)._” [2: Wikipedia Singelton patterns.](https://en.wikipedia.org/wiki/Singleton_pattern)
+Singleton mainly attempts to solve the problem of overusing global variables to change instance data, as they “do not pollute the global namespace _(or their containing namespace)._” [2: Wikipedia Singelton patterns](https://en.wikipedia.org/wiki/Singleton_pattern).
 
 Singleton also saves more internal memory than global variables since storing the variables and arithmetic across memory is much more intense and, in more extensive applications, more intensive on the CPU and the GPU.
 
@@ -45,7 +45,7 @@ Singelton is relatively simple to implement in Dart, mainly due to the implement
 
 This allows the Singleton class to allow both an instance of cache or an instance of a sub-type if declared and to initialize final (Const) variables that cannot be installed due to being assigned through parameters. 
 
-###Singelton Implementation in Dart
+### Singelton Implementation in Dart
 
 ```Dart
 /* Because of Dart's use of factory constructers, it's easy to make an simpleton application in 
