@@ -1,3 +1,7 @@
+In the issues section, I was looking for something familiar on which I have worked already. So in those limitation there were sevral options which includes PHP langauge, Java script Language, C#, MVC and any documentation related. But most of them were already assigned and after some time somebody opened this issue #67 which was with java script that is why particularly I chose this one.
+
+Here, I am explaining the flow of the example code.
+
 # Authentication and Authorization Strategies
 
 This project demonstrates the implementation of different authentication and authorization strategies using the Strategy design pattern.
