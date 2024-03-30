@@ -1,12 +1,12 @@
 //print all observers
 export function observer(parent, observers) {
   clearParent(parent);
-
+  const type = "observer";
   observers.forEach((observer) => {
-    const ele = li(observer, "observer");
+    const ele = li(observer, type);
     bind(ele, observer);
-    ele.appendChild(removeEvent());
-    ele.appendChild(sub(observer.subList, "observer"));
+    ele.appendChild(removeEvent(type));
+    ele.appendChild(sub(observer.subList, type));
     parent.appendChild(ele);
   });
 }
@@ -15,14 +15,15 @@ export function observer(parent, observers) {
 export function subject(parent, subjects) {
   clearParent(parent);
 
+  const type = "subject";
   subjects.forEach((subject) => {
     const ele = document.createElement('li');
-    const title = h3(getName(subject, "subject"));
-    title.appendChild(removeEvent());
+    const title = h3(getName(subject, type));
+    title.appendChild(removeEvent(type));
     ele.appendChild(title);
     bind(ele, subject);
     ele.appendChild(span(subject));
-    ele.appendChild(sub(subject.observerList, "subject"));
+    ele.appendChild(sub(subject.observerList, type));
     parent.appendChild(ele);
   });
 }
@@ -113,7 +114,7 @@ function addEvent() {
   });
   return ele;
 }
-function removeEvent() {
+function removeEvent(type) {
   let ele = document.createElement("a");
 
   let del = document.createElement("a");
@@ -122,23 +123,24 @@ function removeEvent() {
   del.addEventListener("click", (event) => {
     console.log("Remove Event");
   });
+  if (type === 'subject') {
 
-  let edit = document.createElement("a");
-  edit.classList.add('cursor', 'edit');
-  edit.textContent = "Edit";
-  edit.addEventListener("click", (event) => {
-    console.log("Edit Event");
-  });
-
-  let notify = document.createElement("a");
-  notify.classList.add('cursor', 'notify');
-  notify.textContent = "Notify";
-  notify.addEventListener("click", (event) => {
-    console.log("Edit Event");
-  });
-
-  ele.appendChild(edit);
-  ele.appendChild(notify);
+    let edit = document.createElement("a");
+    edit.classList.add('cursor', 'edit');
+    edit.textContent = "Edit";
+    edit.addEventListener("click", (event) => {
+      console.log("Edit Event");
+    });
+    
+    let notify = document.createElement("a");
+    notify.classList.add('cursor', 'notify');
+    notify.textContent = "Notify";
+    notify.addEventListener("click", (event) => {
+      console.log("Edit Event");
+    }); 
+    ele.appendChild(edit);
+    ele.appendChild(notify);
+  }
   ele.appendChild(del);
 
   return ele;
