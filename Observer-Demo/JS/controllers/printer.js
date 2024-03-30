@@ -5,10 +5,10 @@ export function observer(parent, observers) {
   observers.forEach((observer) => {
     const ele = document.createElement('li');
     const title = h3(getName(observer, type));
-    title.appendChild(removeEvent(type));
+    title.appendChild(removeEvent(type, observer.id));
     ele.appendChild(title);
     bind(ele, observer);
-    ele.appendChild(sub(observer.subList, type));
+    ele.appendChild(sub(observer.subList, type, observer.id));
     parent.appendChild(ele);
   });
 }
@@ -21,11 +21,11 @@ export function subject(parent, subjects) {
   subjects.forEach((subject) => {
     const ele = document.createElement('li');
     const title = h3(getName(subject, type));
-    title.appendChild(removeEvent(type));
+    title.appendChild(removeEvent(type, subject.id));
     ele.appendChild(title);
     bind(ele, subject);
     ele.appendChild(span(subject));
-    ele.appendChild(sub(subject.observerList, type));
+    ele.appendChild(sub(subject.observerList, type, subject.id));
     parent.appendChild(ele);
   });
 }
@@ -69,7 +69,7 @@ function getName(object, type) {
 }
 
 //create a sublist
-function sub(list, type) {
+function sub(list, type, id) {
   const ul = document.createElement("ul");
   ul.classList.add('sub');
   if (list.length !== 0) {
@@ -85,7 +85,7 @@ function sub(list, type) {
     });
   }
   ul.appendChild(li("test", type));
-  ul.appendChild(addEvent());
+  ul.appendChild(addEvent(id));
   return ul;
 }
 function h3(title) {
@@ -105,25 +105,25 @@ function li(object, type, ignoreName = false) {
   li.appendChild(object);
   return li;
 }
-function addEvent() {
+function addEvent(id) {
   let ele = document.createElement("li");
   let a = document.createElement("a");
   a.classList.add('cursor','add');
   a.textContent = "Add";
   ele.appendChild(a);
   ele.addEventListener("click", (event) => {
-    console.log("Add Event");
+    console.log(event.target, id);
   });
   return ele;
 }
-function removeEvent(type) {
+function removeEvent(type, id) {
   let ele = document.createElement("span");
 
   let del = document.createElement("a");
   del.classList.add('cursor', 'remove');
   del.textContent = "Delete";
   del.addEventListener("click", (event) => {
-    console.log("Remove Event");
+    console.log("Remove Event", id);
   });
   if (type === 'subject') {
 
@@ -131,14 +131,14 @@ function removeEvent(type) {
     edit.classList.add('cursor', 'edit');
     edit.textContent = "Edit";
     edit.addEventListener("click", (event) => {
-      console.log("Edit Event");
+      console.log("Edit Event", id);
     });
     
     let notify = document.createElement("a");
     notify.classList.add('cursor', 'notify');
     notify.textContent = "Notify";
     notify.addEventListener("click", (event) => {
-      console.log("Edit Event");
+      console.log("Notify Event", id);
     }); 
     ele.appendChild(edit);
     ele.appendChild(notify);

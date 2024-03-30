@@ -39,9 +39,6 @@ export class Subject {
   getData() {
     return this.data;
   }
-  dataBind(bind) {
-    this.bind = bind;
-  }
 }
 
 export class Observer {
@@ -77,8 +74,5 @@ export class Observer {
       dataArray.push(subject.getData());
     });
     return dataArray;
-  }
-  dataBind(bind) {
-    this.bind = bind;
   }
 }
