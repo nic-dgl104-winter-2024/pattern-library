@@ -3,9 +3,11 @@ export function observer(parent, observers) {
   clearParent(parent);
   const type = "observer";
   observers.forEach((observer) => {
-    const ele = li(observer, type);
+    const ele = document.createElement('li');
+    const title = h3(getName(observer, type));
+    title.appendChild(removeEvent(type));
+    ele.appendChild(title);
     bind(ele, observer);
-    ele.appendChild(removeEvent(type));
     ele.appendChild(sub(observer.subList, type));
     parent.appendChild(ele);
   });
@@ -115,7 +117,7 @@ function addEvent() {
   return ele;
 }
 function removeEvent(type) {
-  let ele = document.createElement("a");
+  let ele = document.createElement("span");
 
   let del = document.createElement("a");
   del.classList.add('cursor', 'remove');
