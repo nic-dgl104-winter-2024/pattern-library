@@ -44,6 +44,8 @@ In the Template Method pattern, it's like following a recipe. The main recipe ac
 ----
 ----
 
+## 🌟Issue - [Write definition of Template pattern in README.md ](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/93/files)
+
 ## 🌟References
 
 
