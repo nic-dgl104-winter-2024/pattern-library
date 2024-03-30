@@ -102,6 +102,9 @@ li:not(.sub) {
   margin-left: 10px;
   text-decoration: underline;
 }
+.cursor:first-child {
+  margin-left: auto;
+}
 .cursor.add:hover {
   color: #13A10E;
 }
