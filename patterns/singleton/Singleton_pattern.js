@@ -1,59 +1,59 @@
-class MySingleton {
-  static instance;
+// SingletonExample.js
 
+import React, { Component } from 'react';
+import { View, Text, Button } from 'react-native';
+
+class MySingleton {
   constructor() {
     if (MySingleton.instance) {
-      throw new Error("Singleton instance already exists. Use getInstance method.");
+      return MySingleton.instance;
     }
-
-    this.myProperty = "Initial Value";
-
     MySingleton.instance = this;
-    Object.freeze(MySingleton.instance);
+
+    // Initialize properties
+    this.myProperty = "Initial Value";
   }
 
+  // Instance method example
+  myMethod() {
+    console.log('Singleton method has been called.');
+  }
+
+  // Another instance method example
+  anotherMethod() {
+    console.log('Another method of the Singleton has been called.');
+  }
+
+  // Static method to get instance
   static getInstance() {
     if (!MySingleton.instance) {
       MySingleton.instance = new MySingleton();
     }
     return MySingleton.instance;
   }
-
-  myMethod() {
-    console.log('Singleton method has been called.');
-  }
-
-  anotherMethod() {
-    console.log('Another method of the Singleton has been called.');
-  }
 }
 
-// Usage in a React Native component
-import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
-
-export default class MyComponent extends Component {
+class SingletonExample extends Component {
   constructor(props) {
     super(props);
 
-    // Get the singleton instance
+    // Get the Singleton instance
     this.singletonInstance = MySingleton.getInstance();
   }
-
-  handleButtonClick = () => {
-    // Call methods of the singleton instance
-    this.singletonInstance.myMethod();
-    this.singletonInstance.anotherMethod();
-  };
 
   render() {
     return (
       <View>
-        <Text>React Native Singleton Example</Text>
-        <Button title="Call Singleton Methods" onPress={this.handleButtonClick} />
+        <Text>Singleton Example Component</Text>
+        <Text>Property value: {this.singletonInstance.myProperty}</Text>
+        <Button
+          title="Call Singleton Method"
+          onPress={() => this.singletonInstance.myMethod()}
+        />
       </View>
     );
   }
 }
 
+export default SingletonExample;
 
