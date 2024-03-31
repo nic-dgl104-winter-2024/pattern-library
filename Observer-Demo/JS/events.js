@@ -10,7 +10,6 @@ import { Subject, Observer } from "./classes/ObserverPattern.js";
 ("use strict");
 
 window.addEventListener("load", (event) => {
-  //Disable forms default behaviour
   document.addEventListener("submit", (event) => {
     const form = event.target.closest("form");
     if (form) event.preventDefault();
@@ -51,8 +50,8 @@ testS.addEventListener("click", (event) => {
 function print() {
   printObjects("observer", "allObservers");
   printObjects("subject", "allSubjects");
-  printSelects("subject", "selectSubject", "subjectOptions");
-  printSelects("observer", "selectObserver", "observerOptions");
+  // printSelects("subject", "selectSubject", "subjectOptions");
+  // printSelects("observer", "selectObserver", "observerOptions");
 }
 
 function printObjects(type, parentId) {
@@ -79,8 +78,8 @@ function action(target) {
   const bind = event.target.getAttribute("bind");
   P.actions(parent, event.target);
   let s = S.getSubscribers(true, event.target.value, bind);
-  P.createSelect(parent, 'subscribedObservers', getArray(s), s.sub);
-  console.log(s)
+  P.createSelect(parent, "subscribedObservers", getArray(s), s.sub);
+  console.log(s);
 }
 // brought to you by chatGPT
 function getArray(object) {
