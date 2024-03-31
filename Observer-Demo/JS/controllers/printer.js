@@ -1,8 +1,13 @@
+import {mutateData} from "./storage.js";
+import {Observer, Subject} from "../classes/ObserverPattern.js";
 //print all observers
+function getInstance(object) {
+  return object instanceof Observer ? "observer" : "subject";
+}
 export function observer(parent, observers) {
   clearParent(parent);
-  const type = "observer";
   observers.forEach((observer) => {
+    const type = getInstance(observer);
     const ele = document.createElement('li');
     const title = h3(getName(observer, type));
     title.appendChild(removeEvent(type, observer.id));
@@ -17,8 +22,8 @@ export function observer(parent, observers) {
 export function subject(parent, subjects) {
   clearParent(parent);
 
-  const type = "subject";
   subjects.forEach((subject) => {
+    const type = getInstance(subject)
     const ele = document.createElement('li');
     const title = h3(getName(subject, type));
     title.appendChild(removeEvent(type, subject.id));
@@ -72,7 +77,7 @@ function getName(object, type) {
 function sub(list, type, id) {
   const ul = document.createElement("ul");
   ul.classList.add('sub');
-  if (list.length !== 0) {
+  if (list !== undefined  ) {
     list.forEach((object) => {
       const ele = li(object, list);
       bind(ele, object);
@@ -112,7 +117,7 @@ function addEvent(id) {
   a.textContent = "Add";
   ele.appendChild(a);
   ele.addEventListener("click", (event) => {
-    console.log(event.target, id);
+    //TODO
   });
   return ele;
 }
@@ -122,8 +127,8 @@ function removeEvent(type, id) {
   let del = document.createElement("a");
   del.classList.add('cursor', 'remove');
   del.textContent = "Delete";
-  del.addEventListener("click", (event) => {
-    console.log("Remove Event", id);
+del.addEventListener("click", (event) => {
+    mutateData('remove', id, type);
   });
   if (type === 'subject') {
 
@@ -131,15 +136,15 @@ function removeEvent(type, id) {
     edit.classList.add('cursor', 'edit');
     edit.textContent = "Edit";
     edit.addEventListener("click", (event) => {
-      console.log("Edit Event", id);
-    });
+      mutateData('edit',id, type);
+    })
     
     let notify = document.createElement("a");
     notify.classList.add('cursor', 'notify');
     notify.textContent = "Notify";
     notify.addEventListener("click", (event) => {
-      console.log("Notify Event", id);
-    }); 
+      mutateData('notify',id, type);
+    })
     ele.appendChild(edit);
     ele.appendChild(notify);
   }
