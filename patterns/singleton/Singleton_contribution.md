@@ -1,5 +1,5 @@
 
-# DGL 104 - Community code project contribution report
+# DGL 104 - Community code project contribution report - Part two
 
 ## ✨ Purpose
 
@@ -14,10 +14,15 @@ Since we are three students collaborating on this task, we will break down what 
 * Baljit Singh
 * Anjitha Karuthara Balakrishnan
 * Sandhya Basran
+----
+----
 
+### ✨ Forked Repository - [Pattern Library](https://github.com/BasranS/pattern-library/tree/react_native_development/patterns/singleton)
 
-## ✨ Issue - [Add React Native implementation for Singleton pattern](https://github.com/nic-dgl104-winter-2024/pattern-library/issues/8)
+### ✨ Issue - [Add React Native implementation for Singleton pattern](https://github.com/nic-dgl104-winter-2024/pattern-library/issues/8)
 
+----
+----
 
 ## ✨ Baljit Singh - Old pull request outcome
 
