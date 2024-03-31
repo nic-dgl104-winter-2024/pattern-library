@@ -33,28 +33,39 @@ export function getSubscribers(bool, id, key) {
 }
 
 export function mutateData(e, id, type) {
+  let parentNode = null;
+  let list = [];
   switch (e) {
     case "remove":
       if (type === "observer") {
         const index = observers.findIndex((observer) => observer.id === id);
         if (index !== -1) {
-            const observer = observers[index];
-            observer.subList.forEach(subject => {
-                subjects.findIndex(subject => {
-                    subject.unsubscribe(observer);
-                });
+          const observer = observers[index];
+          observer.subList.forEach((subject) => {
+            subjects.findIndex((subject) => {
+              subject.unsubscribe(observer);
             });
-            observers.splice(index, 1); // Remove the object at the found index
-            addToStorage(observers, "observer");
+          });
+          observers.splice(index, 1); // Remove the object at the found index
+          addToStorage(observers, type);
+          list = observers;
+          parentNode = getParentNode(event.target);
         }
-    } else {
-        const index = subjects.findIndex((obj) => obj.id === id);
+        return { parentNode, list };
+      } else {
+        const index = subjects.findIndex((subject) => subject.id === id);
         if (index !== -1) {
-            console.log(type);
+          const subject = subjects[index];
+          subject.observerList.forEach((observer) => {
+            observer.removeSubject(subject.id);
+          });
+          subjects.splice(index, 1); // Remove the object at the found index
+          addToStorage(subjects, type);
+          list = subjects;
+          parentNode = getParentNode(event.target);
         }
-    }
-      
-      break;
+        return { parentNode, list };
+      }
     case "edit":
       // edit();
       break;
@@ -63,11 +74,18 @@ export function mutateData(e, id, type) {
       break;
     default:
       console.log("unknown event");
-  } 
+  }
+}
+function getParentNode(ele) {
+  let parent = ele.parentNode;
+  while (parent.parentNode !== null && parent.id === "") {
+    parent = parent.parentNode;
+  }
+  return parent;
 }
 function addToArray(object, instance) {
   let list = [];
-  console.log(object instanceof Observer, "add to array")
+  console.log(object instanceof Observer, "add to array");
   if (object instanceof Observer) {
     observers.push(object);
     list = [...observers];
@@ -76,7 +94,7 @@ function addToArray(object, instance) {
     list = [...subjects];
   }
   console.log(list);
-  addToStorage(list, instance)
+  addToStorage(list, instance);
 }
 function addToStorage(list, instance) {
   localStorage.removeItem(instance);

@@ -1,5 +1,5 @@
-import {mutateData} from "./storage.js";
-import {Observer, Subject} from "../classes/ObserverPattern.js";
+import { mutateData } from "./storage.js";
+import { Observer, Subject } from "../classes/ObserverPattern.js";
 //print all observers
 function getInstance(object) {
   return object instanceof Observer ? "observer" : "subject";
@@ -8,7 +8,7 @@ export function observer(parent, observers) {
   clearParent(parent);
   observers.forEach((observer) => {
     const type = getInstance(observer);
-    const ele = document.createElement('li');
+    const ele = document.createElement("li");
     const title = h3(getName(observer, type));
     title.appendChild(removeEvent(type, observer.id));
     ele.appendChild(title);
@@ -23,8 +23,8 @@ export function subject(parent, subjects) {
   clearParent(parent);
 
   subjects.forEach((subject) => {
-    const type = getInstance(subject)
-    const ele = document.createElement('li');
+    const type = getInstance(subject);
+    const ele = document.createElement("li");
     const title = h3(getName(subject, type));
     title.appendChild(removeEvent(type, subject.id));
     ele.appendChild(title);
@@ -34,7 +34,6 @@ export function subject(parent, subjects) {
     parent.appendChild(ele);
   });
 }
-
 
 //print a select and all options in items, also adds eventListeners on option clicks
 export function select(type, parent, items, events) {
@@ -76,8 +75,8 @@ function getName(object, type) {
 //create a sublist
 function sub(list, type, id) {
   const ul = document.createElement("ul");
-  ul.classList.add('sub');
-  if (list !== undefined  ) {
+  ul.classList.add("sub");
+  if (list !== undefined) {
     list.forEach((object) => {
       const ele = li(object, list);
       bind(ele, object);
@@ -94,8 +93,8 @@ function sub(list, type, id) {
   return ul;
 }
 function h3(title) {
-  const ele = document.createElement('h3');
-  ele.classList.add('subject-title');
+  const ele = document.createElement("h3");
+  ele.classList.add("subject-title");
   ele.textContent = title;
   return ele;
 }
@@ -113,7 +112,7 @@ function li(object, type, ignoreName = false) {
 function addEvent(id) {
   let ele = document.createElement("li");
   let a = document.createElement("a");
-  a.classList.add('cursor','add');
+  a.classList.add("cursor", "add");
   a.textContent = "Add";
   ele.appendChild(a);
   ele.addEventListener("click", (event) => {
@@ -125,26 +124,26 @@ function removeEvent(type, id) {
   let ele = document.createElement("span");
 
   let del = document.createElement("a");
-  del.classList.add('cursor', 'remove');
+  del.classList.add("cursor", "remove");
   del.textContent = "Delete";
-del.addEventListener("click", (event) => {
-    mutateData('remove', id, type);
+  del.addEventListener("click", (event) => {
+    const {parentNode, list} = mutateData("remove", id, type);
+    type === 'observer' ? observer(parentNode, list) : subject(parentNode, list);
   });
-  if (type === 'subject') {
-
+  if (type === "subject") {
     let edit = document.createElement("a");
-    edit.classList.add('cursor', 'edit');
+    edit.classList.add("cursor", "edit");
     edit.textContent = "Edit";
     edit.addEventListener("click", (event) => {
-      mutateData('edit',id, type);
-    })
-    
+      mutateData("edit", id, type);
+    });
+
     let notify = document.createElement("a");
-    notify.classList.add('cursor', 'notify');
+    notify.classList.add("cursor", "notify");
     notify.textContent = "Notify";
     notify.addEventListener("click", (event) => {
-      mutateData('notify',id, type);
-    })
+      mutateData("notify", id, type);
+    });
     ele.appendChild(edit);
     ele.appendChild(notify);
   }

@@ -61,10 +61,10 @@ export class Observer {
     });
     return data;
   }
-  addObservable(subject) {
+  addSubject(subject) {
     this.subList.push(subject);
   }
-  removeObservable(subject) {
+  removeSubject(subject) {
     this.subList.pop(subject);
   }
 
