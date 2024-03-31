@@ -105,6 +105,10 @@ Interface:
 
 ### References
 
+Wikipedia page on Strategy pattern(10 May 2023).https://en.wikipedia.org/wiki/Strategy_pattern.
+
+Ashutosh Krishna.(MAY 4, 2023).A Beginner's Guide to the Strategy Design Pattern.https://www.freecodecamp.org/news/a-beginners-guide-to-the-strategy-design-pattern/
+
 Sulabh Kumar.(09 Feb, 2024).Strategy Design Pattern.https://www.geeksforgeeks.org/strategy-pattern-set-1/
 ## Model View View-Model (MVVM) - Architectural Pattern
 
