@@ -21,6 +21,8 @@ Since we are three students collaborating on this task, we will break down what 
 
 ### ✨ Issue - [Add React Native implementation for Singleton pattern](https://github.com/nic-dgl104-winter-2024/pattern-library/issues/8)
 
+### *Task : The objective of this issue is to integrate the Singleton design pattern with React Native.*
+
 ----
 ----
 
@@ -210,7 +212,9 @@ export default class MyComponent extends Component {
 
 ## ✨ Final Outcome
 
-We received feedbacks on our initial pull requests and worked together to address all the changes requested. This involved making changes and contributions to every file in parts. As a result, we developed a file called Singleton_pattern.js, which now contains our latest and finalized code for implementing the singleton pattern in React Native. Additionally, we created a README file that explains everything about implementing the singleton pattern in React Native. Proper explanation of this topic Why to use for singleton pattern is required.
+###  Work Done
+
+We received feedbacks on our initial pull requests and worked together to address all the changes requested. This involved making changes and contributions to every file in parts. As a result, we developed a file called [Singleton_pattern.js](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/102/files#diff-208f2b77c3d1f613176baed8f41459236850d5af18e85511b17c2496dede4058), which now contains our latest and finalized code for implementing the singleton pattern in React Native. Additionally, we created a README file that explains everything about implementing the singleton pattern in React Native. Proper explanation of this topic Why to use for singleton pattern is required with name ["Singleton_readme.md](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/102/files#diff-81a32c10935e99a34d714d440765b96736e61833cef70ffb2fd45ae97e0e8754)". Also, we create this file under name ["Singleton_contribution.md"](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/102/files#diff-54eb7ab7f0213e47979aa159587146d611beace7f8125ff48b1bdf02c3e49b3e) to explain our contribtions.
 
 * Contribution for Singleton_pattern.js
 
@@ -227,5 +231,6 @@ For this part, we divided some sections to work upon which are:
 3. Sandhya Basran : Why to use react-native for Singleton pattern, Real-world platform which uses Singleton pattern.
 
 We all worked together for the provided example and the code explanation.
+
 
 ###  *All of us together giving one pull request for this issue from Sandhya Basran forked repository*
