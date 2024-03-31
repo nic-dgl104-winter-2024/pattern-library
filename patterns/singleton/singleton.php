@@ -24,3 +24,5 @@ class DatabaseConnection {
 // Usage
 DatabaseConnection dbConn = DatabaseConnection.getInstance();
 Connection conn = dbConn.getConnection();
+
+/* This example uses the DatabaseConnection class to create a single instance and provide global access through the getInstance method for retrieving the database connection. */
