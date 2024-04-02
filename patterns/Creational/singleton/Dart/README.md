@@ -41,7 +41,7 @@ As described earlier in this Library, Singleton mainly focuses on the coding pro
 
 ## Implementation
 
-Singeleton is relatively simple to implement in Dart, mainly due to the implementation of Dart’s factory constructors [11]. Factory constructors are pre-fixed with the factory keyword. Factory Constructors work as class instructors. However, factory constructors do not always create new instances of a class unless further defined. 
+Singleton is relatively simple to implement in Dart, mainly due to the implementation of Dart’s factory constructors [11]. Factory constructors are pre-fixed with the factory keyword. Factory Constructors work as class instructors. However, factory constructors do not always create new instances of a class unless further defined. 
 
 This allows the Singleton class to allow both an instance of cache or an instance of a sub-type if declared and to initialize final (Const) variables that cannot be installed due to being assigned through parameters. 
 
