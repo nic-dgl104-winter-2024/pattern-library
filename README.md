@@ -15,7 +15,7 @@ Here's a brief overview and a list of some fundamental design patterns, divided 
 See the [Design Patterns section](#/patterns/)
 
 ## Documentation Table of Contents
-- [Design Patterns Definition](#design_pattern)
+- [Design Patterns Definition](#design-pattern)
 - [Observer Pattern Definition](#observer-pattern)
 - [Singleton Pattern Definition](#singleton-pattern)
 - [Model View View Model Definition](#model_view_view_model)
@@ -36,7 +36,6 @@ See the [Design Patterns section](#/patterns/)
 ### [Abstract Factory](patterns/Creational/abstract-factory/)
 - [JavaScript](patterns/Creational/abstract-factory/JavaScript/)
 
-
 ### [Behavioral Patterns](patterns/Behavioral)
 
 ####  [Observer](patterns/Behavioral/Observal)
@@ -51,11 +50,7 @@ See the [Design Patterns section](#/patterns/)
 - [Model View ViewModel](patterns/Architectual/Model_View_ViewModel)
 - [Model View Controller](patterns/Architectual/Model_View_Controller)
 
-
-
-
 <a id="observer-pattern"></a>
-
 ## Definition of Observer Pattern
 
 The observer pattern is a behavioral design pattern often used in software development. 
@@ -76,13 +71,22 @@ Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/
 
 
 <a id="#singleton-pattern"></a> 
-
 ## Definition of Singleton Pattern
 
+Singleton is a creational design pattern that uses a single class that can only be instantiated once. This class allows you to easily access its single object from anywhere in the codebase without having to create new or additional instances of the class. This is because the goal is to have only one instance of a class throughout an application, which makes Singletons excel at managing global state in an application.
+
+Take a class Calendar as an example. Multiple Calendar instances would introduce confusion and errors as each may have its own settings for time and date format and different time zone settings.  
+
+It is for this reason that Singletons provide the best design solution to the above scenario because with only one instance of class existing, there's only one  source of truth that provides a centralized way to handle shared data, preventing conflicting updates or inconsistent data.
+
 ### References
+Design pattern - Singleton pattern. (n.d.). https://www.tutorialspoint.com/design_pattern/singleton_pattern.htm
+
+Eduard Ghergu Software Architect. (2023, June 27). Singleton Design Pattern: definition, implementation, and benefits | Pentalog. Pentalog. https://www.pentalog.com/blog/design-patterns/singleton-design-pattern/
+
+Rahman, S. (2023, April 3). The 3 Types of Design Patterns All Developers Should Know (with code examples of each). freeCodeCamp.org. https://www.freecodecamp.org/news/the-basic-design-patterns-all-developers-need-to-know/
 
 <a id="model_view_view_model"></a>
-
 ## Model View View-Model (MVVM) - Architectural Pattern
 
 ### Overview of the concept
@@ -165,8 +169,62 @@ Michaelstonis. (2022, November 4). _Model-View-ViewModel - .NET._ Microsoft Lear
 Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture explained._ Web Design, UI/UX, Branding, and App Development Blog. https://www.ramotion.com/blog/what-is-mvvm/ 
 
 
-<a id="articles_websites"></a>
+## Functional Patterns vs. OOP Design Patterns in JavaScript
 
+### Introduction: 
+
+In traditional Object-Oriented Programming (OOP), design patterns are widely used to solve common problems by providing structured approaches to design and development. However, with the rise of Functional Programming (FP), there's a shift towards different paradigms and patterns. In this Section, we'll explore the contrast between OOP design patterns and functional patterns in JavaScript.
+
+### OOP Design Patterns
+OOP design patterns like Singleton, Factory, Observer, and others are well-established concepts in JavaScript development. They focus on class hierarchies, encapsulation, and inheritance to achieve modularity and extensibility.
+
+For example, the Singleton pattern ensures that a class has only one instance and provides a global point of access to it. In JavaScript:
+
+Please see the example for [Singleton pattern in JavaScript](https://github.com/nic-dgl104-winter-2024/pattern-library/blob/main/patterns/Creational/singleton/JavaScript/singleton.js)
+
+### Functional Patterns
+Functional programming emphasizes immutable data and pure functions without side effects. While traditional OOP design patterns may not directly translate, functional programming offers its own set of patterns to address similar concerns.
+
+One common pattern in FP is the Higher-Order Function pattern. Higher-order functions take other functions as arguments or return them, enabling composition and abstraction.
+
+```JavaScript
+// Example of map, a higher-order function
+
+const numbers = [1, 2, 3, 4, 5];
+// Using the map method, which is a higher-order function,
+// to apply the arrow function to each element of the numbers array.
+// The arrow function takes an argument 'x' and returns 'x * 2'.
+const doubled = numbers.map(x => x * 2);
+console.log(doubled); // [2, 4, 6, 8, 10]
+```
+
+### Definitions
+
+| Aspect               | Definition                                                      |
+|----------------------|-----------------------------------------------------------------|
+| Immutability        | "An immutable value is one whose content cannot be changed without creating an entirely new value" ([Developer Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Immutable)). |
+| Composition  | "Object composition refers to the logical or conceptual structure of the information, not the implementation or physical data structure used to represent it" ([Wikipedia](https://en.wikipedia.org/wiki/Object_composition)). |
+| Inheritance  | "In object-oriented programming, inheritance is the mechanism of basing an object or class upon another object (prototype-based inheritance) or class (class-based inheritance), retaining similar implementation" ([Wikipedia](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming))). |
+| Pattern Matching    | "Pattern matching is a mechanism for checking a value against a pattern and, based on the match, performing some kind of action" ([Dev Community](https://dev.to/nexxeln/expressive-code-with-pattern-matching-3de6)). |
+
+### Contrast and Comparison
+
+| Aspect               | Functional Programming (FP)                                      | Object-Oriented Programming (OOP)                                             |
+|----------------------|----------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Immutability                | Favors immutable data to reduce unintended state changes.      | Supports immutability but often relies on mutable state within objects.        |
+| Composition vs. Inheritance | Emphasizes composition over inheritance, using functions for complex behaviors. | Often relies on class hierarchies and inheritance for code organization.        |
+| Pattern Matching    | Offers pattern matching for elegant handling of different cases. | Relies on traditional switch-case or if-else statements for conditional logic. |
+
+### Conclusion
+While OOP design patterns are specific to class-based systems, functional programming offers alternative patterns that address similar concerns. Functional patterns emphasize immutability, higher-order functions, and composition, leading to concise and expressive code. While the transition from OOP to FP may require a mindset shift, understanding both paradigms equips developers with a broader toolkit for solving problems.
+
+### References
+* [javascript-functional-programming-vs-oop](https://anywhere.epam.com/en/blog/javascript-functional-programming-vs-oop)
+* [Comparing Dessign Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
+* [singleton-pattern](https://www.patterns.dev/vanilla/singleton-pattern/)
+* [functional-programming-javascript](https://www.toptal.com/javascript/functional-programming-javascript)
+
+<a id="articles-websites"></a>
 ## Articles / Websites
 
 <a id="contributions"></a>
