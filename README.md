@@ -82,10 +82,10 @@ Rather than statically selecting a single algorithm or behaviour, an object can 
 
 ### Benifits of using Strategy pattern
 
-* Flexibility and Extensibility: 
+* Flexibility and Extensibility
 * Promotes Reusability
 * Enhances Testability
-* Easy to  Maintenance
+* Easy to  maintain
 
 ### Real life example
 
@@ -103,6 +103,67 @@ Interface:
 * Speed: The efficiency and swiftness of the payment process, including transaction time and waiting in line.
 * Privacy: The confidentiality of personal financial information and transaction details.
 
+```c 
+#include <stdio.h>
+#include <stdlib.h>
+
+// Interface defining the payment strategy
+typedef struct PaymentStrategy {
+    void (*pay)(float amount);
+} PaymentStrategy;
+
+// Concrete strategy for paying with credit/debit card
+void cardPayment(float amount) {
+    printf("Paying %.2f via Credit/Debit Card\n", amount);
+    // Logic for processing payment via credit/debit card
+}
+
+// Concrete strategy for paying with cash
+void cashPayment(float amount) {
+    printf("Paying %.2f via Cash\n", amount);
+    // Logic for processing payment via cash
+}
+
+// Context class that utilizes the payment strategies
+typedef struct PaymentContext {
+    PaymentStrategy *strategy;
+} PaymentContext;
+
+void setStrategy(PaymentContext *context, PaymentStrategy *strategy) {
+    context->strategy = strategy;
+}
+
+void executePayment(PaymentContext *context, float amount) {
+    context->strategy->pay(amount);
+}
+
+int main() {
+    char choice;
+    float amount;
+
+    printf("Choose payment method press c for card or m for cash ");
+    scanf(" %c", &choice);
+
+    if (choice == 'C' || choice == 'c') {
+        PaymentStrategy cardStrategy = { .pay = cardPayment };
+        PaymentContext paymentContext = { .strategy = &cardStrategy };
+        printf("Enter amount to pay: ");
+        scanf("%f", &amount);
+        executePayment(&paymentContext, amount);
+    } else if (choice == 'M' || choice == 'm') {
+        PaymentStrategy cashStrategy = { .pay = cashPayment };
+        PaymentContext paymentContext = { .strategy = &cashStrategy };
+        printf("Enter amount to pay: ");
+        scanf("%f", &amount);
+        executePayment(&paymentContext, amount);
+    } else {
+        printf("Invalid choice.\n");
+        return 1;
+    }
+
+    return 0;
+}
+```
 ### References
 
 Wikipedia page on Strategy pattern(10 May 2023).https://en.wikipedia.org/wiki/Strategy_pattern.
