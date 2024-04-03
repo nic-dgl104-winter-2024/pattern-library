@@ -87,21 +87,8 @@ Rather than statically selecting a single algorithm or behaviour, an object can 
 * Enhances Testability
 * Easy to  maintain
 
-### Real life example
+### Example
 
-
-Real-World Analogy of Strategy Design Pattern: Payment Options After Shopping in a Mall
-
-Context: You've finished shopping at a mall and need to choose the most convenient method to pay for your purchases.
-
-Strategies:
- * Credit/Debit Card: 
- * Cash: 
-
-Interface:
-* Security: The level of protection against fraud or unauthorized transactions.
-* Speed: The efficiency and swiftness of the payment process, including transaction time and waiting in line.
-* Privacy: The confidentiality of personal financial information and transaction details.
 
 ```c 
 #include <stdio.h>
