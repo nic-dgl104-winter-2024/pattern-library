@@ -18,61 +18,35 @@ class BlacklistFilter implements StringFilterStrategy {
     }
 
     public function filter($input) {
-        foreach ($this->blacklist as $word) {
-            $input = str_ireplace($word, '***', $input);
+        $filtered = $input;
+        foreach($this->blacklist as $word) {
+            $filtered = str_ireplace($word, '***', $filtered);
         }
-        return $input;
+        if ($filtered === $input) return $input . " safe";
+        return $filtered;
     }
 }
 
-class WhitelistFilter implements StringFilterStrategy {
-    private $whitelist;
-
-    public function __construct(array $whitelist) {
-        $this->whitelist = $whitelist;
-    }
-
-    public function filter($input) {
-        $filteredWords = [];
-        foreach (explode(' ', $input) as $word) {
-            if (in_array($word, $this->whitelist)) {
-                $filteredWords[] = $word;
-            }
-        }
-        return implode(' ', $filteredWords);
-    }
-}
 
 // Context class
 class StringFilterContext {
-    private $strategy;
+    private static $strategy;
 
-    public function setStrategy(StringFilterStrategy $strategy) {
-        $this->strategy = $strategy;
+    public static function setStrategy(StringFilterStrategy $strategy) {
+        self::$strategy = $strategy;
     }
 
-    public function applyFilter($input) {
-        return $this->strategy->filter($input);
+    public static function applyFilter($input) {
+        return self::$strategy->filter($input);
     }
 }
 
 // Client code
 $blacklist = ['badword1', 'inappropriate', 'spam'];
-$whitelist = ['goodword1', 'positive', 'safe'];
 
-$context = new StringFilterContext();
 
-// Use the blacklist strategy
-$blacklistStrategy = new BlacklistFilter($blacklist);
-$context->setStrategy($blacklistStrategy);
-$filteredInput1 = $context->applyFilter("This is an inappropriate message with badword1.");
-
-// Switch to the whitelist strategy
-$whitelistStrategy = new WhitelistFilter($whitelist);
-$context->setStrategy($whitelistStrategy);
-$filteredInput2 = $context->applyFilter("This is a positive message with goodword1.");
+StringFilterContext::setStrategy(new BlacklistFilter($blacklist));
+$filteredInput1 = StringFilterContext::applyFilter("This is an inappropriate message with badword1.This message is full of spam");
 
 echo "Filtered input 1: $filteredInput1\n";
-echo "Filtered input 2: $filteredInput2\n";
 
-?>
