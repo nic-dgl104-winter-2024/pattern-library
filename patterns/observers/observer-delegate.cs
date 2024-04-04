@@ -5,6 +5,7 @@ References used:
 https://www.youtube.com/watch?v=yoAOo4dM2pk
 https://www.c-sharpcorner.com/article/design-pattern-with-net-delegates/
 https://www.devleader.ca/2023/11/17/examples-of-the-observer-pattern-in-c-how-to-simplify-event-management/#google_vignette
+https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events
 */
 
 using System;
