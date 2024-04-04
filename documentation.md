@@ -1,64 +1,88 @@
-#Observer Pattern Implementation in Java
- This repository contains a simple implementation of the Observer pattern in Java.
+# Observer Pattern Implementation in Java
 
-##What is the Observer Pattern?
-  The Observer pattern is a behavioral design pattern where an object, called the subject, maintains a list of its dependents, called observers, and notifies them of any changes in state, usually by calling one of their methods. The Observer pattern promotes loose coupling between objects, allowing for easier maintenance and scalability.
+This repository contains a simple implementation of the Observer pattern in Java.
 
-##How Does it Work?
-  Subject
-  The Subject interface defines the methods required for managing observers. It includes methods to add, remove, and notify observers.
+## What is the Observer Pattern?
 
-##ConcreteSubject
-  The ConcreteSubject class implements the Subject interface. It maintains a list of observers and notifies them whenever its state changes.
+The Observer pattern is a behavioral design pattern where an object, called the subject, maintains a list of its dependents, called observers, and notifies them of any changes in state, usually by calling one of their methods. The Observer pattern promotes loose coupling between objects, allowing for easier maintenance and scalability.
 
-##Observer
-  The Observer interface declares the method that subjects call to notify observers of a state change.
+## How Does it Work?
 
-##ConcreteObserver
-  The ConcreteObserver class implements the Observer interface. It registers itself with a subject during instantiation and updates its state whenever it receives a notification from the subject.
+### Subject Interface
 
-##Main Class
-  The Main class demonstrates how to use the Observer pattern. It creates a ConcreteSubject object and two ConcreteObserver objects. It then changes the state of the subject and observes how the observers react to the state changes.
-##Usage
-  1.To use the Observer pattern in your project:
-  2.Implement the Subject interface in your subject class.
-  3.Implement the Observer interface in your observer classes.
-  4.Use the addObserver, removeObserver, and notifyObservers methods in your subject class to manage observers
-    and notify them of state changes.
+The Subject interface defines the methods required for managing observers. It includes methods to add, remove, and notify observers.
 
-## Code and Explaination
+### ConcreteSubject Class
 
-   1. Subject Interface
-      This is an interface that defines the methods required for managing observers.
-      Methods:
-      addObserver(Observer observer): Adds an observer to the list of observers.
-      removeObserver(Observer observer): Removes an observer from the list of observers.
-      notifyObservers(): Notifies all registered observers when a change occurs.
-   2. ConcreteSubject Class
-      This class implements the Subject interface.
-      It maintains a list of observers and notifies them when its state changes.
-Fields:
- observers: A list of observers.
- state: The state of the subject.
-Methods:
- getState(): Returns the current state of the subject.
- setState(int state): Sets the state of the subject and notifies observers of the change.
- addObserver(Observer observer): Implements the method to add an observer to the list.
- removeObserver(Observer observer): Implements the method to remove an observer from the list.
- notifyObservers(): Notifies all registered observers by calling their update() method.
- 3. Observer Interface
-    This is an interface that declares the method update(), which concrete observers must implement.
-    This method is called by subjects to notify observers of state changes.
- 4. ConcreteObserver Class
-    This class implements the Observer interface.
-    It registers itself with a subject during instantiation and updates its state when notified by the subject.
-Fields:
-    subject: The subject being observed.
-Constructor:
- ConcreteObserver(ConcreteSubject subject): Registers the observer with the specified subject.
-Methods:
- update(): Implements the method to update the observer's state when notified by the subject.
- 5. Main Class
-    This class contains the main method and demonstrates how to use the Observer pattern.
-    It creates a ConcreteSubject object and two ConcreteObserver objects.
-    It changes the state of the subject and observes how the observers react to the state changes. 
+The ConcreteSubject class implements the Subject interface. It maintains a list of observers and notifies them whenever its state changes.
+
+### Observer Interface
+
+The Observer interface defines the method that subjects call to notify observers of a state change.
+
+### ConcreteObserver Class
+
+The ConcreteObserver class implements the Observer interface. During instantiation, it registers itself with a subject. Upon receiving a notification from the subject, it updates its state accordingly.
+
+## Main Class
+
+The Main class demonstrates how to use the Observer pattern. It creates a ConcreteSubject object and two ConcreteObserver objects. It then changes the state of the subject and observes how the observers react to the state changes.
+
+## Usage
+
+To use the Observer pattern in your project:
+
+1. Implement the Subject interface in your subject class.
+2. Implement the Observer interface in your observer classes.
+3. Use the `addObserver`, `removeObserver`, and `notifyObservers` methods in your subject class to manage observers and notify them of state changes.
+
+### Code and Explanation
+
+1. **Subject Interface**:
+   - `addObserver(Observer observer)`: Adds an observer to the list of observers.
+   - `removeObserver(Observer observer)`: Removes an observer from the list of observers.
+   - `notifyObservers()`: Notifies all registered observers when a change occurs.
+
+2. **ConcreteSubject Class**:
+   - Maintains a list of observers and notifies them when its state changes.
+
+3. **Observer Interface**:
+   - Declares the `update()` method, which concrete observers must implement. This method is called by subjects to notify observers of state changes.
+
+4. **ConcreteObserver Class**:
+   - Registers itself with a subject during instantiation and updates its state when notified by the subject.
+
+5. **Main Class**:
+   - Contains the `main` method and demonstrates how to use the Observer pattern. It creates a ConcreteSubject object and two ConcreteObserver objects. It changes the state of the subject and observes how the observers react to the state changes.
+
+### Main Class
+
+The Main Class serves as the entry point for the application and demonstrates the usage of the Observer pattern. It contains the `main` method, where the interaction with the pattern components is showcased.
+
+#### Functionality
+
+The Main Class performs the following actions:
+
+1. Creates a `ConcreteSubject` object.
+2. Creates two `ConcreteObserver` objects.
+3. Modifies the state of the subject.
+4. Observes how the observers react to the state changes.
+
+#### Code Snippet
+
+Here's a snippet from the `main` method:
+
+```java
+// Created a ConcreteSubject object
+ConcreteSubject subject = new ConcreteSubject();
+
+// Created two ConcreteObserver objects
+ConcreteObserver observer1 = new ConcreteObserver();
+ConcreteObserver observer2 = new ConcreteObserver();
+
+// Register observers with the subject
+subject.addObserver(observer1);
+subject.addObserver(observer2);
+
+// Modifying the state of the subject
+subject.setState(1);
