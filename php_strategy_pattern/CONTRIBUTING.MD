@@ -139,21 +139,63 @@ public function login($username, $password, $email, $socialId) {
 ## Documentation  
 
 ## Translations  
+Translations for the project are currently available in English only. We are working on adding support for other languages in future releases.
 
 ## Versioning
+We follow semantic versioning for our project releases. The versioning format is MAJOR.MINOR.PATCH, where:
+MAJOR version increases for incompatible API changes,
+MINOR version increases for backward-compatible functionality additions, and
+PATCH version increases for backward-compatible bug fixes.
+For more details, refer to our Versioning Policy.
 
 ## Continuous Intergration/Continuous Development(CI/CD)
+Used GitHub Actions for continuous integration and continuous deployment (CI/CD) processes. Our workflows include:
+Automated testing on every push to the main branch
+Code quality checks and linting
+Deployment to staging and production environments
+For CI/CD setup instructions, refer to our CI/CD Guide.
 
 ## Security
+Security is a top priority for our project. We implement various security measures such as:
+Secure password hashing using bcrypt
+HTTPS for secure communication
+Input validation and sanitization to prevent SQL injection and XSS attacks
+Regular security audits and vulnerability assessments
+For security best practices and guidelines, see our Security Policy.
 
 ## Licensing  
 
 ## Acknowledgments
+I would like to acknowledge the following individuals and resources for their contributions and inspiration:
+John Doe for the initial project idea
+Refactoring Guru for design pattern insights
+DigitalOcean tutorials for PHP best practices
 
 ## Code of Conduct 
 
 ## External Resources
+For further learning and references, check out the following external resources:
+PHP Manual
+Symfony Security Component
+OWASP PHP Security Cheat Sheet
 
 ## FAQs
+* How do I add a new authentication strategy?
+To add a new authentication strategy, follow these steps:
 
+* Create a new PHP class that implements the AuthStrategy interface.
+* Define the signup and login methods in your new class to handle the authentication logic.
+Update the User class to use your new strategy by calling setAuthStrategy with an instance of your strategy class.
+```
+Example code for a custom authentication strategy:
+class CustomAuthStrategy implements AuthStrategy {
+    public function signup($username, $password, $email, $socialId) {
+        // Custom signup logic
+    }
+
+    public function login($username, $password, $email, $socialId) {
+        // Custom login logic
+    }
+}
+```
 
