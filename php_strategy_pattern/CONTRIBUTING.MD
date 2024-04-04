@@ -20,10 +20,35 @@ interface AuthenticationStrategy {
 ?>
 ```
 
+Email and Password Authentication
+
+```
+<?php
+include_once 'AuthenticationStrategy.php';
+
+class EmailPasswordStrategy implements AuthenticationStrategy {
+    public function authenticate($username, $password) {
+        // Mocking authentication logic for email/password strategy
+        if ($username === 'user@example.com' && $password === 'password') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+?>
+```
 
 ## Project Overview  
+In this implementation:
+We define the AuthenticationStrategy interface and concrete strategy classes EmailPasswordStrategy and SocialLoginStrategy within the strategies directory.
+The User class represents a user with methods for setting the authentication strategy, signing up, and logging in.
+The LoginForm and SignUpForm classes handle login and signup actions, respectively.
+In index.php, we demonstrate how to use the Strategy pattern to switch between different authentication strategies (email/password and social login) dynamically.
 
 ## Prerequisites  
+1. PHP installed on your machine (version 7.0 or higher).
+2. Web server (e.g., Apache, Nginx) with PHP support.
 
 ## Ways to Contribute:  
 There are several ways you can contribute to the DGL104 pattern-library:  
@@ -37,7 +62,6 @@ There are several ways you can contribute to the DGL104 pattern-library:
 
 ## Getting Started  
 To start contributing, follow these steps:  
-
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine.
 3. create a new branch for your changes.
@@ -45,11 +69,35 @@ To start contributing, follow these steps:
 5. push your changes to the forked repository.
 6. submit a pull request from your branch to the main repository's 'main' branch.
 
+i. Clone or download the project from the repository.
+ii. Set up a web server to run the PHP files.
+iii. Update the database configuration in config.php file with your database credentials.
+iv. Create the necessary database tables. You can use the following SQL script as a reference:
+
+```
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    social_id VARCHAR(255),
+    auth_strategy VARCHAR(50) NOT NULL
+);
+```
+v. Start the web server and navigate to the project directory in your web browser.
+
 ## Code Style  
+Followed PHP coding standards such as PSR-12 for code readability and consistency. Use meaningful variable and function names, proper indentation, and comments where necessary.
 
 ## Testing  
+* Create a user account using the desired authentication strategy (email/password or social login).
+* Log in using the created user account to test the authentication process.
+* Verify that the correct authentication strategy is applied based on the user's choice.
 
 ## Code Review Process  
+* Before committing code changes, ensure they follow the project's coding standards and guidelines.
+* Perform code reviews to catch any errors, improve code quality, and ensure consistency.
+* Address feedback received during code reviews promptly and make necessary revisions.
 
 ## Documentation  
 
