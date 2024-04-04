@@ -9,15 +9,34 @@ The Template Method design pattern is a behavioral approach where a superclass o
 
 ## 🌟Components
 
-* Abstract Class (or Interface): This defines the template method, which is the skeleton of the algorithm. It contains one or more abstract methods or hooks that the subclasses need to implement.
+* Abstract Class (or Interface):
+    * It serves as a blueprint for other classes.
+    * Cannot be instantiated on its own; it's meant to be subclassed.
+    * Can contain both abstract methods and concrete methods.
+    * Provides a common interface for all its subclasses.
 
-* Concrete Class (Subclass): Subclasses inherit from the abstract class and provide concrete implementations for the abstract methods or hooks defined in the abstract class.
+* Concrete Class (Subclass):
+    * Inherits from the abstract class.
+    * Provides concrete implementations for all abstract methods or hooks defined in the abstract class.
+   * Can also provide additional methods specific to its functionality.
 
-* Template Method: This is the method declared in the abstract class, outlining the algorithm's structure by calling the abstract methods or hooks in a specific order. It's often marked as final to prevent subclasses from changing its structure.
+* Template Method:
+   * Declared in the abstract class.
+   * Outlines the algorithm's structure by defining the steps in a specific order.
+   * Calls abstract methods or hooks as necessary within its implementation.
+  * Often marked as final to prevent subclasses from altering the algorithm's structure.
 
-* Abstract Methods (or Hooks): These are declared in the abstract class and must be implemented by subclasses. They allow subclasses to provide specific implementations for parts of the algorithm.
+* Abstract Methods (or Hooks):
+  * Declared in the abstract class but not implemented.
+  * Must be implemented by concrete subclasses.
+  * These methods provide flexibility for subclasses to customize parts of the algorithm according to their specific requirements.
+  * Define the contract that concrete subclasses must adhere to.
 
-* Concrete Methods: These are methods implemented in the abstract class and called by the template method. They provide common behavior that doesn't change across subclasses.
+* Concrete Methods:
+   * Implemented in the abstract class.
+   * Provide common behavior shared by all subclasses.
+   * These methods are called by the template method to perform tasks that remain unchanged across different implementations.
+  * They contribute to code reusability and maintainability by centralizing common functionality.
 
 ----
 ----
@@ -44,7 +63,10 @@ In the Template Method pattern, it's like following a recipe. The main recipe ac
 ----
 ----
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 ## 🌟References
 
 
