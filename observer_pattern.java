@@ -17,10 +17,9 @@ class ConcreteSubject implements Subject {
         return state;
     }
 
-    
     public void setState(int state) {
         this.state = state;
-       
+        notifyObservers(); // Notify observers whenever the state changes
     }
 
     @Override
@@ -36,42 +35,39 @@ class ConcreteSubject implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update();
+            observer.update(this); // Pass the subject reference to the observer
         }
     }
 }
 
 // Observer interface
 interface Observer {
-    void update();
+    void update(Subject subject); // Pass the subject reference to the update method
 }
 
 // Concrete Observer
 class ConcreteObserver implements Observer {
-    private ConcreteSubject subject;
-
-    public ConcreteObserver(ConcreteSubject subject) {
-        this.subject = subject;
-        this.subject.addObserver(this);
-    }
-
     @Override
     public void update() {
-        System.out.println("Observer updated. New state: " + subject.getState());
+        // Implement the update logic here
+        System.out.println("Observer updated.");
     }
 }
 
 public class Main {
+
     public static void main(String[] args) {
         ConcreteSubject subject = new ConcreteSubject();
-        ConcreteObserver observer1 = new ConcreteObserver(subject);
-        ConcreteObserver observer2 = new ConcreteObserver(subject);
+        ConcreteObserver observer1 = new ConcreteObserver();
+        ConcreteObserver observer2 = new ConcreteObserver();
+
+        subject.addObserver(observer1);
+        subject.addObserver(observer2);
 
         subject.setState(1);
 
         subject.removeObserver(observer1);
 
         subject.setState(2);
-        subject.notifyObservers();
     }
 }
