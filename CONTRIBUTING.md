@@ -48,7 +48,8 @@ To start contributing, follow these steps:
 ## Code of Conduct 
 
 ## External Resources
-
+*https://www.baeldung.com/java-observer-pattern
+*https://www.digitalocean.com/community/tutorials/observer-design-pattern-in-java
 ## FAQs
 
 
