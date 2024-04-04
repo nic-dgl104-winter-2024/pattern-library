@@ -1,7 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Defines the Subject interface that allows observers to register, unregister, and be notified.
+/**
+ * https://www.baeldung.com/java-observer-pattern
+ * 
+ * https://www.digitalocean.com/community/tutorials/observer-design-pattern-in-java
+ * 
+ */
+// Defines the Subject interface that allows observers to register, unregister,
+// and be notified.
 interface TicketSubject {
     void registerObserver(TicketObserver observer);
 
