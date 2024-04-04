@@ -52,14 +52,14 @@ In index.php, we demonstrate how to use the Strategy pattern to switch between d
 * MySQL or another database system for storing user data.
 
 ## Ways to Contribute:  
-There are several ways you can contribute to the DGL104 pattern-library:  
+There are several ways you can contribute to the DGL104 pattern library:  
 
 1. **Reporting Bugs:** If you encounter any bugs or issues, please report them by creating a new issue.  
 2. **Suggesting Enhancements:** Have ideas for new features or improvements? Feel free to open an issue to discuss.
 3. **Writing Documentation:** Help us improve the project's documentation by fixing typos, adding clarification, or creating new content.
 4. **Submitting Code Fixes:** Found a bug and know how to fix it? Send us a pull request with your code changes.
-5. **Adding Features:** Want to add a new feature? Make sure to discuss it first by openeing an issue, then submit a pull request with your implementation.
-6. **Review issues:** Help us work on some pre existing issues in the issues tab.
+5. **Adding Features:** Want to add a new feature? Make sure to discuss it first by opening an issue, then submit a pull request with your implementation.
+6. **Review issues:** Help us work on some pre-existing issues in the issues tab.
 
 ## Getting Started  
 To start contributing, follow these steps:  
@@ -145,10 +145,10 @@ Translations for the project are currently available in English only. We are wor
 We follow semantic versioning for our project releases. The versioning format is MAJOR.MINOR.PATCH, where:
 MAJOR version increases for incompatible API changes,
 MINOR version increases for backward-compatible functionality additions, and
-PATCH version increases for backward-compatible bug fixes.
+PATCH version increases for backwards-compatible bug fixes.
 For more details, refer to our Versioning Policy.
 
-## Continuous Intergration/Continuous Development(CI/CD)
+## Continuous Integration/Continuous Development(CI/CD)
 Used GitHub Actions for continuous integration and continuous deployment (CI/CD) processes. Our workflows include:
 Automated testing on every push to the main branch
 Code quality checks and linting
@@ -167,9 +167,9 @@ For security best practices and guidelines, see our Security Policy.
 
 ## Acknowledgments
 I would like to acknowledge the following individuals and resources for their contributions and inspiration:
-John Doe for the initial project idea
-Refactoring Guru for design pattern insights
-DigitalOcean tutorials for PHP best practices
+* Basit, Swathy for the initial project idea.
+* Refactoring Guru for design pattern insights
+* DigitalOcean tutorials for PHP best practices
 
 ## Code of Conduct 
 
@@ -198,4 +198,9 @@ class CustomAuthStrategy implements AuthStrategy {
     }
 }
 ```
-
+Then, in your main PHP file:
+```
+$user = new User($username, $password, $email, $socialId);
+$user->setAuthStrategy(new CustomAuthStrategy());
+$user->signup();
+```
