@@ -6,7 +6,8 @@
 
 ## 🌟 Issue Summary
 
-involves writing a clear and concise definition of the Template Pattern in the README.md file of the project repository.
+For the issue "Write definition of Strategy pattern in README.md," I need to add a section to the README.md file of the "DGL 104 Pattern Library" project. This section should provide a clear and concise definition of the Strategy pattern, including its purpose, benefits, how it works, implementation guidelines, and example use cases. Ensure that the information is easy to understand and relevant for other developers using the library. Once added, commit the changes to the repository.
+
 
 
 
