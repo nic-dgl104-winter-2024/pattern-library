@@ -47,8 +47,9 @@ The LoginForm and SignUpForm classes handle login and signup actions, respective
 In index.php, we demonstrate how to use the Strategy pattern to switch between different authentication strategies (email/password and social login) dynamically.
 
 ## Prerequisites  
-1. PHP installed on your machine (version 7.0 or higher).
-2. Web server (e.g., Apache, Nginx) with PHP support.
+* PHP installed on your machine (version 7.0 or higher).
+* Web server (e.g., Apache, Nginx) with PHP support.
+* MySQL or another database system for storing user data.
 
 ## Ways to Contribute:  
 There are several ways you can contribute to the DGL104 pattern-library:  
@@ -95,10 +96,46 @@ Followed PHP coding standards such as PSR-12 for code readability and consistenc
 * Verify that the correct authentication strategy is applied based on the user's choice.
 
 ## Code Review Process  
-* Before committing code changes, ensure they follow the project's coding standards and guidelines.
-* Perform code reviews to catch any errors, improve code quality, and ensure consistency.
-* Address feedback received during code reviews promptly and make necessary revisions.
+* Code Readability
+Ensure variable and function names are descriptive and follow a consistent naming convention.
+Use proper indentation and formatting to improve code readability.
+```
+// Good example of descriptive variable names and proper formatting
+public function signup($username, $password, $email, $socialId) {
+    // Method implementation
+}
+```
+# Security
+Sanitize user input to prevent SQL injection and other security vulnerabilities.
+Use prepared statements when interacting with the database to avoid direct insertion of user-provided data into SQL queries.
 
+```
+// Example of using prepared statements to prevent SQL injection
+$stmt = $pdo->prepare("INSERT INTO users (username, password, email, social_id) VALUES (?, ?, ?, ?)");
+$stmt->execute([$username, $passwordHash, $email, $socialId]);
+```
+
+# Scalability
+Ensure that the code is scalable and can handle a growing number of users and authentication strategies.
+Consider modularizing the code further to accommodate future changes and additions.
+```
+// Example of modular code structure for authentication strategies
+interface AuthStrategy {
+    public function signup($username, $password, $email, $socialId);
+    public function login($username, $password, $email, $socialId);
+}
+```
+
+# Documentation
+Include inline comments and documentation where necessary to explain complex logic and algorithms.
+Update the README.md file with clear instructions for setting up and running the project.
+```
+// Example of inline comments for explaining code logic
+public function login($username, $password, $email, $socialId) {
+    // Check if the username and password match a user record in the database
+    // ...
+}
+```
 ## Documentation  
 
 ## Translations  
