@@ -204,3 +204,9 @@ $user = new User($username, $password, $email, $socialId);
 $user->setAuthStrategy(new CustomAuthStrategy());
 $user->signup();
 ```
+
+# How can I contribute to the project?
+We welcome contributions from the community! To contribute, follow these steps:
+* Fork the repository and create a new branch for your changes.
+* Make your changes, ensuring adherence to coding standards and documentation guidelines.
+* Submit a pull request with a clear description of your changes and the problem they solve.
