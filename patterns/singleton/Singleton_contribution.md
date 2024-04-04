@@ -212,6 +212,8 @@ export default class MyComponent extends Component {
 
 ## ✨ Final Outcome
 
+### New PR link - [Add React Native implementation for Singleton pattern #8 #102](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/102)
+
 ###  Work Done
 
 We received feedbacks on our initial pull requests and worked together to address all the changes requested. This involved making changes and contributions to every file in parts. As a result, we developed a file called Singleton_pattern.js, which now contains our latest and finalized code for implementing the singleton pattern in React Native. Additionally, we created a README file that explains everything about implementing the singleton pattern in React Native. Proper explanation of this topic Why to use for singleton pattern is required with name "Singleton_readme.md". Also, we create this file under name ["Singleton_contribution.md"](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/102/files#diff-54eb7ab7f0213e47979aa159587146d611beace7f8125ff48b1bdf02c3e49b3e) to explain our contribtions.
@@ -231,6 +233,5 @@ For this part, we divided some sections to work upon which are:
 3. Sandhya Basran : Why to use react-native for Singleton pattern, Real-world platform which uses Singleton pattern.
 
 We all worked together for the provided example and the code explanation.
-
 
 ###  *All of us together giving one pull request for this issue from Sandhya Basran forked repository*
