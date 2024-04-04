@@ -6,6 +6,7 @@
 
 ## 🌟 Issue Summary
 
+involves writing a clear and concise definition of the Template Pattern in the README.md file of the project repository.
 
 
 
