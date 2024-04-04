@@ -45,3 +45,7 @@ The `example.js` file provides the following usage examples:
    - The authorization strategy is then switched to `permissionBasedAuthorizationStrategy`, and the `authorize` method is called with a user object and different permissions.
 
 This example demonstrates how the Strategy design pattern can be used to implement flexible and extensible authentication and authorization mechanisms in your application.
+
+## Resources
+- Authentication: Methods, Protocols, and Strategies." Frontegg, 2023, frontegg.com/blog/authentication.
+- Purdue OWL, Purdue University Writing Lab, 2018, owl.purdue.edu/owl/research_and_citation/mla_style/mla_formatting_and_style_guide/mla_formatting_and_style_guide.html.
