@@ -26,7 +26,7 @@ Since we are three students collaborating on this task, we will break down what 
 ----
 ----
 
-## ✨ Baljit Singh - Old pull request outcome
+## ✨ Baljit Singh - [Old PR](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/75)
 
 In his initial pull request, Baljit Singh, submitted this code under the filename "singleton.js".
 
@@ -78,7 +78,7 @@ function MySingleton() {
 
 ----
 ----
-## ✨ Anjitha Karuthara Balakrishnan - Old pull request outcome
+## ✨ Anjitha Karuthara Balakrishnan - [Old PR](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/54)
 
 This code is from the initial pull request of  Anjitha Karuthara Balakrishnan as a outcome for this issue under file name "Singleton.js".
 
@@ -132,7 +132,7 @@ export default MySingleton;
 ----
 ----
 
-## ✨ Sandhya Basran - Old pull request outcome
+## ✨ Sandhya Basran - [Old PR](https://github.com/nic-dgl104-winter-2024/pattern-library/pull/78)
 
 The provided outcome is given by Sandhya Basran as an outcome for the initial pull request under file name "Mysingleton.js" along with a descriptive file which was "contribution.md" to specify everything about react- native and singleton.
 
