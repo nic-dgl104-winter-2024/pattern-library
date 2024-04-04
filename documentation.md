@@ -86,3 +86,12 @@ subject.addObserver(observer2);
 
 // Modifying the state of the subject
 subject.setState(1);
+
+## References 
+   Gamma, Erich, et al. "Design Patterns: Elements of Reusable Object-Oriented Software." Addison-Wesley, 1994. (The "Observer" pattern is discussed in Chapter 5 of this book.)
+
+   "Observer Pattern." Refactoring Guru, https://refactoring.guru/design-patterns/observer. (Provides a detailed explanation of the Observer pattern along with examples in various programming languages.)
+
+   "Observer Design Pattern in Java - Example Tutorial." Java Code Gists, https://www.javacodegeeks.com/2012/09/observer-design-pattern-in-java-example.html. (An example tutorial demonstrating the implementation of the Observer pattern in Java.)
+
+  "Observer Pattern in Java." Baeldung, https://www.baeldung.com/java-observer-pattern. (An article explaining the Observer pattern with code examples in Java.)
