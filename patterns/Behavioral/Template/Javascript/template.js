@@ -48,7 +48,7 @@ class BillAcceptor extends CommunicateWithDevice {
 		console.log("Bill acceptor on");
 	}
 	off() {
-		console.log("Card acceptor off");
+		console.log("Bill acceptor off");
 	}
 	process() {
 		this.collectBills();
