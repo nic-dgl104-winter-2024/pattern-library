@@ -35,20 +35,20 @@ class ConcreteSubject implements Subject {
     @Override
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update(this); // Pass the subject reference to the observer
+            observer.update("data"); // Pass the subject reference to the observer
         }
     }
 }
 
 // Observer interface
 interface Observer {
-    void update(Subject subject); // Pass the subject reference to the update method
+    void update(String data); // Pass the subject reference to the update method
 }
 
 // Concrete Observer
 class ConcreteObserver implements Observer {
     @Override
-    public void update() {
+    public void update(String data) {
         // Implement the update logic here
         System.out.println("Observer updated.");
     }
