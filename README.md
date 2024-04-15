@@ -1,9 +1,7 @@
 # DGL 104 Pattern Library
 A multi-language library containing implementations of common software design and architecture patterns 
 
-
 <a id="design_pattern"></a>
-
 ## Design Patterns
 
 Design patterns are like templates or solutions to common problems encountered in software design. They represent the best practices used by experienced object-oriented software developers. Design patterns are about reusing designs that have been proven effective, rather than reinventing the wheel. They help you solve specific problems in your code, making your software easier to understand, maintain, and scale.
@@ -38,24 +36,24 @@ See the [Design Patterns section](#/patterns/)
 
 ### [Behavioral Patterns](patterns/Behavioral)
 
-####  [Observer](patterns/Behavioral/Observal)
-- [JavaScript](patterns/Behavioral/Observal/JavaScript)
-- [ReactNative](patterns/Behavioral/Observal/ReactNative)
-- [Kotlin](patterns/Behavioral/Observal/Kotlin)
-- [Dart](patterns/Behavioral/Observal/Dart)
-- [Lua](patterns/Behavioral/Observal/Lua)
+#### [Observer](patterns/Behavioral/Observer)
+- [JavaScript](patterns/Behavioral/Observer/JavaScript)
+- [ReactNative](patterns/Behavioral/Observer/ReactNative)
+- [Kotlin](patterns/Behavioral/Observer/Kotlin)
+- [Dart](patterns/Behavioral/Observer/Dart)
+- [Lua](patterns/Behavioral/Observer/Lua)
 
-### [Architectual Patterns](patterns/Architectual)
+### [Architectural Patterns](patterns/Architectural)
 
-- [Model View ViewModel](patterns/Architectual/Model_View_ViewModel)
-- [Model View Controller](patterns/Architectual/Model_View_Controller)
+- [Model View ViewModel](patterns/Architectural/Model_View_ViewModel)
+- [Model View Controller](patterns/Architectural/Model_View_Controller)
 
 <a id="observer-pattern"></a>
 ## Definition of Observer Pattern
 
 The observer pattern is a behavioral design pattern often used in software development. 
 
-The purpose of the observer pattern is to establish a one-to-many dependency between objects. An object known as the subject maintains a list of it's dependents, called observers. The subject automatically notifies these observers of any state changes it undergoes, typically achieved by invoking one of their methods.
+The purpose of the observer pattern is to establish a one-to-many dependency between objects. An object known as the subject maintains a list of its dependents, called observers. The subject automatically notifies these observers of any state changes it undergoes, typically achieved by invoking one of their methods.
 
 This pattern is often employed in software systems to ensure consistency among multiple components or to notify interested parties about specific events.
 
@@ -63,12 +61,11 @@ As an example, consider a scenario using the analogy of a publisher/subscriber r
 
 ### References
 
-Design Patterns and Refactoring. (n.d.). Sourcemaking.com. https://sourcemaking.com/design_patterns/observer
+- Design Patterns and Refactoring. (n.d.). Sourcemaking.com. https://sourcemaking.com/design_patterns/observer
+- Refactoring Guru. (2014). Observer. Refactoring.guru. https://refactoring.guru/design-patterns/observer
+- Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/Observer_pattern#:~:text=In%20software%20design%20and%20engineering
 
-Refactoring Guru. (2014). Observer. Refactoring.guru. https://refactoring.guru/design-patterns/observer
-
-Observer pattern. (2022, November 13). Wikipedia. https://en.wikipedia.org/wiki/Observer_pattern#:~:text=In%20software%20design%20and%20engineering
-
+## Singleton Pattern
 
 <a id="#singleton-pattern"></a> 
 ## Definition of Singleton Pattern
@@ -89,7 +86,7 @@ Rahman, S. (2023, April 3). The 3 Types of Design Patterns All Developers Should
 <a id="model_view_view_model"></a>
 ## Model View View-Model (MVVM) - Architectural Pattern
 
-### Overview of the concept
+### Overview of the Concept
 
 Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) is an architectural pattern in software development whose purpose is to provide a clear separation of concerns in applications, especially those with complex user interfaces and interactive features. In both patterns, the program logic of your application (the model) is kept separate from the user interface (the view). The View-Model acts as the mediator between the Model and View. This separation enhances the structure and maintainability of the code, making it easier to develop, test, and manage. 
 
@@ -97,7 +94,7 @@ Just like the Model View Controller (MVC) pattern, Model View View-Model (MVVM) 
 
 (Mastering Xamarin UI Development - Second Edition, n.d.)
 
-### Which problems does it solve?
+### Which Problems Does it Solve?
 
 MVVM was developed to address several problems in the development of graphical user interfaces (GUIs), particularly those related to separation of concerns, testability, and maintainability. Here are two key issues MVVM aims to solve:
 
@@ -121,13 +118,13 @@ MVVM was developed to address several problems in the development of graphical u
 
 MVVM evolves from MVC but introduces two crucial distinctions:
 
-* Data-binding: Unlike MVC, MVVM's View is fully decoupled from the Model, heavily relying on data binding for synchronization, thus minimizing direct UI-program logic interaction and facilitating dynamic UI responsiveness.
+- Data-binding: Unlike MVC, MVVM's View is fully decoupled from the Model, heavily relying on data binding for synchronization, thus minimizing direct UI-program logic interaction and facilitating dynamic UI responsiveness.
 
 * ViewModel's role: the ViewModel is primarily concerned with preparing data for display, while the Controller in MVC directly manages application flow, deciding which content to display and reacting to user inputs by updating the Model or selecting a different view.
 
 ### Data Binding Explained
 
-Data binding in MVVM is a foundational concept that establishes a two-way connection between the application's UI (the View) and the data it displays (represented by the ViewModel). This connection allows for **automatic synchronization of data** between the ViewModel and the View, meaning that when the data in the ViewModel changes, the UI automatically updates to reflect these changes and vice versa.
+Data binding in MVVM is a foundational concept that establishes a two-way connection between the application's UI (the View) and the data it displays (represented by the ViewModel). This connection allows for automatic synchronization of data between the ViewModel and the View, meaning that when the data in the ViewModel changes, the UI automatically updates to reflect these changes and vice versa.
 
 **How Data Binding Works in MVVM**
 
@@ -161,11 +158,8 @@ MVVM is a desirable architectural pattern in scenarios requiring complex UIs, dy
 ### References
 
 Gallardo, E. (2023, January 9). _What is MVVM Architecture?_ Built In. https://builtin.com/software-engineering-perspectives/mvvm-architecture 
-
 _Mastering Xamarin UI Development - Second Edition._ (n.d.). https://subscription.packtpub.com/book/mobile/9781788995511/5/ch05lvl1sec41/understanding-the-mvvm-architectural-pattern
-
 Michaelstonis. (2022, November 4). _Model-View-ViewModel - .NET._ Microsoft Learn. https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm 
-
 Ramotion. (2023, May 1). _Understanding MVVM: Model-View-ViewModel Architecture explained._ Web Design, UI/UX, Branding, and App Development Blog. https://www.ramotion.com/blog/what-is-mvvm/ 
 
 
@@ -228,5 +222,4 @@ While OOP design patterns are specific to class-based systems, functional progra
 ## Articles / Websites
 
 <a id="contributions"></a>
-
 ## Contributions 
