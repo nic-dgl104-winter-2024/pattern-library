@@ -24,8 +24,8 @@ These patterns deal with object creation mechanisms, trying to create objects in
 | [Singleton](./singleton/)       | Ensures a class has only one instance and provides a global point of access to it.                                  |
 | [Abstract Factory](./abstract-factory/) | Provides an interface for creating families of related or dependent objects without specifying their concrete classes.|
 | Builder         | Separates the construction of a complex object from its representation, allowing the same construction process to create various representations.|
-| Factory Method  | Defines an interface for creating an object but lets subclasses alter the type of objects that will be created.     |
-| [Prototype](./Creational/Prototype/)       | Creates new objects by copying an existing object, known as the prototype.  
+| [Factory Method](./Factory-Design-Patten/)  | Defines an interface for creating an object but lets subclasses alter the type of objects that will be created.     |
+| Prototype       | Creates new objects by copying an existing object, known as the prototype.  
 
 <br>
                                         |
@@ -40,7 +40,7 @@ These patterns deal with the composition of classes or objects. They help ensure
 | Bridge         | Separates an object’s abstraction from its implementation so that the two can vary independently.                  |
 | Composite      | Composes objects into tree structures to represent part-whole hierarchies. It lets clients treat individual objects and compositions of objects uniformly. |
 | Decorator      | Attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality. |
-| Facade         | Provides a simplified interface to a complex subsystem.                                                            |
+| [Facade](./Facade-Pattern/)         | Provides a simplified interface to a complex subsystem.                                                            |
 | Flyweight      | Reduces the cost of creating and manipulating a large number of similar objects.                                   |
 | Proxy          | Provides a surrogate or placeholder for another object to control access to it.                                    |
 
