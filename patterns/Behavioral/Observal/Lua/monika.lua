@@ -35,7 +35,7 @@ end
 
 function GameSubject:notify()
     for _, observer in ipairs(self.observers) do
-        observer:updateScore(self.score)   -- Invoke the updateScore method for each observer
+        observer:update(self.score)   -- Invoke the updateScore method for each observer
     end
 end
 
@@ -60,7 +60,7 @@ end
 
 -- Broadcast function 
 
-function ScoreObserver:updateScore(score)
+function ScoreObserver:update(score)
     print("Player's score has been updated:", score)   -- Print a message indicating the score update
     -- Update UI or perform other actions related to score change
 end
