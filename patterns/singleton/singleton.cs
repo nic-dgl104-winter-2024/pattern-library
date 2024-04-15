@@ -3,7 +3,7 @@
  // https://www.c-sharpcorner.com/UploadFile/8911c4/singleton-design-pattern-in-C-Sharp/
  // https://csharpindepth.com/articles/Singleton
  
-
+using System;
 
 
 public sealed class Calculations
