@@ -1,6 +1,5 @@
 # ✨ Dart - Singleton 
 
-
 ## Introduction: 
 
 Singleton is an object-oriented programming language pattern with only one instance to provide consistency across local data storage and consistent return values when accessing the data. 
@@ -27,12 +26,10 @@ Singleton is a Creational Pattern that ensures a class provides only one instanc
 
 _“Structural patterns are design patterns that deal with the composition and organization of classes and objects. They help you define how different components of your system interact and relate to each other.”_ [10: Linked-In "What is the difference between a structural pattern and a behavioral pattern?"](https://www.linkedin.com/advice/0/what-difference-between-structural-pattern-behavioral-nkg2c#:~:text=Behavioral%20patterns%20can%20improve%20your,%2C%20Template%20Method%2C%20and%20Visitor.)
 
-
 #### Behavioral Patterns: 
 
 _“Behavioral patterns are design patterns that deal with the communication and cooperation of classes and objects. They help you define how different components of your system behave and respond to each other.”_ [10: Linked-In "What is the difference between a structural pattern and a behavioral pattern?"](https://www.linkedin.com/advice/0/what-difference-between-structural-pattern-behavioral-nkg2c#:~:text=Behavioral%20patterns%20can%20improve%20your,%2C%20Template%20Method%2C%20and%20Visitor.)
 
- 
 ### Why use the singleton pattern in Dart? 
 
 Singleton is exceptionally easy to implement and uses a creational pattern. A good use of the Singleton pattern inside Dart would be _“One of the powerhouse advantages of implementing a Dart Singleton is the control over resource consumption. Often, creating many instances consumes many resources, pressing a need for a design pattern where only one instance is created, and the same instance is shared with every class requesting it”_ [2] 
@@ -45,7 +42,7 @@ Singelton is relatively simple to implement in Dart, mainly due to the implement
 
 This allows the Singleton class to allow both an instance of cache or an instance of a sub-type if declared and to initialize final (Const) variables that cannot be installed due to being assigned through parameters. 
 
-###Singelton Implementation in Dart
+### Singelton Implementation in Dart
 
 ```Dart
 /* Because of Dart's use of factory constructers, it's easy to make an simpleton application in 
@@ -54,7 +51,6 @@ Dart, and is quite easy to implement, look at the corresponding  read.me file fo
 
 Coded with help from: https://dart.dev/language/constructors#factory-constructors, https://flutterbyexample.com/lesson/singletons, https://www.dhiwise.com/post/enriching-flutter-architecture-dart-singleton
     https://dart.dev/language/operators and near the end, I used ChatGPT to debug, since I may have over-enginnered my example. "https://chat.openai.com/share/aefc62d3-3566-4b1b-baa7-5e6624f4600f"  */
-
 
 class Singleton {
   // Private constructor to be used for future variable instantiations
@@ -89,7 +85,6 @@ void main() {
   print(identical(singleton1, singleton2)); // Should return true
 }
 ```
-
 ### Lazy Implementation for dart
 
 The main problem with the earlier singleton example (Besides it being over-engineered by an inexperienced dart programmer who used too many sources  as a reference and attempted to fix problems that did not need fixing is that the following code always initializes for the client, even if the client is not currently using the class or features, which is a significant problem regarding memory leakage, and memory optimization for a garbage collecting language such as Dart, 
@@ -115,7 +110,6 @@ class LazyInitializedSingleton{
     static late LazyInitializedSingleton _instance;
     // Refrence that is used later in internal memory in order to create the instance when called
     LazyInitializedSingleton._internal();
-
 
     /* Declares, and Inistalizes the instase when called. Instead of automatically being delcared, instead of the basic
       implmentation which is always created, and in my instance, makes sure there is no duplicates created. */
@@ -143,41 +137,38 @@ class LazyInitializedSingleton{
 
 Overall, Singleton is an easy and practical design pattern for both dart and object-oriented programming as a whole; using factory constructors, it is easy to implement the simpleton design pattern in Dart and use it throughout the project, while it does come with its own set of shortcomings, Singleton is a valuable design pattern for both beginner and advanced projects when done in moderation, and we hope that you now have a further understanding of Dart and it is implementations. 
 
-
 ## Repositories and Documentation:
 
 ### Documentation:
 
-[1] https://dart.dev/language 
+[1] [Language](https://dart.dev/language) 
 
-[2] https://www.dhiwise.com/post/enriching-flutter-architecture-dart-singleton
+[2] [Enriching flutter architechure dart singleton](https://www.dhiwise.com/post/enriching-flutter-architecture-dart-singleton)
 
-[3] https://flutterbyexample.com/lesson/singletons
+[3] [Singleton](https://flutterbyexample.com/lesson/singletons)
 
-[4] https://stackoverflow.com/questions/12649573/how-do-you-build-a-singleton-in-dart
+[4] [How to biult a singleton in datr](https://stackoverflow.com/questions/12649573/how-do-you-build-a-singleton-in-dart)
 
-[5] https://github.com/nic-dgl104-winter-2024/pattern-library/issues/6 
+[5] [issue](https://github.com/nic-dgl104-winter-2024/pattern-library/issues/6 )
 
-[6] https://en.wikipedia.org/wiki/Singleton_pattern 
+[6] [Signleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern )
 
-[7] https://dart.dev/language/constructors#factory-constructors
+[7] [Factory constructors](https://dart.dev/language/constructors#factory-constructors)
 
-[8] https://refactoring.guru/design-patterns/creational-patterns
+[8] [Creational pattern](https://refactoring.guru/design-patterns/creational-patterns)
 
-[9] https://refactoring.guru/design-patterns/structural-patterns
+[9] [Structural patterns](https://refactoring.guru/design-patterns/structural-patterns)
 
-[10] https://refactoring.guru/design-patterns/behavioral-patterns
+[10] [Behavioral patterns](https://refactoring.guru/design-patterns/behavioral-patterns)
  
-[11] https://www.cleancode.studio/design-patterns/single-responsibility-design-pattern
-
+[11] [Single responisbility design pattern](https://www.cleancode.studio/design-patterns/single-responsibility-design-pattern)
 
 ### Repositories: 
 
-[12] https://github.com/jnhyatt/pattern/blob/master/lib/pattern.dart
+[12] [Pattern.dart](https://github.com/jnhyatt/pattern/blob/master/lib/pattern.dart)
 
-[13] https://github.com/ArunPrakashG/wordpress_client
+[13] [Wordpress client](https://github.com/ArunPrakashG/wordpress_client)
 
-[14] https://github.com/yarn-rp/case_matcher
+[14] [Case matcher](https://github.com/yarn-rp/case_matcher)
 
-[15] https://github.com/IliaKhuzhakhmetov/DesignPatterns-Dart
-
+[15] [Design pattern dart](https://github.com/IliaKhuzhakhmetov/DesignPatterns-Dart)
