@@ -1,32 +1,32 @@
 # ✨ Dart - Singleton 
 
-## Introduction: 
+## Introduction
 
 Singleton is an object-oriented programming language pattern with only one instance to provide consistency across local data storage and consistent return values when accessing the data. 
 
 Singleton ensures that objects have only one instance, allowing for easy reference and access to the singleton class and finally helping to control the instance, such as private data, changing variables, or other run-time paradigms. 
 
-Singleton mainly attempts to solve the problem of overusing global variables to change instance data, as they “do not pollute the global namespace _(or their containing namespace)._” [2: Wikipedia Singelton patterns.](https://en.wikipedia.org/wiki/Singleton_pattern)
+Singleton mainly attempts to solve the problem of overusing global variables to change instance data, as they “do not pollute the global namespace _(or their containing namespace)._” [2: Wikipedia Singelton patterns](https://en.wikipedia.org/wiki/Singleton_pattern).
 
 Singleton also saves more internal memory than global variables since storing the variables and arithmetic across memory is much more intense and, in more extensive applications, more intensive on the CPU and the GPU.
 
-Overall, Singelton is a simple pattern that provides an easy-to-use framework for future patterns and allows constituent return value constructors for memory allocation, easy access to the class and its corresponding methods, and overall allows for inoffensive, easy-to-understand patterns for developers to use.
+Overall, Singeleton is a simple pattern that provides an easy-to-use framework for future patterns and allows constituent return value constructors for memory allocation, easy access to the class and its corresponding methods, and overall allows for inoffensive, easy-to-understand patterns for developers to use.
 
 ### What other programming patterns are used for Dart?
 
 Like most object-oriented languages, Dart contains many programming patterns to solve various problems; the following programs can then be separated into several categories. 
 
-#### Creational Patterns: 
+#### Creational Patterns
 
 Creational patterns are patterns that provide various object-creation mechanisms, which can improve flexibility while writing code and allow code reuse or optimization [6: Refactoring Guru: Behavioral Patterns](https://refactoring.guru/design-patterns/behavioral-patterns). Usually, they attempt to fulfill a common programming problem or optimize or condense certain aspects of development, such as frequent re-use of objects, global variables, or other problems 
 
 Singleton is a Creational Pattern that ensures a class provides only one instance while allowing global access to that instance, methods, and constructors; it mainly solves the [11: “Single Responsibility Principle”](https://www.cleancode.studio/design-patterns/single-responsibility-design-pattern)  problem while also providing global access points that can help organize and find code. 
 
-#### Structural Patterns:
+#### Structural Patterns
 
 _“Structural patterns are design patterns that deal with the composition and organization of classes and objects. They help you define how different components of your system interact and relate to each other.”_ [10: Linked-In "What is the difference between a structural pattern and a behavioral pattern?"](https://www.linkedin.com/advice/0/what-difference-between-structural-pattern-behavioral-nkg2c#:~:text=Behavioral%20patterns%20can%20improve%20your,%2C%20Template%20Method%2C%20and%20Visitor.)
 
-#### Behavioral Patterns: 
+#### Behavioral Patterns 
 
 _“Behavioral patterns are design patterns that deal with the communication and cooperation of classes and objects. They help you define how different components of your system behave and respond to each other.”_ [10: Linked-In "What is the difference between a structural pattern and a behavioral pattern?"](https://www.linkedin.com/advice/0/what-difference-between-structural-pattern-behavioral-nkg2c#:~:text=Behavioral%20patterns%20can%20improve%20your,%2C%20Template%20Method%2C%20and%20Visitor.)
 
@@ -38,7 +38,7 @@ As described earlier in this Library, Singleton mainly focuses on the coding pro
 
 ## Implementation
 
-Singelton is relatively simple to implement in Dart, mainly due to the implementation of Dart’s factory constructors [11]. Factory constructors are pre-fixed with the factory keyword. Factory Constructors work as class instructors. However, factory constructors do not always create new instances of a class unless further defined. 
+Singleton is relatively simple to implement in Dart, mainly due to the implementation of Dart’s factory constructors [11]. Factory constructors are pre-fixed with the factory keyword. Factory Constructors work as class instructors. However, factory constructors do not always create new instances of a class unless further defined. 
 
 This allows the Singleton class to allow both an instance of cache or an instance of a sub-type if declared and to initialize final (Const) variables that cannot be installed due to being assigned through parameters. 
 
@@ -133,13 +133,13 @@ class LazyInitializedSingleton{
 }
 ```
 
-## Conclusion: 
+## Conclusion 
 
 Overall, Singleton is an easy and practical design pattern for both dart and object-oriented programming as a whole; using factory constructors, it is easy to implement the simpleton design pattern in Dart and use it throughout the project, while it does come with its own set of shortcomings, Singleton is a valuable design pattern for both beginner and advanced projects when done in moderation, and we hope that you now have a further understanding of Dart and it is implementations. 
 
-## Repositories and Documentation:
+## Repositories and Documentation
 
-### Documentation:
+### Documentation
 
 [1] [Language](https://dart.dev/language) 
 
@@ -163,7 +163,7 @@ Overall, Singleton is an easy and practical design pattern for both dart and obj
  
 [11] [Single responisbility design pattern](https://www.cleancode.studio/design-patterns/single-responsibility-design-pattern)
 
-### Repositories: 
+### Repositories 
 
 [12] [Pattern.dart](https://github.com/jnhyatt/pattern/blob/master/lib/pattern.dart)
 
