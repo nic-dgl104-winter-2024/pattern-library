@@ -87,7 +87,7 @@ void main() {
 ```
 ### Lazy Implementation for dart
 
-The main problem with the earlier singleton example Besides it being over-engineered by an inexperienced dart programmer who used too many sources  as a reference and attempted to fix problems that did not need fixing is that the following code always initializes for the client, even if the client is not currently using the class or features, which is a significant problem regarding memory leakage, and memory optimization for a garbage collecting language such as 'Dart'. 
+The main problem with the earlier singleton example (Besides it being over-engineered by an inexperienced dart programmer who used too many sources  as a reference and attempted to fix problems that did not need fixing is that the following code always initializes for the client, even if the client is not currently using the class or features, which is a significant problem regarding memory leakage, and memory optimization for a garbage collecting language such as Dart, 
 
 Here is some code that shows a lazy implementation, that being some simpleton code that doesn't initialize unless called directly: 
 
