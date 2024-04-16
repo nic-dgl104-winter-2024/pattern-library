@@ -118,7 +118,9 @@ module.exports = Todo;
 
 The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/models/tasksModel.js)
 
-*Mongoose, `Schemas`, mongoosejs.com, Jan. 2024, [Mongoose Schema](https://mongoosejs.com/docs/guide.html)*
+
+
+* Mongoose, "Schemas", mongoosejs.com, Jan. 2024, [Mongoose Schema](https://mongoosejs.com/docs/guide.html)*
 
 ---
 
@@ -178,7 +180,8 @@ export default Todo;
 ```
 The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/views/Todo.js)
 
-*React community, 'Your First Component', react.dev, Feb. 2024, [React components](https://react.dev/learn/your-first-component)*
+
+* React community, "Your First Component", react.dev, Feb. 2024, [React components](https://react.dev/learn/your-first-component)*
 
 ---
 
@@ -213,7 +216,7 @@ const todoController = {
       // If an error occurs, respond with an error message
       res.status(500).json({ message: error.message });
     }
-  }},
+  },
 
   // Create a new Todo task
   createTodo: async (req, res) => {
@@ -239,7 +242,8 @@ const todoController = {
 
 The complete file of this example is available [here](https://github.com/YogeshManni/pattern-library/blob/main/patterns/MVC/controllers/tasks.js)
 
-*MDN contributors, `Routes and controllers`, developer.mozilla.org, 18 Oct. 2023, [Node Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)*
+
+* MDN contributors, "Routes and controllers", developer.mozilla.org, 18 Oct. 2023, [Node Express](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)*
 
 ---
 
@@ -264,9 +268,10 @@ Once all node dependencies are install, you can now run the react application wi
 ```
 npm start
 ```
-If everything works and your code gets compiled, you can see you website live on [Local Host](http://localhost:3000/)
+If everything works and your code gets compiled, you can see you website live on [localhost](http://localhost:3000/)
 
-*Luke Karrys, `Create React App`, create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)*
+
+* Luke Karrys, "Create React App", create-react-app.dev, 09 jan. 2021, [Getting Started](https://create-react-app.dev/docs/getting-started)*
 
 ---
 
@@ -295,7 +300,8 @@ node server.js
 
 If everything works out and your code compile successfully, you will see success message and your server will be running at `http://localhost:5000/`
 
-*Mohammed Ibrahim, `Node.js: Step-by-Step`, medium.com, 05 Nov. 2023, [Node.js Guide](https://medium.com/@ibrahimhz/creating-your-first-backend-with-node-js-step-by-step-guide-892769af4cb0)*
+
+* Mohammed Ibrahim, "Node.js: Step-by-Step", medium.com, 05 Nov. 2023, [Node.js Guide](https://medium.com/@ibrahimhz/creating-your-first-backend-with-node-js-step-by-step-guide-892769af4cb0)*
 
 -----------------------------------------------
 
