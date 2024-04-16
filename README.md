@@ -160,8 +160,8 @@ From View to ViewModel: Data binding also works in the opposite direction. If a 
 
 **Benefits of Data Binding in MVVM**
 * Reducing boilerplate code by eliminating the need for manual UI updates
-* Helps maintain a clean separation between the View and ViewModel
-* Simplifies state management and enhances maintanability 
+* Helps maintain clean separation between the View and ViewModel
+* Simplifies state management and enhances maintainability 
 
 ### Use Cases
 
@@ -240,7 +240,7 @@ While OOP design patterns are specific to class-based systems, functional progra
 
 ### References
 * [javascript-functional-programming-vs-oop](https://anywhere.epam.com/en/blog/javascript-functional-programming-vs-oop)
-* [Comparing Dessign Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
+* [Comparing Design Pattern in OO and Functional (With Javascript Examples)](https://medium.com/@denniswalangadi/comparing-dessign-pattern-in-oo-and-functional-with-javascript-examples-b883c61e7009)
 * [singleton-pattern](https://www.patterns.dev/vanilla/singleton-pattern/)
 * [functional-programming-javascript](https://www.toptal.com/javascript/functional-programming-javascript)
 
