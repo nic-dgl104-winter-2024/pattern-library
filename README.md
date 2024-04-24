@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -279,6 +279,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mijuanmontalvo"><img src="https://avatars.githubusercontent.com/u/122574675?v=4?s=100" width="100px;" alt="mijuanmontalvo"/><br /><sub><b>mijuanmontalvo</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=mijuanmontalvo" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=mijuanmontalvo" title="Documentation">📖</a> <a href="#design-mijuanmontalvo" title="Design">🎨</a> <a href="#ideas-mijuanmontalvo" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-mijuanmontalvo" title="Answering Questions">💬</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Amijuanmontalvo" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Bhoomi3637"><img src="https://avatars.githubusercontent.com/u/144162455?v=4?s=100" width="100px;" alt="Bhoomi3637"/><br /><sub><b>Bhoomi3637</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Bhoomi3637" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Bhoomi3637" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Hpunia1"><img src="https://avatars.githubusercontent.com/u/144393163?v=4?s=100" width="100px;" alt="Himanshu Punia"/><br /><sub><b>Himanshu Punia</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Hpunia1" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sabrina01031997"><img src="https://avatars.githubusercontent.com/u/144160750?v=4?s=100" width="100px;" alt="sabrina01031997"/><br /><sub><b>sabrina01031997</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=sabrina01031997" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
