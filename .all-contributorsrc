@@ -82,6 +82,16 @@
         "question",
         "review"
       ]
+    },
+    {
+      "login": "8968sam",
+      "name": "sam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61202199?v=4",
+      "profile": "https://github.com/8968sam",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
