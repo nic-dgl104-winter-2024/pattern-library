@@ -55,6 +55,18 @@
         "ideas",
         "review"
       ]
+    },
+    {
+      "login": "lcgraves",
+      "name": "Lara Graves",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144481646?v=4",
+      "profile": "https://github.com/lcgraves",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
