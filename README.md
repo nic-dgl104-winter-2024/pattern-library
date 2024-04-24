@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -282,6 +282,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sabrina01031997"><img src="https://avatars.githubusercontent.com/u/144160750?v=4?s=100" width="100px;" alt="sabrina01031997"/><br /><sub><b>sabrina01031997</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=sabrina01031997" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AditiVatish"><img src="https://avatars.githubusercontent.com/u/144161682?v=4?s=100" width="100px;" alt="AditiVatish"/><br /><sub><b>AditiVatish</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=AditiVatish" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=AditiVatish" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
