@@ -43,6 +43,18 @@
         "question",
         "review"
       ]
+    },
+    {
+      "login": "kattsky",
+      "name": "Katrina",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144481854?v=4",
+      "profile": "https://github.com/kattsky",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
