@@ -28,6 +28,21 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ting-dev-coder",
+      "name": "Ting Yu Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62139442?v=4",
+      "profile": "https://github.com/ting-dev-coder",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,

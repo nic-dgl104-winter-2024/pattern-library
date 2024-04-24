@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -265,6 +265,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/YogeshManni"><img src="https://avatars.githubusercontent.com/u/29475936?v=4?s=100" width="100px;" alt="Yogesh Manni"/><br /><sub><b>Yogesh Manni</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=YogeshManni" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=YogeshManni" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Aawofeso"><img src="https://avatars.githubusercontent.com/u/144481917?v=4?s=100" width="100px;" alt="Aawofeso"/><br /><sub><b>Aawofeso</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Aawofeso" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ting-dev-coder"><img src="https://avatars.githubusercontent.com/u/62139442?v=4?s=100" width="100px;" alt="Ting Yu Chen"/><br /><sub><b>Ting Yu Chen</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=ting-dev-coder" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=ting-dev-coder" title="Documentation">📖</a> <a href="#design-ting-dev-coder" title="Design">🎨</a> <a href="#ideas-ting-dev-coder" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-ting-dev-coder" title="Maintenance">🚧</a> <a href="#question-ting-dev-coder" title="Answering Questions">💬</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Ating-dev-coder" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>
