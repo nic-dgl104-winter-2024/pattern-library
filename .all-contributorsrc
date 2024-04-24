@@ -67,6 +67,21 @@
         "ideas",
         "review"
       ]
+    },
+    {
+      "login": "john24alex",
+      "name": "John",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4331340?v=4",
+      "profile": "https://github.com/john24alex",
+      "contributions": [
+        "code",
+        "doc",
+        "design",
+        "ideas",
+        "maintenance",
+        "question",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
