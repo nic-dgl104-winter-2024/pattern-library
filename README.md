@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -275,6 +275,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kuljit95"><img src="https://avatars.githubusercontent.com/u/144160996?v=4?s=100" width="100px;" alt="kuljit95"/><br /><sub><b>kuljit95</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=kuljit95" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=kuljit95" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/KaiKitKobold"><img src="https://avatars.githubusercontent.com/u/144362514?v=4?s=100" width="100px;" alt="Kai Kitching "/><br /><sub><b>Kai Kitching </b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=KaiKitKobold" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=KaiKitKobold" title="Documentation">📖</a> <a href="#design-KaiKitKobold" title="Design">🎨</a> <a href="#ideas-KaiKitKobold" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-KaiKitKobold" title="Answering Questions">💬</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3AKaiKitKobold" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nazrinzuwair"><img src="https://avatars.githubusercontent.com/u/144160072?v=4?s=100" width="100px;" alt="nazrinzuwair"/><br /><sub><b>nazrinzuwair</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=nazrinzuwair" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=nazrinzuwair" title="Documentation">📖</a> <a href="#question-nazrinzuwair" title="Answering Questions">💬</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Anazrinzuwair" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/monika-789"><img src="https://avatars.githubusercontent.com/u/144393563?v=4?s=100" width="100px;" alt="monika"/><br /><sub><b>monika</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=monika-789" title="Code">💻</a></td>
     </tr>
   </tbody>
   <tfoot>
