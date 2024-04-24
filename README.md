@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -270,6 +270,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lcgraves"><img src="https://avatars.githubusercontent.com/u/144481646?v=4?s=100" width="100px;" alt="Lara Graves"/><br /><sub><b>Lara Graves</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=lcgraves" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=lcgraves" title="Documentation">📖</a> <a href="#ideas-lcgraves" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Alcgraves" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/john24alex"><img src="https://avatars.githubusercontent.com/u/4331340?v=4?s=100" width="100px;" alt="John"/><br /><sub><b>John</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=john24alex" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=john24alex" title="Documentation">📖</a> <a href="#design-john24alex" title="Design">🎨</a> <a href="#ideas-john24alex" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-john24alex" title="Maintenance">🚧</a> <a href="#question-john24alex" title="Answering Questions">💬</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Ajohn24alex" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/8968sam"><img src="https://avatars.githubusercontent.com/u/61202199?v=4?s=100" width="100px;" alt="sam"/><br /><sub><b>sam</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=8968sam" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=8968sam" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kuljit95"><img src="https://avatars.githubusercontent.com/u/144160996?v=4?s=100" width="100px;" alt="kuljit95"/><br /><sub><b>kuljit95</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=kuljit95" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=kuljit95" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
