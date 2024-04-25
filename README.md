@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-18-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -35,6 +35,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sabrina01031997"><img src="https://avatars.githubusercontent.com/u/144160750?v=4?s=100" width="100px;" alt="sabrina01031997"/><br /><sub><b>sabrina01031997</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=sabrina01031997" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AditiVatish"><img src="https://avatars.githubusercontent.com/u/144161682?v=4?s=100" width="100px;" alt="AditiVatish"/><br /><sub><b>AditiVatish</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=AditiVatish" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=AditiVatish" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/manasvi111"><img src="https://avatars.githubusercontent.com/u/122574665?v=4?s=100" width="100px;" alt="manasvi111"/><br /><sub><b>manasvi111</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=manasvi111" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=manasvi111" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Dhuds1"><img src="https://avatars.githubusercontent.com/u/113390143?v=4?s=100" width="100px;" alt="Dhuds1"/><br /><sub><b>Dhuds1</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Dhuds1" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Dhuds1" title="Documentation">📖</a> <a href="#design-Dhuds1" title="Design">🎨</a> <a href="#ideas-Dhuds1" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-Dhuds1" title="Maintenance">🚧</a> <a href="#question-Dhuds1" title="Answering Questions">💬</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3ADhuds1" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>
