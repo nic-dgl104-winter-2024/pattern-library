@@ -214,6 +214,17 @@
         "question",
         "review"
       ]
+    },
+    {
+      "login": "BasranS",
+      "name": "BasranS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144393592?v=4",
+      "profile": "https://github.com/BasranS",
+      "contributions": [
+        "code",
+        "doc",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
