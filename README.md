@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -39,6 +39,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/BasranS"><img src="https://avatars.githubusercontent.com/u/144393592?v=4?s=100" width="100px;" alt="BasranS"/><br /><sub><b>BasranS</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=BasranS" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=BasranS" title="Documentation">📖</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3ABasranS" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alinaghale88"><img src="https://avatars.githubusercontent.com/u/144161260?v=4?s=100" width="100px;" alt="alinaghale88"/><br /><sub><b>alinaghale88</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=alinaghale88" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=alinaghale88" title="Documentation">📖</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Aalinaghale88" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tharinduj"><img src="https://avatars.githubusercontent.com/u/4573317?v=4?s=100" width="100px;" alt="Tharindu"/><br /><sub><b>Tharindu</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3Atharinduj" title="Reviewed Pull Requests">👀</a> <a href="#ideas-tharinduj" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Sumit-tech-joshi"><img src="https://avatars.githubusercontent.com/u/47482270?v=4?s=100" width="100px;" alt="sumit joshi"/><br /><sub><b>sumit joshi</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Sumit-tech-joshi" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Sumit-tech-joshi" title="Documentation">📖</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3ASumit-tech-joshi" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
   <tfoot>

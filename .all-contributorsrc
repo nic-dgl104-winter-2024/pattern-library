@@ -246,6 +246,17 @@
         "review",
         "ideas"
       ]
+    },
+    {
+      "login": "Sumit-tech-joshi",
+      "name": "sumit joshi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47482270?v=4",
+      "profile": "https://github.com/Sumit-tech-joshi",
+      "contributions": [
+        "code",
+        "doc",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
