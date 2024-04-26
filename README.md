@@ -1,6 +1,6 @@
 # DGL 104 Pattern Library
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A multi-language library containing implementations of common software design and architecture patterns 
 
@@ -45,6 +45,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Anjitha-94"><img src="https://avatars.githubusercontent.com/u/122707518?v=4?s=100" width="100px;" alt="Anjitha-94"/><br /><sub><b>Anjitha-94</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Anjitha-94" title="Documentation">📖</a> <a href="https://github.com/dgl104-winter2024/pattern library/pulls?q=is%3Apr+reviewed-by%3AAnjitha-94" title="Reviewed Pull Requests">👀</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jaskaransingh9990"><img src="https://avatars.githubusercontent.com/u/144161095?v=4?s=100" width="100px;" alt="jaskaransingh9990"/><br /><sub><b>jaskaransingh9990</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=jaskaransingh9990" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Jessica-Pelletier"><img src="https://avatars.githubusercontent.com/u/113213096?v=4?s=100" width="100px;" alt="Jessica-Pelletier"/><br /><sub><b>Jessica-Pelletier</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Jessica-Pelletier" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=Jessica-Pelletier" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/BALJITSINGH23"><img src="https://avatars.githubusercontent.com/u/144160846?v=4?s=100" width="100px;" alt="BALJITSINGH23"/><br /><sub><b>BALJITSINGH23</b></sub></a><br /><a href="https://github.com/dgl104-winter2024/pattern library/commits?author=BALJITSINGH23" title="Code">💻</a> <a href="https://github.com/dgl104-winter2024/pattern library/commits?author=BALJITSINGH23" title="Documentation">📖</a></td>
     </tr>
   </tbody>
   <tfoot>
